@@ -1,0 +1,49 @@
+
+   INFO  Processing jobs from the [default] queue.  
+
+
+   INFO  Processing jobs from the [default] queue.  
+
+
+   INFO  Processing jobs from the [default] queue.  
+
+
+   INFO  Processing jobs from the [default] queue.  
+
+
+   INFO  Processing jobs from the [default] queue.  
+
+
+   INFO  Processing jobs from the [default] queue.  
+
+
+   INFO  Processing jobs from the [default] queue.  
+
+  2022-09-14 12:39:24 App\Jobs\CreateWithdraw ............... 14,293.96ms FAIL
+  2022-09-14 12:39:39 App\Jobs\CreateWithdraw ................ 3,442.16ms FAIL
+  2022-09-14 12:39:42 App\Jobs\CreateWithdraw ................ 4,349.23ms FAIL
+  2022-09-14 12:42:14 App\Jobs\CreateWithdraw ................ 5,923.75ms FAIL
+  2022-09-14 12:42:20 App\Jobs\CreateWithdraw ................ 1,742.65ms FAIL
+  2022-09-14 12:42:22 App\Jobs\CreateWithdraw ................ 1,500.55ms FAIL
+  2022-09-14 12:42:29 App\Jobs\CreateWithdraw ................ 2,532.92ms FAIL
+  2022-09-14 12:42:32 App\Jobs\CreateWithdraw ................ 2,768.54ms FAIL
+  2022-09-14 12:42:35 App\Jobs\CreateWithdraw ................ 1,893.82ms FAIL
+  2022-09-14 12:42:49 App\Jobs\CreateWithdraw ................ 3,478.88ms FAIL
+  2022-09-14 12:42:52 App\Jobs\CreateWithdraw ................ 2,355.12ms FAIL
+  2022-09-14 12:42:55 App\Jobs\CreateWithdraw ................ 2,371.70ms FAIL
+  2022-09-14 12:43:03 App\Jobs\CreateWithdraw ................ 5,432.78ms FAIL
+  2022-09-14 12:43:08 App\Jobs\CreateWithdraw ................ 3,684.50ms FAIL
+  2022-09-14 12:43:12 App\Jobs\CreateWithdraw ................ 1,102.41ms FAIL
+  2022-09-14 12:43:40 App\Jobs\CreateWithdraw ................ 3,512.62ms FAIL
+  2022-09-14 12:43:44 App\Jobs\CreateWithdraw .................. 539.66ms FAIL
+  2022-09-14 12:43:45 App\Jobs\CreateWithdraw ................ 2,773.80ms FAIL
+  2022-09-14 12:44:08 App\Jobs\CreateWithdraw ................ 4,023.40ms FAIL
+  2022-09-14 12:44:12 App\Jobs\CreateWithdraw ................ 2,705.87ms FAIL
+  2022-09-14 12:44:15 App\Jobs\CreateWithdraw ................ 4,013.00ms FAIL
+  2022-09-14 12:45:23 App\Jobs\CreateWithdraw ............... 12,608.81ms DONE
+
+   INFO  Processing jobs from the [default] queue.  
+
+  2022-09-14 13:30:07 App\Jobs\CreateWithdraw .................. 215.75ms DONE
+  2022-09-14 13:54:53 App\Jobs\CreateWithdraw ................... 63.79ms DONE
+  2022-09-14 13:55:51 App\Jobs\CreateWithdraw ................... 14.48ms DONE
