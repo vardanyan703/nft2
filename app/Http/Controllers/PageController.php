@@ -17,9 +17,13 @@ class PageController extends Controller
          ->with('attachment')
          ->get();
 
+       $faq = Faq::query()
+           ->latest()
+           ->first();
+
        $live = LiveStatistic::query()->first();
 
-      return view('home',compact('tariffs','live'));
+      return view('home',compact('tariffs','live','faq'));
    }
 
    public function about()

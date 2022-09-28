@@ -7,16 +7,16 @@
             <nav class="header-menu menu">
                 <ul class="header-menu__list menu__list">
                     <li class="header-menu__item menu__item">
-                        <a href="#about-us" class="header-menu__link menu__link">ABOUT US</a>
+                        <a href="#about" class="header-menu__link menu__link">ABOUT US</a>
                     </li>
                     <li class="header-menu__item menu__item">
-                        <a href="#" class="header-menu__link menu__link">NFTs</a>
+                        <a href="#ntfs" class="header-menu__link menu__link">NFTs</a>
                     </li>
                     <li class="header-menu__item menu__item">
-                        <a href="#" class="header-menu__link menu__link">ROADMAP</a>
+                        <a href="#roadmap" class="header-menu__link menu__link">ROADMAP</a>
                     </li>
                     <li class="header-menu__item menu__item">
-                        <a href="{{ route('faq') }}" class="header-menu__link menu__link">FAQ</a>
+                        <a href="#faq" class="header-menu__link menu__link" translate="no">FAQ</a>
                     </li>
                 </ul>
             </nav>
@@ -59,16 +59,16 @@
                         <nav class="header-menu menu">
                             <ul class="header-menu__list menu__list">
                                 <li class="header-menu__item menu__item">
-                                    <a href="#about-us" class="header-menu__link menu__link">ABOUT US</a>
+                                    <a href="#about" class="header-menu__link menu__link">ABOUT US</a>
                                 </li>
                                 <li class="header-menu__item menu__item">
-                                    <a href="#" class="header-menu__link menu__link">NFTs</a>
+                                    <a href="#ntfs" class="header-menu__link menu__link">NFTs</a>
                                 </li>
                                 <li class="header-menu__item menu__item">
-                                    <a href="#" class="header-menu__link menu__link">ROADMAP</a>
+                                    <a href="#roadmap" class="header-menu__link menu__link">ROADMAP</a>
                                 </li>
                                 <li class="header-menu__item menu__item">
-                                    <a href="#" class="header-menu__link menu__link">FAQ</a>
+                                    <a href="#faq" class="header-menu__link menu__link" translate="no">FAQ</a>
                                 </li>
                             </ul>
                         </nav>
