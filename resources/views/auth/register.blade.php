@@ -8,10 +8,10 @@
                 @csrf
                 <div class="effects">
                     <div class="effect effect-1">
-                        <img src="images/heand-1__small.png" alt="">
+                        <img src="/images/heand-1__small.png" alt="">
                     </div>
                     <div class="effect effect-2">
-                        <img src="images/heand-2__small.png" alt="">
+                        <img src="/images/heand-2__small.png" alt="">
                     </div>
                 </div>
                 <h1 class="title title-line">Sign Up</h1>
@@ -21,7 +21,7 @@
                         <label for="username" class="form-label">Username</label>
                         <div class="form-input @if($errors->has('name')) error @endif">
                             <input type="text" name="name" id="username" value="{{ old('name') }}"
-                                   placeholder="Andrew Marynovych">
+                                   placeholder="">
                             @error('name')
                                     <div class="form-input__error">{{ $message }}</div>
                             @enderror
@@ -31,7 +31,7 @@
                         <label for="email" class="form-label">Email</label>
                         <div class="form-input @if($errors->has('email')) error @endif">
                             <input type="text" name="email" id="email" value="{{ old('email') }}"
-                                   placeholder="xolxllz@gmail.com">
+                                   placeholder="">
                             @error('email')
                                 <div class="form-input__error">{{ $message }}</div>
                             @enderror
@@ -46,11 +46,11 @@
                     <div class="form-item">
                         <label for="password" class="form-label">Password</label>
                         <div class="form-input @if($errors->has('password')) error @endif">
-                            <input type="password" name="password" id="password" placeholder="password">
+                            <input type="password" name="password" id="password" placeholder="">
                             @error('password')
                                 <div class="form-input__error">{{ $message }}</div>
                             @enderror
-                            <div class="password-seen active">
+                            <div class="password-seen">
                                 <svg class="password-1" width="26" height="26" viewBox="0 0 26 26" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g opacity="0.4">
@@ -72,7 +72,7 @@
                         <label for="retype-password" class="form-label">Retype password</label>
                         <div class="form-input">
                             <input type="password" name="password_confirmation" id="retype-password"
-                                   placeholder="password">
+                                   placeholder="">
                             <div class="password-seen">
                                 <svg class="password-1" width="26" height="26" viewBox="0 0 26 26" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -99,6 +99,7 @@
                         <div class="form-input">
                             <input type="text"
                                    id="pin"
+                                   value="{{ old('reg_pincode') }}"
                                    name="reg_pincode" minlength="4" maxlength="4"
                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
                                    pattern="[0-9]{4}" >
@@ -118,20 +119,19 @@
                                     </svg>
                                 </div>
                                 <div class="w-full">
-                                    <input type="text" name="verification" id="verification" value="">
+                                    <input type="text" name="captcha" id="verification" value="">
                                     @error('captcha')
                                         <div class="form-input__error">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
                 <div class="form-item">
                     <button class="btn btn-primary">Complete registration</button>
                 </div>
-                <div class="title title-small-1 mt-11 pb-0 mb-0">Already have a NFT Grower Account? <a href="{{ route('login') }}"
+                <div class="title title-small-1 mt-sm-11 mt-4 pb-0 mb-sm-0 mb-2">Already have a NFT Grower Account? <a href="{{ route('login') }}"
                                                                                                        class="title-small__link">Login</a>
                 </div>
             </form>
@@ -145,7 +145,7 @@
         $('#reload').click(function () {
             $.ajax({
                 type: 'GET',
-                url: 'reload-captcha',
+                url: '/reload-captcha',
                 success: function (data) {
                     $("#captcha").prop('src', data.captcha);
                 }

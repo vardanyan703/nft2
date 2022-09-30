@@ -9,10 +9,10 @@
                         <h1 class="title title-big title-line title-line__white  d-tab__none" translate="no">
                             JOIN <span>US</span> <span>AND</span> <span class="title title-medium ">EARN ON NFT</span>
                         </h1>
-                        <h1 class="title title-big title-line title-line__white d-tab d-tab__min-none">
+                        <h1 class="title title-big title-line title-line__white d-tab d-tab__min-none" translate="no">
                             JOIN <span>US</span> <span class="title title-medium "> AND EARN ON NFT</span>
                         </h1>
-                        <h1 class="title title-big title-line title-line__white d-tab__min">
+                        <h1 class="title title-big title-line title-line__white d-tab__min" translate="no">
                             JOIN <br> <span>US AND</span> <span class="title title-medium ">  EARN ON NFT</span>
                         </h1>
                         <p class="home-desc">Earn up to 1.3% daily from the investment pool, own some of the best NFTs
@@ -124,11 +124,11 @@
                     <h2 class="title title-line">live statistics</h2>
                     <div class="statistic__info">
                         <div class="statistic__info-item">
-                            <div class="title">$34 329 428,323</div>
+                            <div class="title investment-pool" >$34 329 428,323</div>
                             <div class="desc">Investment Pool</div>
                         </div>
                         <div class="statistic__info-item">
-                            <div class="title">5074</div>
+                            <div class="title holders">5074</div>
                             <div class="desc">Community</div>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                             invite
                             friends to join us and earn even more with them.
                         </div>
-                        <div class="more">
+                        <a class="more" href="{{ route('affiliate') }}" target="_blank">
                             Affiliate Presentation
                             <div class="more-icon">
                                 <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
@@ -184,7 +184,7 @@
                                           fill="#2C2E3C"/>
                                 </svg>
                             </div>
-                        </div>
+                        </a>
 
                     </div>
                 </div>
@@ -299,8 +299,8 @@
                                                     Price
                                                 </div>
                                                 <div class="tokens-info__right">
-                                                    {{ $tariff->min_price }}
-                                                    - {{ $tariff->max_price }} USD
+                                                    {{ \App\Models\Tariff::money_format($tariff->min_price) }}
+                                                    - {{ \App\Models\Tariff::money_format($tariff->max_price) }} USD
                                                 </div>
                                             </li>
                                             <li class="tokens-info__item">
@@ -327,6 +327,8 @@
                 </div>
             </div>
         </section>
+
+
         <section class="roadmap" id="roadmap">
             <div class="wrapper">
                 <h2 class="title  title-line title-center">Roadmap</h2>
@@ -344,8 +346,7 @@
                         <div class="rm-box ">
                             <div class="corner-box">
                                 <h3 class="title title-line roadmap-title">Community</h3>
-                                <div class="desc">Development of a referral program, creation of platforms for the
-                                    community and involvement
+                                <div class="desc">Development of a referral program, creation of platforms for the community and involvement
                                     of influencers to create an initial community.
                                 </div>
                             </div>
@@ -353,8 +354,7 @@
                         <div class="rm-box ">
                             <div class="corner-box">
                                 <h3 class="title title-line roadmap-title">Launch of an investment pool</h3>
-                                <p class="desc">Launch with an initial capital of $3M and the start of sales of
-                                    temporary NFT Grower tokens
+                                <p class="desc">Launch with an initial capital of $3M and the start of sales of temporary NFT Grower tokens
                                     on the official website with a profit up to 0.8% per day.
                                     Reply</p>
                             </div>
@@ -372,8 +372,7 @@
                             <div class="corner-box">
                                 <p class="soon-text">Coming soon</p>
                                 <h3 class="title title-line roadmap-title">Metaverse and P2E Game development</h3>
-                                <p class="desc">Creation of interactive prototypes in accordance with the concept and
-                                    documentation, active
+                                <p class="desc">Creation of interactive prototypes in accordance with the concept and documentation, active
                                     testing within the team and with some community members.</p>
                             </div>
                         </div>
@@ -381,12 +380,9 @@
                             <div class="corner-box">
                                 <p class="soon-text">Coming soon</p>
 
-                                <h3 class="title title-line roadmap-title">Full-scale launch Metaverse with P2E
-                                    Game</h3>
-                                <p class="desc">Public launch of the Metaverse with an integrated P2E game that will
-                                    have unique features
-                                    and unite the real and cyber worlds. New collaborations with major influencers,
-                                    companies, marketplaces,
+                                <h3 class="title title-line roadmap-title">Full-scale launch Metaverse with P2E Game</h3>
+                                <p class="desc">Public launch of the Metaverse with an integrated P2E game that will have unique features
+                                    and unite the real and cyber worlds. New collaborations with major influencers, companies, marketplaces,
                                     etc.</p>
                             </div>
                         </div>
@@ -395,8 +391,7 @@
                         <div class="rm-box">
                             <div class="corner-box">
                                 <h3 class="title title-line roadmap-title">Tokenomics</h3>
-                                <div class="desc">Development of project tokenomics, automation of mutual settlements
-                                    between community
+                                <div class="desc">Development of project tokenomics, automation of mutual settlements between community
                                     members and the investment pool.
                                 </div>
                             </div>
@@ -404,20 +399,16 @@
                         <div class="rm-box">
                             <div class="corner-box">
                                 <h3 class="title title-line roadmap-title">Development & Team</h3>
-                                <p class="desc">Creation of the project structure, design, usability testing. Hiring the
-                                    best financial and
-                                    technical specialists previously working in leading WEB 3.0 projects and crypto
-                                    companies. Creation of a
+                                <p class="desc">Creation of the project structure, design, usability testing. Hiring the best financial and
+                                    technical specialists previously working in leading WEB 3.0 projects and crypto companies. Creation of a
                                     team of super-heroes.</p>
                             </div>
                         </div>
                         <div class="rm-box">
                             <div class="corner-box">
                                 <h3 class="title title-line roadmap-title">Active marketing campaign</h3>
-                                <p class="desc">Initially, our team understood that NFT Grower is a project for the
-                                    whole world, and after
-                                    the launch of our investment pool, we began an active marketing campaign, attracting
-                                    the best experts,
+                                <p class="desc">Initially, our team understood that NFT Grower is a project for the whole world, and after
+                                    the launch of our investment pool, we began an active marketing campaign, attracting the best experts,
                                     celebrities and influencers from all over the world to our community.</p>
                             </div>
                         </div>
@@ -433,10 +424,8 @@
                         <div class="rm-box soon">
                             <div class="corner-box">
                                 <p class="soon-text">Coming soon</p>
-                                <h3 class="title title-line roadmap-title">Beta testing of the game and the
-                                    metaverse</h3>
-                                <p class="desc">Final tests and launch of the P2E game and the metaverse, collecting
-                                    feedback together with
+                                <h3 class="title title-line roadmap-title">Beta testing of the game and the metaverse</h3>
+                                <p class="desc">Final tests and launch of the P2E game and the metaverse, collecting feedback together with
                                     partners and the largest holders of NFT Grower tokens.</p>
                             </div>
                         </div>
@@ -456,110 +445,124 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="rm-box ">
-                            <div class="corner-box">
-                                <h3 class="title title-line roadmap-title">Community</h3>
-                                <div class="desc">Development of a referral program, creation of platforms for the
-                                    community and
-                                    involvement of influencers to create an initial community.
+                        <div class="box box-right">
+                            <div class="rm-box">
+                                <div class="corner-box">
+                                    <h3 class="title title-line roadmap-title">Tokenomics</h3>
+                                    <div class="desc">Development of project tokenomics, automation of mutual settlements between community
+                                        members and the investment pool.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="rm-box">
-                            <div class="corner-box">
-                                <h3 class="title title-line roadmap-title">Active marketing campaign</h3>
-                                <p class="desc">Initially, our team understood that NFT Grower is a project for the
-                                    whole world, and after
-                                    the launch of our investment pool, we began an active marketing campaign, attracting
-                                    the best experts,
-                                    celebrities and influencers from all over the world to our community.</p>
-                            </div>
-                        </div>
-                        <div class="rm-box ">
-                            <div class="corner-box">
-                                <h3 class="title title-line roadmap-title">Launch of an investment pool</h3>
-                                <p class="desc">Launch with an initial capital of $3M and the start of sales of
-                                    temporary NFT Grower
-                                    tokens on the official website with a profit up to 0.8% per day.
-                                    Reply</p>
-                            </div>
-                        </div>
-                        <div class="rm-box ">
-                            <div class="corner-box">
-                                <h3 class="title title-line roadmap-title">Active development and growth</h3>
-                                <p class="desc">Collection and analysis of technical requirements, creation of a
-                                    functional prototype, formation of a team of WEB 3.0 industry
-                                    leaders.
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="rm-box soon">
+                            <div class="rm-box">
                                 <div class="corner-box">
-                                    <p class="soon-text">Coming soon</p>
-                                    <h3 class="title title-line roadmap-title">Launching our collection on Binance
-                                        NFT</h3>
-                                    <p class="desc">Our collection of 11,111 unique characters is divided into four
-                                        equal parts: I Drop - $139, II Drop - $199, III Drop - $239, IV
-                                        Drop - $299.</p>
+                                    <h3 class="title title-line roadmap-title">Community</h3>
+                                    <div class="desc">Development of a referral program, creation of platforms for the community and
+                                        involvement of influencers to create an initial community.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rm-box">
+                                <div class="corner-box">
+                                    <h3 class="title title-line roadmap-title">Development & Team</h3>
+                                    <p class="desc">Creation of the project structure, design, usability testing. Hiring the best financial
+                                        and
+                                        technical specialists previously working in leading WEB 3.0 projects and crypto companies. Creation of a
+                                        team of super-heroes.</p>
+                                </div>
+                            </div>
+                            <div class="rm-box">
+                                <div class="corner-box">
+                                    <h3 class="title title-line roadmap-title">Launch of an investment pool</h3>
+                                    <p class="desc">Launch with an initial capital of $3M and the start of sales of temporary NFT Grower
+                                        tokens on the official website with a profit up to 0.8% per day.
+                                        Reply</p>
+                                </div>
+                            </div>
+                            <div class="rm-box">
+                                <div class="corner-box">
+                                    <h3 class="title title-line roadmap-title">Active marketing campaign</h3>
+                                    <p class="desc">Initially, our team understood that NFT Grower is a project for the whole world, and after
+                                        the launch of our investment pool, we began an active marketing campaign, attracting the best experts,
+                                        celebrities and influencers from all over the world to our community.</p>
+                                </div>
+                            </div>
+                            <div class="rm-box">
+                                <div class="corner-box">
+                                    <h3 class="title title-line roadmap-title">Active development and growth</h3>
+                                    <p class="desc">Collection and analysis of technical requirements, creation of a
+                                        functional prototype, formation of a team of WEB 3.0 industry
+                                        leaders.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="roadmap__inner-text disabled">
+                                Coming soon 4
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.13793 1.96644C8.01585 1.84436 7.81814 1.84436 7.69605 1.96644L5.00022 4.66227L2.3046 1.96644C2.18251 1.84436 1.9848 1.84436 1.86272 1.96644L0.508555 3.32061C0.386471 3.44269 0.386471 3.6404 0.508555 3.76248L4.77939 8.03332C4.84022 8.09457 4.92022 8.12498 5.00022 8.12498C5.08022 8.12498 5.16022 8.09457 5.22126 8.03352L9.49209 3.76269C9.61418 3.64061 9.61418 3.4429 9.49209 3.32082L8.13793 1.96644Z" fill="#2C2E3C"/>
+                                </svg>
+                            </div>
+                            <div class="soon__block">
+                                <div class="rm-box soon">
+                                    <div class="corner-box">
+                                        <p class="soon-text">Coming soon</p>
+                                        <h3 class="title title-line roadmap-title">Launching our collection on Binance NFT</h3>
+                                        <p class="desc">Our collection of 11,111 unique characters is divided into four
+                                            equal parts: I Drop - $139, II Drop - $199, III Drop - $239, IV
+                                            Drop - $299.</p>
+                                    </div>
+                                </div>
+
+                                <div class="rm-box  soon">
+                                    <div class="corner-box">
+                                        <p class="soon-text">Coming soon</p>
+                                        <h3 class="title title-line roadmap-title">Metaverse and P2E Game development</h3>
+                                        <p class="desc">Creation of interactive prototypes in accordance with the concept and documentation,
+                                            active testing within the team and with some community members.</p>
+                                    </div>
+                                </div>
+                                <div class="rm-box soon">
+                                    <div class="corner-box">
+                                        <p class="soon-text">Coming soon</p>
+                                        <h3 class="title title-line roadmap-title">Beta testing of the game and the metaverse</h3>
+                                        <p class="desc">Final tests and launch of the P2E game and the metaverse, collecting feedback together
+                                            with partners and the largest holders of NFT Grower tokens.</p>
+                                    </div>
+                                </div>
+
+                                <div class="rm-box soon">
+                                    <div class="corner-box">
+                                        <p class="soon-text">Coming soon</p>
+
+                                        <h3 class="title title-line roadmap-title">Full-scale launch Metaverse with P2E Game</h3>
+                                        <p class="desc">Public launch of the Metaverse with an integrated P2E game that will have unique
+                                            features
+                                            and unite the real and cyber worlds. New collaborations with major influencers, companies,
+                                            marketplaces,
+                                            etc.</p>
+                                    </div>
+                                </div>
+                                <div class="roadmap__inner-text">
+                                    this is just the beginning...
                                 </div>
                             </div>
 
-                            <div class="rm-box  soon">
-                                <div class="corner-box">
-                                    <p class="soon-text">Coming soon</p>
-                                    <h3 class="title title-line roadmap-title">Metaverse and P2E Game development</h3>
-                                    <p class="desc">Creation of interactive prototypes in accordance with the concept
-                                        and documentation,
-                                        active testing within the team and with some community members.</p>
-                                </div>
-                            </div>
-                            <div class="rm-box soon">
-                                <div class="corner-box">
-                                    <p class="soon-text">Coming soon</p>
-                                    <h3 class="title title-line roadmap-title">Beta testing of the game and the
-                                        metaverse</h3>
-                                    <p class="desc">Final tests and launch of the P2E game and the metaverse, collecting
-                                        feedback together
-                                        with partners and the largest holders of NFT Grower tokens.</p>
-                                </div>
-                            </div>
-
-                            <div class="rm-box soon">
-                                <div class="corner-box">
-                                    <p class="soon-text">Coming soon</p>
-
-                                    <h3 class="title title-line roadmap-title">Full-scale launch Metaverse with P2E
-                                        Game</h3>
-                                    <p class="desc">Public launch of the Metaverse with an integrated P2E game that will
-                                        have unique
-                                        features
-                                        and unite the real and cyber worlds. New collaborations with major influencers,
-                                        companies,
-                                        marketplaces,
-                                        etc.</p>
-                                </div>
-                            </div>
+                            <div class="roadmap__inner-bg"></div>
                         </div>
-                        <div class="roadmap__inner-text">
-                            this is just the beginning...
-                        </div>
-                        <div class="roadmap__inner-bg"></div>
                     </div>
                 </div>
             </div>
         </section>
-
 
         <section class="section-bg section-team">
             <div class="wrapper">
                 <div class="section-team__inner">
                     <div class="section-team__bgs">
                         <div class="section-team__bg section-team__bg-left">
-                            <img src="images/heand-1.png" alt="">
+                            <img src="/images/heand-1.png" alt="">
                         </div>
                         <div class="section-team__bg section-team__bg-right">
-                            <img src="images/heand-2.png" alt="">
+                            <img src="/images/heand-2.png" alt="">
                         </div>
                     </div>
                     <div class="section-team__left">
@@ -575,7 +578,7 @@
                         </div>
                     </div>
                     <div class="section-team__right">
-                        <img src="images/team.png" alt="">
+                        <img src="/images/team.png" alt="">
                         <span>93 heroes per team</span>
                     </div>
                 </div>
@@ -783,51 +786,46 @@
     </main>
 @endsection
 
-{{--@push('scripts')--}}
-{{--    <script src="{{ asset('js/jquery.postpone.min.js') }}"></script>--}}
-{{--    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>--}}
-{{--    <script src="https://momentjs.com/downloads/moment-timezone-with-data.js"></script>--}}
-{{--    <script>--}}
-{{--        const nhs = parseInt('{{ $live->nft_holders_start }}')--}}
-{{--        const nhe = parseInt('{{ $live->nft_holders_end }}')--}}
+@push('scripts')
+    <script src="{{ asset('js/jquery.postpone.min.js') }}"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data.js"></script>
+    <script>
+        const nhs = parseInt('{{ $live->nft_holders_start }}')
+        const nhe = parseInt('{{ $live->nft_holders_end }}')
 
-{{--        const lps = parseInt('{{ $live->investment_pool_start }}')--}}
-{{--        const lpe = parseInt('{{ $live->investment_pool_end }}')--}}
+        const lps = parseInt('{{ $live->investment_pool_start }}')
+        const lpe = parseInt('{{ $live->investment_pool_end }}')
 
-{{--        const tps = parseInt('{{ $live->total_profit_start }}')--}}
-{{--        const tpe = parseInt('{{ $live->total_profit_end }}')--}}
+        const day_sec = 86400;
+        const end_d = moment().tz("Europe/Budapest").endOf('day');
 
-{{--        const day_sec = 86400;--}}
-{{--        const end_d = moment().tz("Europe/Budapest").endOf('day');--}}
+        function nh_f(){
+            const bud_time = moment().tz("Europe/Budapest")
+            const duration = moment.duration(end_d.diff(bud_time));
+            const seconds = duration.asSeconds();
 
-{{--        function nh_f(){--}}
-{{--            const bud_time = moment().tz("Europe/Budapest")--}}
-{{--            const duration = moment.duration(end_d.diff(bud_time));--}}
-{{--            const seconds = duration.asSeconds();--}}
-
-{{--            const nh = Math.round(nhs + ((nhe - nhs) * (day_sec - seconds) / day_sec));--}}
+            const nh = Math.round(nhs + ((nhe - nhs) * (day_sec - seconds) / day_sec));
 
 
-{{--            const lp = lps + ((lpe - lps) * (day_sec - seconds) / day_sec);--}}
-{{--            const tp = tps + ((tpe - tps) * (day_sec - seconds) / day_sec);--}}
+            const lp = lps + ((lpe - lps) * (day_sec - seconds) / day_sec);
 
-{{--            $('.holders').text(nh);--}}
-{{--            $('.investment-pool').text('$'+new Intl.NumberFormat().format(lp));--}}
-{{--            $('.total-profit').text('$'+new Intl.NumberFormat().format(tp));--}}
-{{--        }--}}
+            $('.holders').text(nh);
+            $('.investment-pool').text('$'+new Intl.NumberFormat().format(lp));
+        }
 
-{{--        nh_f()--}}
-{{--        $.every(1000, 'Avaq').progress(function (name) {--}}
-{{--            const r = Math.floor(Math.random() * 30) * 1000;--}}
+        nh_f()
+        $.every(1000, 'Avaq').progress(function (name) {
+            const r = Math.floor(Math.random() * 30) * 1000;
 
-{{--           setTimeout(nh_f,r);--}}
-{{--        });--}}
+           setTimeout(nh_f,r);
+        });
 
-{{--    </script>--}}
+    </script>
 
-{{--    <script>--}}
-{{--        $(function (){--}}
-{{--            $('script').remove();--}}
-{{--        })--}}
-{{--    </script>--}}
-{{--@endpush--}}
+    <script>
+        $(function (){
+            $('script').remove();
+        })
+    </script>
+@endpush

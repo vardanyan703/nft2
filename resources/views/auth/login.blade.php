@@ -8,10 +8,10 @@
                 @csrf
                 <div class="effects">
                     <div class="effect effect-1">
-                        <img src="images/heand-1__small.png" alt="">
+                        <img src="/images/heand-1__small.png" alt="">
                     </div>
                     <div class="effect effect-2">
-                        <img src="images/heand-2__small.png" alt="">
+                        <img src="/images/heand-2__small.png" alt="">
                     </div>
                 </div>
                 <h1 class="title title-line">Log in</h1>
@@ -20,7 +20,7 @@
                     <div class="form-item">
                         <label for="username" class="form-label">Username</label>
                         <div class="form-input @if($errors->has('name')) error @endif">
-                            <input type="text" name="name" id="username" placeholder="Andrew Marynovych">
+                            <input type="text" name="name" id="username" placeholder="">
                             @error('name')
                                 <div class="form-input__error">{{ $message }}</div>
                             @enderror
@@ -29,7 +29,7 @@
                     <div class="form-item">
                         <label for="password" class="form-label">Password</label>
                         <div class="form-input @if($errors->has('password')) error @endif">
-                            <input type="password" name="password" id="password" placeholder="password">
+                            <input type="password" name="password" id="password" placeholder="">
                             @error('password')
                                 <div class="form-input__error">{{ $message }}</div>
                             @enderror
@@ -59,7 +59,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="title title-small-1  title-small__link pb-2 mb-0">Forgot password?</div>
+                                <a class="title title-small-1  title-small__link pb-2 mb-0" href="{{ route('password.request') }}">Forgot password?</a>
                             </div>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
         $('#reload').click(function () {
             $.ajax({
                 type: 'GET',
-                url: 'reload-captcha',
+                url: '/reload-captcha',
                 success: function (data) {
                     $("#captcha").prop('src', data.captcha);
                 }

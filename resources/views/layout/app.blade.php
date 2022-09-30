@@ -14,9 +14,9 @@
     {!! Meta::tag('image',asset('assets/cabinet/style/default/img/monky.png')) !!}
     <meta itemprop="image" content="{{ asset('assets/cabinet/style/default/img/monky.png') }}">
     <title>NFT Grower - NFT Collection | P2E Metaverse | Investment Pool </title>
-
+    <link rel="shortcut icon" href="{{ asset('favicon.png?v=2') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/main.min.css') }}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
         // (function(m,e,t,r,i,k,a){m[i]=m[i]function(){(m[i].a=m[i].a[]).push(arguments)};
@@ -191,7 +191,7 @@
             </select></div>
         Технологии <span style="white-space:nowrap"><a class="goog-logo-link" href="./translate.google.com.html"
                                                        target="_blank"><img
-                    src="./www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px"
+                    src="www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px"
                     height="14px" style="padding-right: 3px" alt="Google Переводчик">Переводчик</a></span></div>
 </div>
 <style type="text/css">
@@ -224,6 +224,20 @@
 <script type="text/javascript" src="{{ asset('assets/theme/style/flags/f.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/theme/style/flags/google_translater.js') }}"></script>
 
+
+<script>
+    function readCookie(name) {
+        var c = document.cookie.split('; '),
+            cookies = {}, i, C;
+
+        for (i = c.length - 1; i >= 0; i--) {
+            C = c[i].split('=');
+            cookies[C[0]] = C[1];
+        }
+
+        return cookies[name];
+    }
+</script>
 @stack('scripts')
 </body>
 </html>

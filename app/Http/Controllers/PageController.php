@@ -11,58 +11,59 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-   public function index()
-   {
-       $tariffs = Tariff::query()
-         ->with('attachment')
-         ->get();
+    public function index()
+    {
+        $tariffs = Tariff::query()
+            ->with('attachment')
+            ->get();
 
-       $faq = Faq::query()
-           ->latest()
-           ->first();
+        $faq = Faq::query()
+            ->latest()
+            ->first();
 
-       $live = LiveStatistic::query()->first();
+        $live = LiveStatistic::query()->first();
 
-      return view('home',compact('tariffs','live','faq'));
-   }
-
-   public function about()
-   {
-      return view('about');
-   }
-
-   public function mainNews()
-   {
-      $news = News::query()
-         ->with('attachment')
-         ->orderBy('id', 'desc')
-         ->get();
-      return view('main_news', compact('news'));
-   }
-
-   public function faq()
-   {
-      $faq = Faq::query()
-         ->latest()
-         ->first();
-      return view('faq',compact('faq'));
-   }
-
-   public function rules()
-   {
-      return view('rules');
-   }
-
-
-   public function videoReviews()
-   {
-      $video_reviews = VideoReview::query()
-         ->orderBy('id', 'desc')
-         ->get();
-       return view('video_reviews',compact('video_reviews'));
+        return view('home', compact('tariffs', 'live', 'faq'));
     }
 
-    public function affiliate(){
-       return view('affiliate');
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function mainNews()
+    {
+        $news = News::query()
+            ->with('attachment')
+            ->orderBy('id', 'desc')
+            ->get();
+        return view('main_news', compact('news'));
+    }
+
+    public function faq()
+    {
+        $faq = Faq::query()
+            ->latest()
+            ->first();
+        return view('faq', compact('faq'));
+    }
+
+    public function termsAndConditions()
+    {
+        return view('termsAndConditions');
+    }
+
+
+    public function passwordChangeDone()
+    {
+       if(session()->has('change'))
+            return view('auth.passwords.success');
+
+       return abort('404');
+    }
+
+    public function affiliate()
+    {
+        return view('affiliate');
     }
 }

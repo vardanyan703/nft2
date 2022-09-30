@@ -23,13 +23,15 @@ Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'i
 
 
 Route::get('/',[\App\Http\Controllers\PageController::class,'index'])->name('home');
-Route::get('about',[\App\Http\Controllers\PageController::class,'about'])->name('about');
+//Route::get('about',[\App\Http\Controllers\PageController::class,'about'])->name('about');
 //Route::get('main-news',[\App\Http\Controllers\PageController::class,'mainNews'])->name('main-news');
 //Route::get('video-reviews',[\App\Http\Controllers\PageController::class,'videoReviews'])->name('video-reviews');
-Route::get('faq',[\App\Http\Controllers\PageController::class,'faq'])->name('faq');
-Route::get('rules',[\App\Http\Controllers\PageController::class,'rules'])->name('rules');
+//Route::get('faq',[\App\Http\Controllers\PageController::class,'faq'])->name('faq');
+Route::get('terms-and-conditions',[\App\Http\Controllers\PageController::class,'termsAndConditions'])->name('termsAndConditions');
 Route::get('ref/{username}',[\App\Http\Controllers\ReferralController::class,'__invoke'])->middleware('referral')->name('referral');
 Route::get('affiliate/presentation',[\App\Http\Controllers\PageController::class,'affiliate'])->name('affiliate');
+
+Route::get('/password/success',[\App\Http\Controllers\PageController::class,'passwordChangeDone'])->name('passwordChangeDone');
 
 \Illuminate\Support\Facades\Auth::routes();
 Route::get('reload-captcha', [App\Http\Controllers\CaptchaServiceController::class, 'reloadCaptcha']);
