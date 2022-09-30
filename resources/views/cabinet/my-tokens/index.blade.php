@@ -6,11 +6,9 @@
             <div class="cardfon">
                 <div class="row row-deck row-cards">
                     <div class="col-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Reinvest funds</h4>
-                            </div>
-                            <div class="card-body">
+                        <div class="card card-grey card-tokens">
+                                <h4 class="title title-small text-uppercase title-line mb-md-2">Reinvest funds</h4>
+                            <div class="mt-xl-4 mt-2">
                                 {{ debug($errors) }}
 
                                 @if($errors->any())
@@ -22,14 +20,14 @@
                                         </ul>
                                     </div>
                                 @endif
-                                <form action="{{ route('cabinet.buy-token.payment.balance') }}" method="post">
+                                <form action="{{ route('cabinet.buy-token.payment.balance') }}"  method="post">
                                     <input type="hidden" name="do" value="wallet_reinvest_pay">
                                     <input type="hidden" name="duplicate" value="1658428473">
                                     @csrf
                                     <div class="row">
-                                        <div class="col-md-4 mb-2" translate="no">
+                                        <div class="col-xl-4 col-lg-6 mb-xl-2 mb-lg-4 mb-3" translate="no">
                                             <label class="form-label" translate="yes">Select a token</label>
-                                            <select class="form-select" id="tarif_plan_reinvest"
+                                            <select class="form-select form-control form-select-main table-white form-select-main__big" id="tarif_plan_reinvest"
                                                     name="tarif_plan_reinvest"
                                                     onchange="tarif_plan_reinvest_setinfo(this);">
                                                 @foreach($tariffs as $tariff)
@@ -40,13 +38,13 @@
 
                                             </select>
                                         </div>
-                                        <div class="col-md-4 mb-2" translate="no">
+                                        <div class="col-xl-4 col-lg-6 mb-xl-2 mb-lg-4 mb-3" translate="no">
                                             <label class="form-label" translate="yes">Select a payment system</label>
                                             <div class="choices" data-type="select-one" tabindex="0" role="listbox"
                                                  aria-haspopup="true" aria-expanded="false">
                                                 <select name="wallet_type"
                                                         onchange="get_wallet_minmax(this);"
-                                                        class="form-select form-control"
+                                                        class="form-select form-control form-select-main table-white form-select-main__big"
                                                         id="selects" hidden="" tabindex="-1"
                                                 >
                                                     <option value="">Payment system</option>
@@ -58,24 +56,22 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 mb-2" translate="no">
+                                        <div class="col-xl-4 col-lg-6" translate="no">
                                             <label class="form-label" translate="yes">Enter amount (USD)</label>
-                                            <input class="form-control" autocomplete="off" name="m_amount"
+                                            <input class="form-control form-input-main table-white form-input-main__big"  autocomplete="off" name="m_amount"
                                                    id="tdep_minmax" type="text" placeholder="" disabled=""
                                                    inputmode="text">
                                         </div>
                                     </div>
-                                    <div class="form-footer">
-                                        <button onclick="return reinvest();" type="submit" name="submit" id="form"
-                                                class="btn btn-primary">
-                                            <svg style="margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"
-                                                 width="16" height="16" fill="currentColor" class="bi bi-cart-plus-fill"
-                                                 viewBox="0 0 16 16">
-                                                <path
-                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z"/>
-                                            </svg>
-                                            Buy a token
-                                        </button>
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-6">
+                                            <div class="form-footer">
+                                                <button onclick="return reinvest();" type="submit" name="submit" id="form"
+                                                        class="w-full btn btn-yellow btn-big text-uppercase btn-main btn-primary">
+                                                    Buy a token
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                     <script>
                                         function reinvest() {
@@ -91,12 +87,10 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <div class="card">
+                        <div class="card card-grey card-tokens">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Your tokens</h4>
-                                    </div>
+                                    <h4 class="title title-small text-uppercase title-line mb-2">Your tokens</h4>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="row">
@@ -203,18 +197,14 @@
                                             </div>
                                         @empty
                                             <div class="col-md-12">
-                                                <div class="card card-sm">
-                                                    <div class="card-body">
-                                                        <div class="row align-items-center">
-                                                            <div class="col-12">
-                                                                <h4 class="card-title">YOU DON'T HAVE ANY DEPOSITS</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                <div class="main-empty ">
+                                                    <h4 class="main-empty__title">
+{{--                                                        YOU DON'T HAVE ANY DEPOSITS--}}
+                                                        You don’t have any tokens
+                                                    </h4>
                                                 </div>
                                             </div>
                                         @endforelse
-
                                     </div>
                                 </div>
                             </div>
