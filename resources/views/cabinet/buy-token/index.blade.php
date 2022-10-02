@@ -30,7 +30,7 @@
                                     <h4 class="title title-small text-uppercase title-line mb-2">Tariff plans</h4>
                                 </div>
                                 @foreach($tariffs as $key => $tariff)
-                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                                         <div class="card" style="background: #fff;color: #000;">
                                             <div class="card-body">
                                                 <form action="{{ route('cabinet.buy-token.payment.confirm') }}"
@@ -129,7 +129,7 @@
                                                             >
                                                         </div>
                                                     </div>
-                                                    <div class="form-footer mt-3 pt-2" style="margin-top: 1.1rem;">
+                                                    <div class="form-footer mt-3 pt-lg-2" style="margin-top: 1.1rem;">
                                                         <button type="button" name="submit" id="form"
                                                                 data-min="{{ $tariff->min_price }}"
                                                                 data-max="{{ $tariff->max_price }}"

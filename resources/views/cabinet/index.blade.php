@@ -7,23 +7,23 @@
         <div class="container-fluid">
             <div class="cardfon">
                 <div class="row row-deck row-cards d-flex">
-                    <div class="w-full" style="max-width: 373px">
+                    <div class="w-full person-info" style="max-width: 373px">
                         <div class="card card-sm" style="background: #FFDC40;color: #000;">
                             <div class="card-body">
                                 <div class="row align-items-center">
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="profile-img">
-                                                    <img src="{{ asset('assets/cabinet/style/default/img/monky.png') }}"
-                                                         alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="text-center profile-name-margin">
+                                                <div class="profile-img__inner">
+                                                    <div class="profile-img">
+                                                        <img src="{{ asset('assets/cabinet/style/default/img/monky.png') }}"
+                                                             alt="">
+                                                    </div>
+                                                    <div class="text-center profile-name-margin">
                                                     <span class="profile-name text-uppercase " translate="no">
                                                         {{ auth()->user()->name }}
                                                     </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -79,7 +79,7 @@
                                                     <h4 class="title title-small-1 title-line title-line__dark">Referral
                                                         link</h4>
                                                 </div>
-                                                <div class="w-full mb-md-4 mb-2">
+                                                <div class="w-full mb-sm-4 mb-3">
                                                     <form>
                                                         <div class="input-group input-main-group">
                                                             <input type="text" class="form-control"
@@ -116,9 +116,10 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
-                                                <div class="mt-3">
+                                                <div class="mt-md-3">
                                                     <h4 class="title title-small-1 title-line title-line__dark">
-                                                        Authorization logs</h4>
+                                                        Authorization logs
+                                                    </h4>
 
                                                     <div class="profile-info__list profile-info__list-2 pt-1">
                                                         @foreach($geos as $log)
@@ -167,106 +168,110 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="card card-sm card-main mt-4">
-                                    <div class="row align-items-center">
-                                        <div class="col-md-10 col-sm-12 col-12">
-                                            <h4 class="card-main__title">Total Deposits</h4>
-                                            <div class="card-main__price" translate="no">
-                                                {{ number_format($deposit,2) }}
+                            <div class="col-xl-4">
+                                <div class="card card-sm card-main mt-xxl-4 mt-2 mb-0">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <h4 class="card-main__title">Total Deposits</h4>
+                                                <div class="card-main__price" translate="no">
+                                                    {{ number_format($deposit,2) }}
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-2 col-sm-12 col-12 text-center">
                                             <span class="bg-border-yellow avatar" translate="no">USD</span>
-                                        </div>
                                     </div>
 
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="card card-sm card-main mt-4">
-                                    <div class="row align-items-center">
-                                        <div class="col-md-10 col-sm-12 col-12">
+                            <div class="col-xl-4">
+                                <div class="card card-sm card-main mt-xxl-4 mt-2 mb-0">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
                                             <h4 class="card-main__title">Total Withdraw</h4>
                                             <div class="card-main__price" translate="no">
                                                 {{ number_format($withdraw,2) }}
                                             </div>
                                         </div>
-                                        <div class="col-md-2 col-sm-12 col-12 text-center">
-                                            <span class="bg-border-yellow avatar" translate="no">USD</span>
-                                        </div>
+                                        <span class="bg-border-yellow avatar" translate="no">USD</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="card card-sm card-main mt-4">
-                                    <div class="row align-items-center">
-                                        <div class="col-md-10 col-sm-12 col-12">
+                            <div class="col-xl-4">
+                                <div class="card card-sm card-main mt-xxl-4 mt-2 mb-0">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
                                             <h4 class="card-main__title">Available Balance</h4>
                                             <div class="card-main__price"  translate="no">
                                                 {{ number_format($total_balance,2)}}
                                             </div>
                                         </div>
-                                        <div class="col-md-2 col-sm-12 col-12 text-center">
-                                            <span class="bg-border-yellow avatar" translate="no">USD</span>
-                                        </div>
+                                        <span class="bg-border-yellow avatar" translate="no">USD</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="card card-grey px-3">
+                            <div class="col-md-12 mt-sm-3 mt-2">
+                                <div class="card card-grey px-sm-3">
                                     <div class="px-2">
                                         <div class="pt-3 my-1 ">
                                             <h4 class="title title-small text-uppercase title-line mb-2">Financial statistics</h4>
                                         </div>
                                         <div class="row">
-                                            @foreach($currencies as $currency)
-                                                <div class="col-md-6">
-                                                    <div class="card card-sm card-white card-statistic mx-0">
-                                                        <div class="card-body">
-                                                            <div class="row align-items-center">
-                                                                <div class="col-md-10 col-sm-12 col-12">
-                                                                    <div class="card-statistic__price" translate="no">
-                                                                        <span class="text-yellow">
+                                            <div class="col-12">
+                                                <div class="statistics">
+                                                    @foreach($currencies as $currency)
+                                                            <div class="statistic-item card card-sm card-white card-statistic mx-0">
+                                                                <div class="row align-items-center">
+                                                                    <div class="card-statistic-mobile col" style="max-width: 36px">
+                                                                        <img
+                                                                                src="{{ asset("assets/cabinet/style/default/img/ps/$currency->image") }}"
+                                                                                alt="" style="max-width: 36px">
+                                                                    </div>
+                                                                    <div class="col-md-10 col-sm-12 col">
+                                                                        <div class="card-statistic__price" translate="no">
+                                                                            <div class="d-xxl-none d-block card-statistic-mobile-1">
+                                                                                <img
+                                                                                        src="{{ asset("assets/cabinet/style/default/img/ps/$currency->image") }}"
+                                                                                        alt="" style="max-width: 48px">
+                                                                            </div>
+                                                                            <span>
                                                                             {{ $currency->user->count() ? number_format($currency->user[0]->pivot->balance,4) : number_format(0,4) }} {{ $currency->name }}
                                                                         </span>
-                                                                    </div>
-                                                                    <div class="card-statistic__list">
-                                                                        <div class="card-statistic__item">
-                                                                            <div class="card-statistic__left">
-                                                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                    <rect width="8" height="8" fill="#FCD535"/>
-                                                                                </svg>
-                                                                                Total deposits
+                                                                        </div>
+                                                                        <div class="card-statistic__list">
+                                                                            <div class="card-statistic__item">
+                                                                                <div class="card-statistic__left">
+                                                                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                        <rect width="8" height="8" fill="#FCD535"/>
+                                                                                    </svg>
+                                                                                    Total deposits
+                                                                                </div>
+                                                                                <div class="card-statistic__right">
+                                                                                    {{ $currency->user->count() ? number_format($currency->user[0]->pivot->deposit,4) : number_format(0,4)  }} {{ $currency->network }}
+                                                                                </div>
                                                                             </div>
-                                                                            <div class="card-statistic__right">
-                                                                                {{ $currency->user->count() ? number_format($currency->user[0]->pivot->deposit,4) : number_format(0,4)  }} {{ $currency->network }}
+                                                                            <div class="card-statistic__item">
+                                                                                <div class="card-statistic__left">
+                                                                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                        <rect width="8" height="8" fill="#FCD535"/>
+                                                                                    </svg>
+                                                                                    Earned total
+                                                                                </div>
+                                                                                <div class="card-statistic__right">
+                                                                                    {{ $currency->user->count() ? number_format($currency->user[0]->pivot->earned_total,4) : number_format(0,4)  }} {{ $currency->network }}
+                                                                                </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="card-statistic__item">
-                                                                            <div class="card-statistic__left">
-                                                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                    <rect width="8" height="8" fill="#FCD535"/>
-                                                                                </svg>
-                                                                                Earned total
-                                                                            </div>
-                                                                            <div class="card-statistic__right">
-                                                                                {{ $currency->user->count() ? number_format($currency->user[0]->pivot->earned_total,4) : number_format(0,4)  }} {{ $currency->network }}
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
 
-                                                                </div>
-                                                                <div class="col-md-2 col-sm-12 col-12 text-center">
-                                                                    <img
-                                                                            src="{{ asset("assets/cabinet/style/default/img/ps/$currency->image") }}"
-                                                                            alt="" style="max-width: 58px">
+                                                                    </div>
+                                                                    <div class="col-md-2 col-sm-12 col-12 text-center d-xxl-block d-none">
+                                                                        <img
+                                                                                src="{{ asset("assets/cabinet/style/default/img/ps/$currency->image") }}"
+                                                                                alt="" style="max-width: 58px;width: 100%;">
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
+                                                    @endforeach
                                                 </div>
-                                            @endforeach
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

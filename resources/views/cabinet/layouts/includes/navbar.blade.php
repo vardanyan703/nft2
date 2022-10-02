@@ -1,6 +1,6 @@
 <aside class="navbar navbar-vertical navbar-expand-lg navbar-dark m-0 rounded-0">
     <div class="w-full">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+        <button class="navbar-toggler navbar-toggler__custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
             <span class="navbar-toggler-icon"></span>
         </button>
         <h1 class="navbar-brand navbar-brand-autodark p-0  logo-img">

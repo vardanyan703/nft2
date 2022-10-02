@@ -111,43 +111,69 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="row">
-                                        @forelse($withdraws as $withdraw)
-                                            <div class="col-lg-3 col-lg-3 col-sm-4">
-                                                <div class="card card-sm" style="background: #fff;">
-                                                    <div class="card-body">
+                                        <div class="col-12">
+                                            <div class="statistics statistics-1">
+                                                @forelse($withdraws as $withdraw)
+                                                    <div class="statistic-item card card-sm card-white card-statistic mx-0">
                                                         <div class="row align-items-center">
-                                                            <div class="col-lg-10 col-sm-12 col-12">
-                                                                <div class="card-header">
-                                                                    <h4 class="card-title"
-                                                                        translate="no">{{ $withdraw->crypto->name }}</h4>
-                                                                </div>
-                                                                <div class="text-muted"><i
-                                                                            class="bi bi-chevron-compact-right"></i>
-                                                                    Total
-                                                                    deposits&nbsp; <b
-                                                                            translate="no">{{  $withdraw->amount }} {{ $withdraw->network }}</b>
-                                                                </div>
-                                                                <div class="font-weight-medium {{ \App\Models\WithdrawQuestion::WITHDRAW_QUESTION_STATUSES[$withdraw->status] }}"
-                                                                     style="font-size: 1.5rem;color: #6F9D75;"
-                                                                     translate="no"> {{ \App\Models\WithdrawQuestion::WITHDRAW_QUESTION_STATUSES[$withdraw->status] == 'Affiliate' ? 'Paid' : \App\Models\WithdrawQuestion::WITHDRAW_QUESTION_STATUSES[$withdraw->status]}}</div>
+                                                            <div class="card-statistic-mobile col" style="max-width: 36px">
+                                                                <img
+                                                                        src="{{ asset("assets/cabinet/style/default/img/ps/".$withdraw->crypto->image) }}"
+                                                                        alt="" style="max-width: 36px">
                                                             </div>
-                                                            <div class="col-lg-2 col-sm-12 col-12 text-center">
-                                                                <img src="{{ asset("assets/cabinet/style/default/img/ps/".$withdraw->crypto->image) }}"
-                                                                     alt="">
+                                                            <div class="col-md-10 col-sm-12 col">
+                                                                <div class="card-statistic__price" translate="no">
+                                                                    <div class="d-xxl-none d-block card-statistic-mobile-1">
+                                                                        <img
+                                                                                src="{{ asset("assets/cabinet/style/default/img/ps/".$withdraw->crypto->image) }}"
+                                                                                alt="" style="max-width: 48px">
+                                                                    </div>
+                                                                    <span>
+                                                                {{ $withdraw->crypto->name }}
+                                                            </span>
+                                                                </div>
+                                                                <div class="card-statistic__list">
+                                                                    <div class="card-statistic__item">
+                                                                        <div class="card-statistic__left">
+                                                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <rect width="8" height="8" fill="#FCD535"/>
+                                                                            </svg>
+                                                                            Total
+                                                                            deposits
+                                                                        </div>
+                                                                        <div class="card-statistic__right">
+                                                                            {{  $withdraw->amount }} {{ $withdraw->network }}
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="card-statistic__status {{ \App\Models\WithdrawQuestion::WITHDRAW_QUESTION_STATUSES[$withdraw->status] }}"
+                                                                     translate="no">
+                                                                    {{ \App\Models\WithdrawQuestion::WITHDRAW_QUESTION_STATUSES[$withdraw->status] == 'Affiliate' ? 'Paid' : \App\Models\WithdrawQuestion::WITHDRAW_QUESTION_STATUSES[$withdraw->status]}}
+                                                                </div>
+
+
+                                                            </div>
+                                                            <div class="col-md-2 col-sm-12 col-12 text-center d-xxl-block d-none">
+                                                                <img
+                                                                        src="{{ asset("assets/cabinet/style/default/img/ps/".$withdraw->crypto->image) }}"
+                                                                        alt="" style="max-width: 58px;width: 100%;">
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+
+                                                @empty
+                                                    <div class="col-lg-12">
+                                                        <div class="main-empty ">
+                                                            <h4 class="main-empty__title">
+                                                                You don't have any payments
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+                                                @endforelse
                                             </div>
-                                        @empty
-                                            <div class="col-lg-12">
-                                                <div class="main-empty ">
-                                                    <h4 class="main-empty__title">
-                                                        You don't have any payments
-                                                    </h4>
-                                                </div>
-                                            </div>
-                                        @endforelse
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>

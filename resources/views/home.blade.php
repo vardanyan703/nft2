@@ -124,11 +124,11 @@
                     <h2 class="title title-line">live statistics</h2>
                     <div class="statistic__info">
                         <div class="statistic__info-item">
-                            <div class="title investment-pool" >$34 329 428,323</div>
+                            <div class="title investment-pool" translate="no" >$34 329 428,323</div>
                             <div class="desc">Investment Pool</div>
                         </div>
                         <div class="statistic__info-item">
-                            <div class="title holders">5074</div>
+                            <div class="title holders" >5074</div>
                             <div class="desc">Community</div>
                         </div>
                     </div>
