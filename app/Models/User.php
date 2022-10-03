@@ -134,13 +134,13 @@ class User extends Authenticatable
     public function tariffs(): BelongsToMany
     {
         return $this->belongsToMany(Tariff::class, 'user_tariffs', 'user_id', 'tariff_id')
-            ->withPivot(['created_at', 'status','deposit','total_deposit','txn_id','stop_at','created_at','network']);
+            ->withPivot(['created_at', 'status', 'deposit', 'total_deposit', 'txn_id', 'stop_at', 'created_at', 'network']);
     }
 
     public function cryptos(): BelongsToMany
     {
         return $this->belongsToMany(Crypto::class, 'crypto_user', 'user_id', 'crypto_id')
-            ->withPivot('id', 'deposit', 'balance', 'earned_total','withdraw');
+            ->withPivot('id', 'deposit', 'balance', 'earned_total', 'withdraw');
     }
 
     public function wallet_addresses(): HasMany
@@ -161,6 +161,10 @@ class User extends Authenticatable
 
     public static function getUserByIdOrName($buyer, $currency)
     {
+        if ($buyer instanceof self) {
+            $buyer = $buyer->id;
+        }
+
         return self::query()
             ->where('id', $buyer)
             ->orWhere('name', $buyer)
@@ -227,9 +231,7 @@ class User extends Authenticatable
 
     public static function updateCryptosFromBalance($user, $network, $received_amount)
     {
-        if (!($user instanceof self)) {
-            $user = self::getUserByIdOrName($user, $network);
-        }
+        $user = self::getUserByIdOrName($user, $network);
 
         $user->cryptos()
             ->newPivotStatement()
@@ -243,9 +245,7 @@ class User extends Authenticatable
 
     public static function withdrawCryptosFromBalance($user, $network, $received_amount)
     {
-        if (!($user instanceof self)) {
-            $user = self::getUserByIdOrName($user, $network);
-        }
+        $user = self::getUserByIdOrName($user, $network);
 
         $user->cryptos()
             ->newPivotStatement()
@@ -259,9 +259,7 @@ class User extends Authenticatable
 
     public static function updateOrAttachCryptoDeposit($user, $network, $received_amount)
     {
-        if (!($user instanceof self)) {
-            $user = self::getUserByIdOrName($user, $network);
-        }
+        $user = self::getUserByIdOrName($user, $network);
 
         $user->cryptos()
             ->newPivotStatement()
@@ -274,9 +272,7 @@ class User extends Authenticatable
 
     public static function updateOrAttachCryptoBalance($user, $network, $received_amount)
     {
-        if (!($user instanceof self)) {
-            $user = self::getUserByIdOrName($user, $network);
-        }
+        $user = self::getUserByIdOrName($user, $network);
 
         $user->cryptos()
             ->newPivotStatement()
@@ -289,9 +285,7 @@ class User extends Authenticatable
 
     public static function updateOrAttachCryptoEarnedTotal($user, $network, $received_amount)
     {
-        if (!($user instanceof self)) {
-            $user = self::getUserByIdOrName($user, $network);
-        }
+        $user = self::getUserByIdOrName($user, $network);
 
         $user->cryptos()
             ->newPivotStatement()
@@ -348,8 +342,9 @@ class User extends Authenticatable
         );
     }
 
-    public function getBalance($network){
-        return $this->cryptos()->where('network',$network)->first();
+    public function getBalance($network)
+    {
+        return $this->cryptos()->where('network', $network)->first();
     }
 
 }
