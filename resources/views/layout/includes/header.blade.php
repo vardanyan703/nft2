@@ -1,4 +1,4 @@
-<header class="header">
+<div class="navbar-main-2">
     <div class="wrapper">
         <div class="header-inner">
             <a class="header-logo logo" href="{{ route('home') }}">
@@ -165,8 +165,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn">Log in</button>
-                            <button class="btn btn-primary">Sign Up</button>
+                            <a class="btn" href="{{ route('login') }}">Log in</a>
+                            <a class="btn btn-primary" href="{{ route('register') }}">Sign Up</a>
                         </div>
                     </div>
                 </div>
