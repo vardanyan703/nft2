@@ -140,7 +140,7 @@
             <div class="wrapper">
                 <div class="section-grower__inner">
                     <div class="section-grower__left">
-                        <video loop autoplay="autoplay" muted>
+                        <video loop autoplay playsinline muted>
                             <source src="images/gif.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -200,14 +200,15 @@
                             <img src="images/featured-1.png" alt="">
                         </a>
                     </li>
+
                     <li class="featured__item">
                         <a href="#" class="featured__link">
-                            <img src="images/featured-3.png" alt="">
+                            <img src="images/featured-2.png" alt="">
                         </a>
                     </li>
                     <li class="featured__item">
                         <a href="#" class="featured__link">
-                            <img src="images/featured-2.png" alt="">
+                            <img src="images/featured-3.png" alt="">
                         </a>
                     </li>
                     <li class="featured__item">
@@ -578,7 +579,7 @@
                         </div>
                     </div>
                     <div class="section-team__right">
-                        <img src="/images/team.png" alt="">
+                        <img src="/images/team.jpg" alt="">
                         <span>93 heroes per team</span>
                     </div>
                 </div>
@@ -657,46 +658,46 @@
                                 IOST, etc..</p>
                             <ul class="coin__list">
                                 <li class="coin__item ">
-                                    <img src="images/coin-14.png" alt="">
-                                </li>
-                                <li class="coin__item ">
-                                    <img src="images/coin-13.png" alt="">
-                                </li>
-                                <li class="coin__item ">
-                                    <img src="images/coin-12.png" alt="">
-                                </li>
-                                <li class="coin__item ">
-                                    <img src="images/coin-11.png" alt="">
-                                </li>
-                                <li class="coin__item ">
-                                    <img src="images/coin-10.png" alt="">
-                                </li>
-                                <li class="coin__item ">
-                                    <img src="images/coin-9.png" alt="">
-                                </li>
-                                <li class="coin__item ">
-                                    <img src="images/coin-8.png" alt="">
-                                </li>
-                                <li class="coin__item ">
-                                    <img src="images/coin-7.png" alt="">
-                                </li>
-                                <li class="coin__item ">
-                                    <img src="images/coin-6.png" alt="">
-                                </li>
-                                <li class="coin__item ">
-                                    <img src="images/coin-5.png" alt="">
-                                </li>
-                                <li class="coin__item ">
-                                    <img src="images/coin-4.png" alt="">
-                                </li>
-                                <li class="coin__item ">
-                                    <img src="images/coin-3.png" alt="">
+                                    <img src="images/coin-1.png" alt="">
                                 </li>
                                 <li class="coin__item ">
                                     <img src="images/coin-2.png" alt="">
                                 </li>
                                 <li class="coin__item ">
-                                    <img src="images/coin-1.png" alt="">
+                                    <img src="images/coin-3.png" alt="">
+                                </li>
+                                <li class="coin__item ">
+                                    <img src="images/coin-4.png" alt="">
+                                </li>
+                                <li class="coin__item ">
+                                    <img src="images/coin-5.png" alt="">
+                                </li>
+                                <li class="coin__item ">
+                                    <img src="images/coin-6.png" alt="">
+                                </li>
+                                <li class="coin__item ">
+                                    <img src="images/coin-7.png" alt="">
+                                </li>
+                                <li class="coin__item ">
+                                    <img src="images/coin-8.png" alt="">
+                                </li>
+                                <li class="coin__item ">
+                                    <img src="images/coin-9.png" alt="">
+                                </li>
+                                <li class="coin__item ">
+                                    <img src="images/coin-10.png" alt="">
+                                </li>
+                                <li class="coin__item ">
+                                    <img src="images/coin-11.png" alt="">
+                                </li>
+                                <li class="coin__item ">
+                                    <img src="images/coin-12.png" alt="">
+                                </li>
+                                <li class="coin__item ">
+                                    <img src="images/coin-13.png" alt="">
+                                </li>
+                                <li class="coin__item ">
+                                    <img src="images/coin-14.png" alt="">
                                 </li>
                             </ul>
                         </div>
