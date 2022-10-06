@@ -49,7 +49,7 @@
                         <div class="modal__body-right modal_time"></div>
                     </div>
                 </div>
-                <div class="modal__btn btn btn-primary">
+                <div class="btn btn-big btn-yellow btn-main text-uppercase mb-2 buy w-full">
                     I have paid
                 </div>
                 <p class="modal-more">Need help? <a href="#">Contact Us</a></p>
