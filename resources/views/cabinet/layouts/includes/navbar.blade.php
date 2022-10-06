@@ -1,16 +1,17 @@
-<aside class="navbar navbar-vertical navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+<aside class="navbar navbar-vertical navbar-expand-lg navbar-dark m-0 rounded-0">
+    <div class="w-full">
+        <button class="navbar-toggler navbar-toggler__custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <h1 class="navbar-brand navbar-brand-autodark">
+        <h1 class="navbar-brand navbar-brand-autodark p-0  logo-img">
             {{--<img src="{{ asset('assets/cabinet/style/default/img/logos/Group_1632519773.png') }}" alt="">--}}
-            <a href="{{ route('cabinet.index') }}"><img src="{{ asset('assets/cabinet/style/default/img/logos/Group_1632519773.png') }}" alt=""></a>
+            <a href="{{ route('cabinet.index') }}">
+                <img src="{{ asset('assets/cabinet/style/default/img/logos/Group_1632519773.png') }}" alt="">
+            </a>
             {{--<a href="{{ route('cabinet.index') }}"><span class="navbar-brand-span" translate="no">NFT<span style="color: #FFDC40;">mainer</span></span></a>--}}
         </h1>
         <div class="collapse navbar-collapse" id="navbar-menu">
-            <div class="dropdown-divider"></div>
-            <ul class="navbar-nav pt-lg-3">
+            <ul class="navbar-nav text-uppercase pt-lg-4">
                 <li class="nav-item @if(Route::currentRouteName() === 'cabinet.index') active @endif">
                     <a class="nav-link" href="{{ route('cabinet.index') }}">
                         <span class="nav-link-title" style="margin-left: 5px;">Dashboard</span>

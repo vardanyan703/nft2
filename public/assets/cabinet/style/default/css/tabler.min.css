@@ -12228,7 +12228,7 @@ body .content :hover::-webkit-scrollbar-thumb {
 
 @media (min-width: 992px) {
   .navbar-vertical.navbar-expand-lg {
-    width: 16rem;
+    width: 17.2rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -12296,10 +12296,10 @@ body .content :hover::-webkit-scrollbar-thumb {
     align-items: stretch
   }
 
-  .navbar-vertical.navbar-expand-lg .navbar-collapse .navbar-nav {
-    margin-left: calc(-1 * var(--tblr-gutter-x, 1.5rem));
-    margin-right: calc(-1 * var(--tblr-gutter-x, 1.5rem))
-  }
+  /*.navbar-vertical.navbar-expand-lg .navbar-collapse .navbar-nav {*/
+  /*  margin-left: calc(-1 * var(--tblr-gutter-x, 1.5rem));*/
+  /*  margin-right: calc(-1 * var(--tblr-gutter-x, 1.5rem))*/
+  /*}*/
 
   .navbar-vertical.navbar-expand-lg .navbar-collapse .navbar-nav .nav-link {
     padding: 1rem 0 1rem 1rem;

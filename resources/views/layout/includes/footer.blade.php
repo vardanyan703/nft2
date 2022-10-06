@@ -12,32 +12,33 @@
                         <a href="mailto:ads@nftgrower.io" class="footer-info__link">ads@nftgrower.io</a>
                     </div>
                 </div>
-                <div class="footer-top__inner">
-                    <nav class="footer-menu menu">
-                        <ul class="footer-menu__list menu__list">
-                            <li class="footer-menu__item menu__item">
-                                <a href="{{ Route::currentRouteName() == 'home' ? '#about' : route('home').'#about' }}" class="footer-menu__link menu__link">ABOUT US</a>
-                            </li>
-                            <li class="footer-menu__item menu__item">
-                                <a href="{{ Route::currentRouteName() == 'home' ? '#ntfs' : route('home').'#ntfs' }}" class="footer-menu__link menu__link">NFTs</a>
-                            </li>
-                            <li class="footer-menu__item menu__item">
-                                <a href="{{ Route::currentRouteName() == 'home' ? '#roadmap' : route('home').'#roadmap' }}" class="footer-menu__link menu__link">ROADMAP</a>
-                            </li>
-                            <li class="footer-menu__item menu__item">
-                                <a href="{{ Route::currentRouteName() == 'home' ? '#faq' : route('home').'#faq' }}" class="footer-menu__link menu__link" translate="no">FAQ</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="footer-btns">
-                        <a class="btn btn-grey" href="https://www.binance.com" target="_blank">
-                            <img src="/images/binance.svg" alt="">
-                        </a>
-                        <a class="btn btn-grey" href="https://www.trustpilot.com/review/nftgrower.io" target="_blank">
-                            <img src="/images/trustpilot.png" alt="">
-                        </a>
-                    </div>
+                <nav class="footer-menu menu">
+                    <ul class="footer-menu__list menu__list">
+                        <li class="footer-menu__item menu__item">
+                            <a href="{{ Route::currentRouteName() == 'home' ? '#about' : route('home').'#about' }}" class="footer-menu__link menu__link">ABOUT US</a>
+                        </li>
+                        <li class="footer-menu__item menu__item">
+                            <a href="{{ Route::currentRouteName() == 'home' ? '#ntfs' : route('home').'#ntfs' }}" class="footer-menu__link menu__link">NFTs</a>
+                        </li>
+                        <li class="footer-menu__item menu__item">
+                            <a href="{{ Route::currentRouteName() == 'home' ? '#roadmap' : route('home').'#roadmap' }}" class="footer-menu__link menu__link">ROADMAP</a>
+                        </li>
+                        <li class="footer-menu__item menu__item">
+                            <a href="{{ Route::currentRouteName() == 'home' ? '#faq' : route('home').'#faq' }}" class="footer-menu__link menu__link" translate="no">FAQ</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-btns">
+                    <a class="btn btn-grey" href="https://www.binance.com" target="_blank">
+                        <img src="/images/binance.svg" alt="">
+                    </a>
+                    <a class="btn btn-grey" href="https://www.trustpilot.com/review/nftgrower.io" target="_blank">
+                        <img src="/images/trustpilot.png" alt="">
+                    </a>
                 </div>
+{{--                <div class="footer-top__inner">--}}
+{{--                   --}}
+{{--                </div>--}}
             </div>
             <div class="footer-bottom">
                 <div class="footer-soc">
