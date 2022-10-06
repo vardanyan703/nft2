@@ -9,17 +9,21 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use Kevupton\LaravelCoinpayments\Models\Transaction;
 
 class PaymentCallbackEvent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+    private $transaction;
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct(private string $name){}
+    public function __construct(private string $name,private $transaction_txn_id){
+        $this->transaction = Transaction::query()->where('txn_id',$transaction_txn_id)->first();
+    }
 
     /**
      * Get the channels the event should broadcast on.
@@ -32,8 +36,11 @@ class PaymentCallbackEvent implements ShouldBroadcast
     }
 
     public function broadcastWith(){
+        $transaction = $this->transaction;
+
         return [
-            'status' => 'ok'
+            'html' => view('cabinet.modals.payment',compact('transaction'))->render(),
+            'transaction_id' => $this->transaction->id
         ];
     }
 }

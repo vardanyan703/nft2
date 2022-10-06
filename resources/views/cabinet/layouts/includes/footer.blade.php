@@ -1,5 +1,4 @@
-
-<script src="{{ asset('js/app.js?v=1') }}"></script>
+<script src="{{ asset('js/app.js?v=2') }}"></script>
 <script src="{{ asset('assets/cabinet/style/default/libs/choices.js/public/assets/scripts/select_fix.js') }}"></script>
 <script src="{{ asset('assets/cabinet/style/default/libs/choices.js/public/assets/scripts/choices.js') }}"></script>
 <link href="{{ asset('assets/cabinet/style/default/growl/jquery.growl.css') }}" rel="stylesheet" type="text/css">

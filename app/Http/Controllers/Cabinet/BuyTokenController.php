@@ -64,7 +64,10 @@ class BuyTokenController extends Controller
             'item_name' => $token->id,
         ]);
 
-        return redirect()->to($transaction['status_url']);
+        $transaction = Transaction::query()->where('id',$transaction['id'])->first();
+
+        $html = view('cabinet.modals.payment',compact('transaction'))->render();
+        return \response()->json($html);
     }
 
     /**

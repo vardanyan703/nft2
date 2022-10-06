@@ -26,6 +26,6 @@ class OnTransactionUpdated
      */
     public function handle(TransactionUpdated $event)
     {
-        event(new PaymentCallbackEvent($event->transaction['buyer_name']));
+        event(new PaymentCallbackEvent($event->transaction['buyer_name'],$event->transaction['txn_id']));
     }
 }
