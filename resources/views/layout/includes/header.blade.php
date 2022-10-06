@@ -1,4 +1,4 @@
-<div class="navbar-main-2">
+<header class="header">
     <div class="wrapper">
         <div class="header-inner">
             <a class="header-logo logo" href="{{ route('home') }}">
