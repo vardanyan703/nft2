@@ -291,6 +291,7 @@
 
         $(function () {
             $('button.buy').on('click', function (e) {
+                e.preventDefault();
                 let amount = $(this).parent('.form-footer').siblings().find('input[name="m_amount"]').val();
                 let min = $(this).data('min');
                 let max = $(this).data('max');
