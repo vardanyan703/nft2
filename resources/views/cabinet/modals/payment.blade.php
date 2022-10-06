@@ -82,7 +82,7 @@
 
 
         var countDownDate = moment('{{ $transaction->created_at }}').add('{{ $transaction->timeout }}', 's');
-        var x = setInterval(
+        window.x = setInterval(
             function () {
                 // Get today's date and time
                 var now = new Date().getTime();
@@ -104,7 +104,7 @@
 
                 // If the count down is finished, write some text
                 if (distance < 0) {
-                    clearInterval(x);
+                    clearInterval(window.x);
                     $('#buy-modal .modal_time').text("EXPIRED");
                 }
             }, 1000);

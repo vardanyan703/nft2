@@ -219,6 +219,11 @@
                                                         {{ $transaction->received_confirms ?? 0 }}
                                                         of {{ $transaction->confirms_needed }}
                                                     </th>
+                                                    <th>
+                                                        <button type="button" class="btn btn-big btn-yellow btn-main text-uppercase mb-2 open-details" data-id="{{ $transaction->id }}" style="width: 100%;">
+                                                            Details
+                                                        </button>
+                                                    </th>
                                                 </tr>
                                             @endforeach
                                         </table>
@@ -324,7 +329,6 @@
                     $(this).find('button.buy').removeClass('d-none');
                     $(this).find('button.loading').addClass('d-none');
 
-                    console.log(res);
                     $('#modal-html').html(res.data);
 
                     $('#buy-modal').fadeIn();
@@ -346,9 +350,23 @@
             $("body").on("click",".modal .close, .modal, .modal-close ", function (e) {
                 e.preventDefault();
                 $(".modal").fadeOut(function () {
+                    clearInterval(window.x);
                     $("body").css("overflow", "auto");
                 });
             });
+
+            $('.open-details').click(function (){
+
+                let id = $(this).data('id');
+
+                axios.post('/dashboard/buy-nfts/payment/details', { id : id}).then(res => {
+                    console.log(res);
+
+                    $('#modal-html').html(res.data);
+
+                    $('#buy-modal').fadeIn();
+                })
+            })
 
         });
     </script>

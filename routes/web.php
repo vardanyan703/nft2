@@ -45,6 +45,7 @@ Route::prefix('dashboard')->name('cabinet.')->middleware('auth')->group(function
      // Route::post('payment/create',[\App\Http\Controllers\Cabinet\BuyTokenController::class,'createPayment'])->name('payment.create');
       Route::post('payment/confirm',[\App\Http\Controllers\Cabinet\BuyTokenController::class,'confirmPayment'])->name('payment.confirm');
       Route::post('payment/balance',[\App\Http\Controllers\Cabinet\BuyTokenController::class,'fromBalance'])->name('payment.balance');
+      Route::post('payment/details',[\App\Http\Controllers\Cabinet\BuyTokenController::class,'details'])->name('payment.details');
    });
 
    Route::prefix('your-tokens')->name('my-tokens.')->group(function(){

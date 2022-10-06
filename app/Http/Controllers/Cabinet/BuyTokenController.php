@@ -134,4 +134,9 @@ class BuyTokenController extends Controller
 
         return redirect()->route('cabinet.my-tokens.index');
     }
+
+    public function details(Request $request){
+        $transaction = Transaction::query()->where('id',$request->get('id'))->firstOrFail();
+        return view('cabinet.modals.payment',compact('transaction'));
+    }
 }
