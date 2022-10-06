@@ -15,9 +15,13 @@
                         <h1 class="title title-big title-line title-line__white d-tab__min" translate="no">
                             JOIN <br> <span>US AND</span> <span class="title title-medium ">  EARN ON NFT</span>
                         </h1>
-                        <p class="home-desc">Earn up to 1.3% daily from the investment pool, own some of the best NFTs
-                            on Binance, and
-                            be part of a new world in the metaverse.</p>
+                        <p class="home-desc">
+                            Earn daily from the investment pool, own some of the best NFTs on Binance, and be part of a new world in the metaverse.
+
+
+{{--                            Earn up to 1.3% daily from the investment pool, own some of the best NFTs--}}
+{{--                            on Binance, and--}}
+{{--                            be part of a new world in the metaverse.</p>--}}
                         <div class="home-banner__btns">
                             <button onclick="window.location.href = '{{ route('register') }}'" class="btn btn-primary">
                                 Get Started

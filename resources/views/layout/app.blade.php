@@ -15,7 +15,7 @@
     <meta itemprop="image" content="{{ asset('assets/cabinet/style/default/img/monky.png') }}">
     <title>NFT Grower - NFT Collection | P2E Metaverse | Investment Pool </title>
     <link rel="shortcut icon" href="{{ asset('favicon.png?v=2') }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ asset('css/main.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main.min.css?v=1') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
@@ -43,7 +43,7 @@
 
 <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
 <script src="{{ asset('js/plugins.min.js') }}"></script>
-<script src="{{ asset('js/main.min.js') }}"></script>
+<script src="{{ asset('js/main.min.js?v=1') }}"></script>
 
 <div id="google_translate_element2">
     <div class="skiptranslate goog-te-gadget" dir="ltr">
