@@ -98,10 +98,10 @@
                                             </a>
                                         </td>
                                         <td>
-                                            <a href="{{ $actionUrl }}"
+                                            <div
                                                style="padding: 21px 22px 21px 0;text-decoration: none; display: block; font-family: 'Montserrat', sans-serif;font-weight: 900;font-size: 16px;line-height: 100%;text-align: right;text-transform: uppercase;color: #FFFFFF;">
                                                 Password reset
-                                            </a>
+                                            </div>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -130,7 +130,7 @@
                                             <p style="font-weight: 400;font-size: 16px;line-height: 150%;color: #20232B; margin: 0 auto 40px;">
                                                 If you did not request this change, please contact our <a href="mailto:help@nftgrower.io"
                                                                                                           style="font-weight: 600; color: #128EFF;">Support
-                                                    Team</a> (сап тим подчеркнуто как ссылка) immediately.</p>
+                                                    Team</a> immediately.</p>
                                         </td>
                                     </tr>
                                     <tr>
