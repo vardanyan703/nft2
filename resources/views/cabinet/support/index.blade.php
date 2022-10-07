@@ -83,9 +83,9 @@
                             <h4 class="title title-small text-uppercase title-line mb-4">Ticket List</h4>
 
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table table-new table-new-bold">
                                     <thead>
-                                    <tr>
+                                    <tr class="table-white">
                                         <th>Subject</th>
                                         <th>Message</th>
                                         <th>Registration date</th>
@@ -107,6 +107,7 @@
                         </div>
                     </div>
                     <script type="text/javascript">
+
                       function show_ticket_form() {
                         $("#ticket_button_open").hide();
                         $("#ticket_button_show").fadeIn(500);

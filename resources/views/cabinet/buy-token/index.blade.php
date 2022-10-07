@@ -192,7 +192,7 @@
                                 <div class="mt-3">
                                     @if(!$transactions->isEmpty())
                                         <div class="table-responsive">
-                                            <table class="table table-new">
+                                            <table class="table table-new ">
                                                 @foreach($transactions as $transaction)
 
                                                     @php

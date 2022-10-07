@@ -1739,10 +1739,10 @@ textarea.form-control.form-textarea-main__big {
         color: #000000 !important;
     }
 
-    .navbar-collapse.collapse.show {
+    .navbar-collapse.collapse {
         overflow-x: hidden;
+        height: 100vh;
     }
-
     .navbar-dark {
         background: #14151B;
     }
@@ -2008,7 +2008,8 @@ body {
 
 
 .table-new tr {
-    border: 8px solid #F3F3F3;
+    border-bottom: 8px solid #F3F3F3;
+    background-color: #fff;
 }
 
 .table-new th {
@@ -2040,7 +2041,10 @@ body {
     line-height: 130%;
     color: #14151B;
 }
-
+.table-new-bold tbody tr{
+    font-weight: 400;
+    border-bottom: 2px solid rgba(44, 46, 60, 0.1);
+}
 .table-new span {
     font-size: 16px;
     line-height: 130%;
@@ -2093,7 +2097,7 @@ body {
     }
 
     .table-new tr {
-        border: 6px solid #F3F3F3;
+        border-bottom: 6px solid #F3F3F3;
     }
 
     .table-new th {
@@ -2152,4 +2156,7 @@ body {
 .statistic-btn__yellow {
     background-color: #FFDC40;
     border-radius: 6px;
+}
+.overflow-hidden{
+    overflow-y: hidden;
 }

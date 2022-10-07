@@ -196,6 +196,9 @@
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
         });
+        $('.navbar-toggler').on('click',function (){
+          $('body').toggleClass('overflow-hidden')
+        })
 </script>
 </body>
 </html>
