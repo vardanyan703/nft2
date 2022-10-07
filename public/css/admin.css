@@ -1103,6 +1103,7 @@ body {
 .btn-big {
     height: 70px;
 }
+
 .btn-yellow:disabled,
 .btn-yellow {
     background: #FFDC40;
@@ -1525,21 +1526,25 @@ textarea.form-control.form-textarea-main__big {
     max-width: calc(50% - 15px);
     width: 100%;
 }
+
 .statistics-1 {
     gap: 0 15px;
 
 }
-.statistics-1 .statistic-item{
+
+.statistics-1 .statistic-item {
     max-width: calc(33% - 7.5px);
 }
-.card-statistic__status{
+
+.card-statistic__status {
     margin-top: 15px;
     font-weight: 900;
     font-size: 16px;
     line-height: 100%;
     text-transform: uppercase;
-    color: rgba(44,46,60,0.3);
+    color: rgba(44, 46, 60, 0.3);
 }
+
 @media screen and (max-width: 1540px) {
     .card-main {
         padding: 20px 24px;
@@ -1590,6 +1595,7 @@ textarea.form-control.form-textarea-main__big {
         max-width: calc(50% - 5px);
         margin: 0;
     }
+
     .form-select-main__big {
         height: 56px;
         padding: 12px 48px 12px 24px;
@@ -1599,31 +1605,40 @@ textarea.form-control.form-textarea-main__big {
         height: 56px;
         padding: 12px 24px;
     }
+
     .btn-big {
         height: 56px;
     }
-    .title.title-small-2{
+
+    .title.title-small-2 {
         font-size: 14px;
     }
-    .table-main{
+
+    .table-main {
         font-size: 14px;
     }
-    .table-main svg{
+
+    .table-main svg {
         width: 18px;
         height: 18px;
     }
-    .btn-main{
+
+    .btn-main {
         font-size: 14px;
     }
-    .form-input-main, .form-select-main{
+
+    .form-input-main, .form-select-main {
         font-size: 14px;
     }
-    .card-statistic__status{
+
+    .card-statistic__status {
         font-size: 14px;
     }
-    .statistics-1 .statistic-item{
+
+    .statistics-1 .statistic-item {
         max-width: calc(50% - 5px);
     }
+
     .bg-border-yellow {
         padding: 17px 9px;
         font-size: 14px;
@@ -1653,7 +1668,6 @@ textarea.form-control.form-textarea-main__big {
     }
 
 
-
     .card-tokens {
         padding: 24px 28px;
     }
@@ -1681,7 +1695,6 @@ textarea.form-control.form-textarea-main__big {
     .main-empty__title {
         font-size: 18px;
     }
-
 
 
     .form-check-label {
@@ -1734,9 +1747,11 @@ textarea.form-control.form-textarea-main__big {
         background: #14151B;
     }
 }
-body{
+
+body {
     overflow-x: hidden;
 }
+
 .card-statistic-mobile {
     display: none;
 }
@@ -1757,6 +1772,7 @@ body{
         width: 32px;
         height: 32px;
     }
+
     .navbar-toggler-icon {
         width: 32px;
         height: 3px;
@@ -1951,29 +1967,37 @@ body{
         gap: 0;
         margin-top: 0;
     }
-    .title.title-small-2{
+
+    .title.title-small-2 {
         font-size: 12px;
     }
-    .table-main{
+
+    .table-main {
         font-size: 12px;
     }
-    .table-main svg{
+
+    .table-main svg {
         width: 18px;
         height: 18px;
     }
-    .btn-main{
+
+    .btn-main {
         font-size: 12px;
     }
-    .form-input-main, .form-select-main{
+
+    .form-input-main, .form-select-main {
         font-size: 12px;
     }
-    .card-statistic__status{
+
+    .card-statistic__status {
         font-size: 12px;
         margin-top: 10px;
     }
-    .statistics-1 .statistic-item{
+
+    .statistics-1 .statistic-item {
         max-width: 100%;
     }
+
     .card-statistic__status,
     .card-statistic__price,
     .card-statistic__list {
@@ -1983,89 +2007,107 @@ body{
 }
 
 
-.table-new tr{
+.table-new tr {
     border: 8px solid #F3F3F3;
 }
-.table-new th{
+
+.table-new th {
     vertical-align: middle;
     white-space: nowrap;
     padding: 4px;
 }
-.table-new .btn{
+
+.table-new .btn {
     height: 56px;
     font-size: 14px;
     max-width: 141px;
     width: 100%;
 }
-.table-btn-th{
+
+.table-btn-th {
     padding: 2px 0;
     text-align: right;
 }
-.table-btn-th .btn{
+
+.table-btn-th .btn {
     margin: 12px 12px 12px 0;
 }
-.table-new{
-    font-family: 'Cera Pro',sans-serif;
+
+.table-new {
+    font-family: 'Cera Pro', sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 130%;
     color: #14151B;
 }
-.table-new span{
+
+.table-new span {
     font-size: 16px;
     line-height: 130%;
     opacity: 0.5;
 }
-.table-new img{
+
+.table-new img {
     margin-left: 16px;
     margin-right: 0;
     max-width: 40px;
     border-radius: 50%;
 }
-@media screen and (max-width: 1400px){
-    .table-new{
+
+@media screen and (max-width: 1400px) {
+    .table-new {
         font-size: 16px;
     }
-    .table-new span{
+
+    .table-new span {
         font-size: 14px;
     }
-    .table-new img{
+
+    .table-new img {
         margin-left: 0;
     }
-    .table-new th{
+
+    .table-new th {
         padding: 4px 20px;
     }
-    .table-new .btn{
+
+    .table-new .btn {
         height: 50px;
         font-size: 12px;
         max-width: 121px;
     }
 }
 
-@media screen and (max-width: 575px){
-    .table-new{
+@media screen and (max-width: 575px) {
+    .table-new {
         font-size: 12px;
     }
-    .table-new span{
+
+    .table-new span {
         font-size: 10px;
     }
-    .table-new img{
+
+    .table-new img {
         margin-left: 0;
         max-width: 30px;
     }
-    .table-new tr{
+
+    .table-new tr {
         border: 6px solid #F3F3F3;
     }
-    .table-new th{
+
+    .table-new th {
         padding: 4px 10px;
     }
-    .table-new .btn{
+
+    .table-new .btn {
         height: 40px;
         font-size: 10px;
         max-width: 100px;
     }
 }
-.btn-yellow.btn-yellow-disabled{
+
+.btn-yellow.btn-yellow-disabled {
     background: #F3F3F3;
     border-color: #F3F3F3;
     color: rgba(20, 21, 27, 0.3);
@@ -2074,4 +2116,40 @@ body{
 
 .btn.loading {
     gap: 10px;
+}
+
+.statistic-btns {
+    display: flex;
+    gap: 11px;
+    margin-top: 30px;
+}
+
+.statistic-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #14151B;
+    width: 100%;
+    height: 50px;
+    border: 2px solid #FFDC40;
+    border-radius: 6px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.statistic-btn:hover {
+    background-color: #FFDC40;
+    text-decoration: none;
+    color: #14151B;
+}
+
+.statistic-btn__yellow {
+    background-color: #FFDC40;
+    border-radius: 6px;
 }
