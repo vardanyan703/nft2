@@ -204,6 +204,11 @@
                             <img src="images/featured-1.png" alt="">
                         </a>
                     </li>
+                    <li class="featured__item">
+                        <a href="#" class="featured__link">
+                            <img src="images/featured-4.png" alt="">
+                        </a>
+                    </li>
 
                     <li class="featured__item">
                         <a href="#" class="featured__link">
@@ -215,11 +220,7 @@
                             <img src="images/featured-3.png" alt="">
                         </a>
                     </li>
-                    <li class="featured__item">
-                        <a href="#" class="featured__link">
-                            <img src="images/featured-4.png" alt="">
-                        </a>
-                    </li>
+
                     <li class="featured__item">
                         <a href="https://blockonomi.com/nft-grower-monkeys-win-the-hearts-of-crypto-community-nft-collection-metaverse-investment-pool/" target="_blank" class="featured__link">
                             <img src="images/featured-5.png" alt="">

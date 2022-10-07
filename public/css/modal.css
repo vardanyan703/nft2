@@ -6,8 +6,8 @@
     right: 0;
     height: 100%;
     width: 100%;
-    z-index: 5;
-    background: rgba(44, 46, 60, 0.3);
+    z-index: 999999;
+    background: rgba(44, 46, 60, 0.7);
     overflow: auto;
     box-sizing: border-box; }
 .modal-inner {

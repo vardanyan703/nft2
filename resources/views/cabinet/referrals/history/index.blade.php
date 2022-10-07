@@ -114,14 +114,15 @@
                             <div class="col-lg-12">
                                 @if(!$referral_histories->isEmpty())
                                     <div class="table-responsive mt-3" style="border-radius: 20px">
-                                        <table class="table text-center">
+                                        <table class="table table-new">
                                             @foreach($referral_histories as $history)
-                                                <tr class="table-light">
-                                                    <th scope="row">Name <br> {{ $history->referrals->name }}</th>
-                                                    <th>Profit from referral's
-                                                        deposit<br> {{ $history->referral_deposit_cash_back }} TRC20
+                                                <tr class="table-white">
+                                                    <th scope="row"><span>Name</span> <br> {{ $history->referrals->name }}</th>
+                                                    <th>
+                                                        <span>Profit from referral's deposit</span><br>
+                                                        {{ $history->referral_deposit_cash_back }} TRC20
                                                     </th>
-                                                    <th>Level <br> {{ $history->level }}</th>
+                                                    <th><span>Level</span> <br> {{ $history->level }}</th>
                                                 </tr>
                                             @endforeach
                                         </table>
