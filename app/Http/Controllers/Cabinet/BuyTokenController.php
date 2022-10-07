@@ -64,7 +64,10 @@ class BuyTokenController extends Controller
             'item_name' => $token->id,
         ]);
 
-        return redirect()->to($transaction['status_url']);
+        $transaction = Transaction::query()->where('id',$transaction['id'])->first();
+
+        $html = view('cabinet.modals.payment',compact('transaction'))->render();
+        return \response()->json($html);
     }
 
     /**
@@ -130,5 +133,10 @@ class BuyTokenController extends Controller
         }
 
         return redirect()->route('cabinet.my-tokens.index');
+    }
+
+    public function details(Request $request){
+        $transaction = Transaction::query()->where('id',$request->get('id'))->firstOrFail();
+        return view('cabinet.modals.payment',compact('transaction'));
     }
 }

@@ -58,7 +58,7 @@ class OnTransactionComplete
             'stop_at' => now()->addHours($tariff->period)
         ]);
 
-        event(new PaymentCallbackEvent($event->transaction['buyer_name']));
+        event(new PaymentCallbackEvent($event->transaction['buyer_name'],$event->transaction['txn_id']));
         dispatch(new AffiliatePercentJob($event->transaction['buyer_name'],$usdt));
     }
 }

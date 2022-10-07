@@ -15,9 +15,13 @@
                         <h1 class="title title-big title-line title-line__white d-tab__min" translate="no">
                             JOIN <br> <span>US AND</span> <span class="title title-medium ">  EARN ON NFT</span>
                         </h1>
-                        <p class="home-desc">Earn up to 1.3% daily from the investment pool, own some of the best NFTs
-                            on Binance, and
-                            be part of a new world in the metaverse.</p>
+                        <p class="home-desc">
+                            Earn daily from the investment pool, own some of the best NFTs on Binance, and be part of a new world in the metaverse.
+
+
+{{--                            Earn up to 1.3% daily from the investment pool, own some of the best NFTs--}}
+{{--                            on Binance, and--}}
+{{--                            be part of a new world in the metaverse.</p>--}}
                         <div class="home-banner__btns">
                             <button onclick="window.location.href = '{{ route('register') }}'" class="btn btn-primary">
                                 Get Started
@@ -200,6 +204,11 @@
                             <img src="images/featured-1.png" alt="">
                         </a>
                     </li>
+                    <li class="featured__item">
+                        <a href="#" class="featured__link">
+                            <img src="images/featured-4.png" alt="">
+                        </a>
+                    </li>
 
                     <li class="featured__item">
                         <a href="#" class="featured__link">
@@ -211,11 +220,7 @@
                             <img src="images/featured-3.png" alt="">
                         </a>
                     </li>
-                    <li class="featured__item">
-                        <a href="#" class="featured__link">
-                            <img src="images/featured-4.png" alt="">
-                        </a>
-                    </li>
+
                     <li class="featured__item">
                         <a href="https://blockonomi.com/nft-grower-monkeys-win-the-hearts-of-crypto-community-nft-collection-metaverse-investment-pool/" target="_blank" class="featured__link">
                             <img src="images/featured-5.png" alt="">

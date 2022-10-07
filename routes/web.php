@@ -37,21 +37,22 @@ Route::get('/password/success',[\App\Http\Controllers\PageController::class,'pas
 Route::get('reload-captcha', [App\Http\Controllers\CaptchaServiceController::class, 'reloadCaptcha']);
 
 
-Route::prefix('cabinet')->name('cabinet.')->middleware('auth')->group(function(){
+Route::prefix('dashboard')->name('cabinet.')->middleware('auth')->group(function(){
    Route::get('/',[\App\Http\Controllers\Cabinet\MainController::class,'index'])->name('index');
 
-   Route::prefix('buy-token')->name('buy-token.')->group(function(){
+   Route::prefix('buy-nfts')->name('buy-token.')->group(function(){
       Route::get('/',[\App\Http\Controllers\Cabinet\BuyTokenController::class,'index'])->name('index');
      // Route::post('payment/create',[\App\Http\Controllers\Cabinet\BuyTokenController::class,'createPayment'])->name('payment.create');
       Route::post('payment/confirm',[\App\Http\Controllers\Cabinet\BuyTokenController::class,'confirmPayment'])->name('payment.confirm');
       Route::post('payment/balance',[\App\Http\Controllers\Cabinet\BuyTokenController::class,'fromBalance'])->name('payment.balance');
+      Route::post('payment/details',[\App\Http\Controllers\Cabinet\BuyTokenController::class,'details'])->name('payment.details');
    });
 
-   Route::prefix('my-tokens')->name('my-tokens.')->group(function(){
+   Route::prefix('your-tokens')->name('my-tokens.')->group(function(){
       Route::get('/',[\App\Http\Controllers\Cabinet\MyTokenController::class,'index'])->name('index');
    });
 
-   Route::prefix('withdraw')->name('withdraw.')->group(function(){
+   Route::prefix('withdrawals')->name('withdraw.')->group(function(){
       Route::get('/',[\App\Http\Controllers\Cabinet\WithdrawController::class,'index'])->name('index');
       Route::post('/create',[\App\Http\Controllers\Cabinet\WithdrawController::class,'create'])->name('create');
    });
@@ -59,7 +60,7 @@ Route::prefix('cabinet')->name('cabinet.')->middleware('auth')->group(function()
    Route::prefix('referrals')->name('referrals.')->group(function(){
       Route::get('/',[\App\Http\Controllers\Cabinet\ReferralController::class,'index'])->name('index');
 
-      Route::prefix('history')->name('history.')->group(function(){
+      Route::prefix('statistics')->name('history.')->group(function(){
          Route::get('/',[\App\Http\Controllers\Cabinet\ReferralHistoryController::class,'index'])->name('index');
       });
    });
@@ -72,7 +73,7 @@ Route::prefix('cabinet')->name('cabinet.')->middleware('auth')->group(function()
 //      Route::get('/',[\App\Http\Controllers\Cabinet\NewsController::class,'index'])->name('index');
 //   });
 
-   Route::prefix('my-wallets')->name('my-wallets.')->group(function(){
+   Route::prefix('settings')->name('my-wallets.')->group(function(){
       Route::get('/',[\App\Http\Controllers\Cabinet\MyWalletController::class,'index'])->name('index');
       Route::post('/store',[\App\Http\Controllers\Cabinet\MyWalletController::class,'store'])->name('store');
       Route::post('/get-user-wallet',[\App\Http\Controllers\Cabinet\MyWalletController::class,'getUserWallet'])->name('getUserWallet');

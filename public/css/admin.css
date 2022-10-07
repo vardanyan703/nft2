@@ -1103,7 +1103,7 @@ body {
 .btn-big {
     height: 70px;
 }
-
+.btn-yellow:disabled,
 .btn-yellow {
     background: #FFDC40;
 }
@@ -1983,3 +1983,95 @@ body{
 }
 
 
+.table-new tr{
+    border: 8px solid #F3F3F3;
+}
+.table-new th{
+    vertical-align: middle;
+    white-space: nowrap;
+    padding: 4px;
+}
+.table-new .btn{
+    height: 56px;
+    font-size: 14px;
+    max-width: 141px;
+    width: 100%;
+}
+.table-btn-th{
+    padding: 2px 0;
+    text-align: right;
+}
+.table-btn-th .btn{
+    margin: 12px 12px 12px 0;
+}
+.table-new{
+    font-family: 'Cera Pro',sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    color: #14151B;
+}
+.table-new span{
+    font-size: 16px;
+    line-height: 130%;
+    opacity: 0.5;
+}
+.table-new img{
+    margin-left: 16px;
+    margin-right: 0;
+    max-width: 40px;
+    border-radius: 50%;
+}
+@media screen and (max-width: 1400px){
+    .table-new{
+        font-size: 16px;
+    }
+    .table-new span{
+        font-size: 14px;
+    }
+    .table-new img{
+        margin-left: 0;
+    }
+    .table-new th{
+        padding: 4px 20px;
+    }
+    .table-new .btn{
+        height: 50px;
+        font-size: 12px;
+        max-width: 121px;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .table-new{
+        font-size: 12px;
+    }
+    .table-new span{
+        font-size: 10px;
+    }
+    .table-new img{
+        margin-left: 0;
+        max-width: 30px;
+    }
+    .table-new tr{
+        border: 6px solid #F3F3F3;
+    }
+    .table-new th{
+        padding: 4px 10px;
+    }
+    .table-new .btn{
+        height: 40px;
+        font-size: 10px;
+        max-width: 100px;
+    }
+}
+.btn-yellow.btn-yellow-disabled{
+    background: #F3F3F3;
+    border-color: #F3F3F3;
+    color: rgba(20, 21, 27, 0.3);
+}
+
+
+.btn.loading {
+    gap: 10px;
+}

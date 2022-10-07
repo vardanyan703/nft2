@@ -40,36 +40,36 @@
                         </span>
                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
-                                    d="M8.13793 1.96656C8.01585 1.84448 7.81814 1.84448 7.69605 1.96656L5.00022 4.6624L2.3046 1.96656C2.18251 1.84448 1.9848 1.84448 1.86272 1.96656L0.508555 3.32073C0.386471 3.44281 0.386471 3.64052 0.508555 3.7626L4.77939 8.03344C4.84022 8.09469 4.92022 8.1251 5.00022 8.1251C5.08022 8.1251 5.16022 8.09469 5.22126 8.03365L9.49209 3.76281C9.61418 3.64073 9.61418 3.44302 9.49209 3.32094L8.13793 1.96656Z"
-                                    fill="white"/>
+                                d="M8.13793 1.96656C8.01585 1.84448 7.81814 1.84448 7.69605 1.96656L5.00022 4.6624L2.3046 1.96656C2.18251 1.84448 1.9848 1.84448 1.86272 1.96656L0.508555 3.32073C0.386471 3.44281 0.386471 3.64052 0.508555 3.7626L4.77939 8.03344C4.84022 8.09469 4.92022 8.1251 5.00022 8.1251C5.08022 8.1251 5.16022 8.09469 5.22126 8.03365L9.49209 3.76281C9.61418 3.64073 9.61418 3.44302 9.49209 3.32094L8.13793 1.96656Z"
+                                fill="white"/>
                         </svg>
 
                     </div>
                     <div class="header-lang__more">
                         <div class="header-lang__list" translate="no">
                             <div onclick="doGTranslate('en|en');return false;" class="header-lang__item"><img
-                                        src="/assets/theme/style/flags/usa.svg" alt="EN">English
+                                    src="/assets/theme/style/flags/usa.svg" alt="EN">English
                             </div>
                             <div onclick="doGTranslate('en|ru');return false;" class="header-lang__item"><img
-                                        src="/assets/theme/style/flags/russia.svg" alt="RU">Русский
+                                    src="/assets/theme/style/flags/russia.svg" alt="RU">Русский
                             </div>
                             <div onclick="doGTranslate('en|de');return false;" class="header-lang__item"><img
-                                        src="/assets/theme/style/flags/germany.svg" alt="DE">Deutsch
+                                    src="/assets/theme/style/flags/germany.svg" alt="DE">Deutsch
                             </div>
                             <div onclick="doGTranslate('en|it');return false;" class="header-lang__item"><img
-                                        src="/assets/theme/style/flags/italy.svg" alt="IT">Italiano
+                                    src="/assets/theme/style/flags/italy.svg" alt="IT">Italiano
                             </div>
                             <div onclick="doGTranslate('en|pl');return false;" class="header-lang__item"><img
-                                        src="/assets/theme/style/flags/poland.svg" alt="PL">Polski
+                                    src="/assets/theme/style/flags/poland.svg" alt="PL">Polski
                             </div>
                             <div onclick="doGTranslate('en|tr');return false;" class="header-lang__item"><img
-                                        src="/assets/theme/style/flags/turkey.svg" alt="TR">Türk
+                                    src="/assets/theme/style/flags/turkey.svg" alt="TR">Türk
                             </div>
                             <div onclick="doGTranslate('en|es');return false;" class="header-lang__item"><img
-                                        src="/assets/theme/style/flags/spain.svg" alt="ES">Español
+                                    src="/assets/theme/style/flags/spain.svg" alt="ES">Español
                             </div>
                             <div onclick="doGTranslate('en|es');return false;" class="header-lang__item"><img
-                                        src="/assets/theme/style/flags/georgia.svg" alt="KA">Gorgia
+                                    src="/assets/theme/style/flags/georgia.svg" alt="KA">Gorgia
                             </div>
                         </div>
                     </div>
@@ -122,8 +122,8 @@
                                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
-                                                    d="M8.13793 1.96656C8.01585 1.84448 7.81814 1.84448 7.69605 1.96656L5.00022 4.6624L2.3046 1.96656C2.18251 1.84448 1.9848 1.84448 1.86272 1.96656L0.508555 3.32073C0.386471 3.44281 0.386471 3.64052 0.508555 3.7626L4.77939 8.03344C4.84022 8.09469 4.92022 8.1251 5.00022 8.1251C5.08022 8.1251 5.16022 8.09469 5.22126 8.03365L9.49209 3.76281C9.61418 3.64073 9.61418 3.44302 9.49209 3.32094L8.13793 1.96656Z"
-                                                    fill="white"/>
+                                                d="M8.13793 1.96656C8.01585 1.84448 7.81814 1.84448 7.69605 1.96656L5.00022 4.6624L2.3046 1.96656C2.18251 1.84448 1.9848 1.84448 1.86272 1.96656L0.508555 3.32073C0.386471 3.44281 0.386471 3.64052 0.508555 3.7626L4.77939 8.03344C4.84022 8.09469 4.92022 8.1251 5.00022 8.1251C5.08022 8.1251 5.16022 8.09469 5.22126 8.03365L9.49209 3.76281C9.61418 3.64073 9.61418 3.44302 9.49209 3.32094L8.13793 1.96656Z"
+                                                fill="white"/>
                                         </svg>
 
                                     </div>
@@ -135,31 +135,31 @@
                                             </div>
                                             <div onclick="doGTranslate('en|ru');return false;"
                                                  class="header-lang__item"><img
-                                                        src="/assets/theme/style/flags/russia.svg" alt="RU">Русский
+                                                    src="/assets/theme/style/flags/russia.svg" alt="RU">Русский
                                             </div>
                                             <div onclick="doGTranslate('en|de');return false;"
                                                  class="header-lang__item"><img
-                                                        src="/assets/theme/style/flags/germany.svg" alt="DE">Deutsch
+                                                    src="/assets/theme/style/flags/germany.svg" alt="DE">Deutsch
                                             </div>
                                             <div onclick="doGTranslate('en|it');return false;"
                                                  class="header-lang__item"><img
-                                                        src="/assets/theme/style/flags/italy.svg" alt="IT">Italiano
+                                                    src="/assets/theme/style/flags/italy.svg" alt="IT">Italiano
                                             </div>
                                             <div onclick="doGTranslate('en|pl');return false;"
                                                  class="header-lang__item"><img
-                                                        src="/assets/theme/style/flags/poland.svg" alt="PL">Polski
+                                                    src="/assets/theme/style/flags/poland.svg" alt="PL">Polski
                                             </div>
                                             <div onclick="doGTranslate('en|tr');return false;"
                                                  class="header-lang__item"><img
-                                                        src="/assets/theme/style/flags/turkey.svg" alt="TR">Türk
+                                                    src="/assets/theme/style/flags/turkey.svg" alt="TR">Türk
                                             </div>
                                             <div onclick="doGTranslate('en|es');return false;"
                                                  class="header-lang__item"><img
-                                                        src="/assets/theme/style/flags/spain.svg" alt="ES">Español
+                                                    src="/assets/theme/style/flags/spain.svg" alt="ES">Español
                                             </div>
                                             <div onclick="doGTranslate('en|es');return false;"
                                                  class="header-lang__item"><img
-                                                        src="/assets/theme/style/flags/georgia.svg" alt="KA">Gorgia
+                                                    src="/assets/theme/style/flags/georgia.svg" alt="KA">Gorgia
                                             </div>
                                         </div>
                                     </div>
@@ -174,9 +174,8 @@
             </div>
         </div>
     </div>
+
 </header>
-
-
 @push('scripts')
     {{--    <script>--}}
     {{--        $(function (){--}}
