@@ -270,7 +270,7 @@
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="statistic-btns">
-                                                                        <a href="#" class="statistic-btn">Withdraw</a>
+                                                                        <a href="{{ route('cabinet.withdraw.index') }}" class="statistic-btn">Withdraw</a>
                                                                         <a href="#" class="statistic-btn statistic-btn__yellow">Top up</a>
                                                                     </div>
                                                                 </div>
