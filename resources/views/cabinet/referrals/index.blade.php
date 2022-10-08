@@ -76,6 +76,8 @@
                                         <div class="input-group">
                                             <input type="text"
                                                    class="form-control form-input-main table-white form-input-main__big"
+                                                   disabled
+                                                   style="background: #fff;"
                                                    value="{{ route('referral',['username' => auth()->user()->name]) }}"
                                                    id="copyreflink">
                                             <button class="btn btn-main-dark btn-copy rounded-0" type="button"

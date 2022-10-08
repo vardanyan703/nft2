@@ -894,6 +894,10 @@ body {
 .profile-info__right {
     color: #14151B;
     opacity: 0.8;
+    word-wrap: break-word;
+    width: 100%;
+    max-width: 60%;
+    text-align: right;
 }
 
 .profile-info__item-big .profile-info__left {
@@ -1544,6 +1548,17 @@ textarea.form-control.form-textarea-main__big {
     text-transform: uppercase;
     color: rgba(44, 46, 60, 0.3);
 }
+.card-statistic__status.Waiting{
+    color: rgba(44, 46, 60, 0.3);
+}
+.card-statistic__status.Rejected{
+    color: #FF1515;
+    opacity: 1;
+}
+.card-statistic__status.Completed,
+.card-statistic__status.Paid{
+    color: rgba( 14,177,89,0.9);
+}
 
 @media screen and (max-width: 1540px) {
     .card-main {
@@ -2156,6 +2171,20 @@ body {
 .statistic-btn__yellow {
     background-color: #FFDC40;
     border-radius: 6px;
+}
+
+@media screen and (max-width: 1400px){
+    .statistic-btn{
+        font-size: 14px;
+        height: 42px;
+    }
+}
+@media screen and (max-width: 575px){
+    .statistic-btn{
+        height: 36px;
+        font-size: 12px;
+    }
+
 }
 .overflow-hidden{
     overflow-y: hidden;

@@ -112,10 +112,10 @@
                         // $('input[name="tag"]').val(response.data.tag);
 
                         if ($('input[name="wallet_number"]').val() === ''){
-                            $('button[type="submit"]').html(`<i class="bi bi-chevron-compact-right"></i>Save`)
+                            $('button[type="submit"]').html(`Save`)
                             $('.wallet_form').attr('action',`{{ route('cabinet.my-wallets.store') }}`)
                         }else{
-                            $('button[type="submit"]').html((`<i class="bi bi-chevron-compact-right"></i>Update`))
+                            $('button[type="submit"]').html((`Update`))
                             $('.wallet_form').attr('action',`/cabinet/my-wallets/update/${response.my_wallet.id}`)
                         }
                     },
