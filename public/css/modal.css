@@ -423,6 +423,7 @@
     font-size: 22px;
     line-height: 100%;
     color: #14151B;
+    outline: none;
 border:none;}
 @media screen and (max-width: 900px) {
     .modal__form-inner input {
