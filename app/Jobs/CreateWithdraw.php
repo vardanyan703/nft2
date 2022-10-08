@@ -37,7 +37,7 @@ class CreateWithdraw implements ShouldQueue
 
             if($user->getBalance($this->withdrawQuestion->network)->pivot->balance < $this->withdrawQuestion->amount) return false;
 
-            if (WithdrawQuestion::WITHDRAW_QUESTION_STATUSES[$this->withdrawQuestion->status] == 'Paid') {
+            if (WithdrawQuestion::WITHDRAW_QUESTION_STATUSES[$this->withdrawQuestion->status] == 'COMPLETED') {
                 $payment = [
                     [
                         'amount' => $this->withdrawQuestion->amount,

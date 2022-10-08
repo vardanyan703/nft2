@@ -148,7 +148,7 @@
                                                         </div>
                                                         <div class="card-statistic__status {{ \App\Models\WithdrawQuestion::WITHDRAW_QUESTION_STATUSES[$withdraw->status] }}"
                                                              translate="no">
-                                                            {{ \App\Models\WithdrawQuestion::WITHDRAW_QUESTION_STATUSES[$withdraw->status] == 'Affiliate' ? 'Paid' : \App\Models\WithdrawQuestion::WITHDRAW_QUESTION_STATUSES[$withdraw->status]}}
+                                                            {{ \App\Models\WithdrawQuestion::WITHDRAW_QUESTION_STATUSES[$withdraw->status] == 'Affiliate' ? 'COMPLETED' : \App\Models\WithdrawQuestion::WITHDRAW_QUESTION_STATUSES[$withdraw->status]}}
                                                         </div>
 
 

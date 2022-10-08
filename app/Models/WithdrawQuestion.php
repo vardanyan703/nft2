@@ -17,7 +17,7 @@ class WithdrawQuestion extends Model
 
     public const WITHDRAW_QUESTION_STATUSES = [
       'Waiting',
-      'Paid',
+      'COMPLETED',
       'Rejected',
       'Affiliate',
     ];
