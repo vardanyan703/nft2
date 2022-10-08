@@ -1782,9 +1782,7 @@ body {
     overflow-x: hidden;
 }
 
-.card-statistic-mobile {
-    display: none;
-}
+
 
 @media screen and (max-width: 575px) {
 
@@ -1817,12 +1815,9 @@ body {
     }
 
 
-    .card-statistic-mobile {
-        display: block;
-    }
 
-    .card-statistic-mobile-1 {
-        display: none !important;
+    .card-statistic-mobile-1 img{
+         max-width: 36px !important;
     }
 
     .profile-img__inner {
@@ -2035,11 +2030,15 @@ body {
         max-width: 100%;
     }
 
+    .card-statistic__price{
+        margin-bottom: 11px;
+    }
     .card-statistic__status,
     .card-statistic__price,
     .card-statistic__list {
         padding-left: 15px;
     }
+
 
 }
 
@@ -2163,6 +2162,18 @@ body {
     display: flex;
     gap: 11px;
     margin-top: 30px;
+}
+
+
+.statistic-btns {
+    display: flex;
+    gap: 11px;
+    margin-top: 30px;
+}
+@media screen and (max-width: 575px){
+    .statistic-btns{
+        margin-top: 20px;
+    }
 }
 
 .statistic-btn {

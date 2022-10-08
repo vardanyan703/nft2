@@ -115,11 +115,6 @@
                                         @forelse($withdraws as $withdraw)
                                             <div class="statistic-item card card-sm card-white card-statistic mx-0">
                                                 <div class="row align-items-center">
-                                                    <div class="card-statistic-mobile col" style="max-width: 36px">
-                                                        <img
-                                                                src="{{ asset("assets/cabinet/style/default/img/ps/".$withdraw->crypto->image) }}"
-                                                                alt="" style="max-width: 36px">
-                                                    </div>
                                                     <div class="col-md-10 col-sm-12 col">
                                                         <div class="card-statistic__price" translate="no">
                                                             <div class="d-xxl-none d-block card-statistic-mobile-1">
