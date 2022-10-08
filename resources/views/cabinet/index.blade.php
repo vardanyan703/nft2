@@ -317,9 +317,7 @@
     <script>
         $(document).ready(function () {
 
-            $('.top_up').click(function (){
-                const network = $(this).data('coin');
-
+            function openModalTopUp(network){
                 axios.post('/dashboard/buy-nfts/payment/top_up',{network}).then(res => {
                     $('#modal-html').html(res.data);
 
@@ -330,20 +328,18 @@
                         templateResult: formatState,
                         closeOnSelect: false
                     }).on("change.select2",function (e){
-                      console.log($("#social").val())
+                        console.log($("#social").val())
+                        openModalTopUp($("#social").val()[0])
                     })
-                  // const social = $("#social").select2({
-                  //   placeholder:'Search',
-                  //   templateResult: formatState,
-                  //   closeOnSelect: false
-                  // }).on("select2:closing", function(e) {
-                  //   e.preventDefault();
-                  // }).on("select2:closed", function(e) {
-                  //   social.select2("open");
-                  // });
                 })
-            })
+            }
 
+
+            $('.top_up').click(function () {
+                const network = $(this).data('coin');
+
+                openModalTopUp(network);
+            })
 
             $(".open__modal").on("click", function (e) {
                 e.preventDefault();
