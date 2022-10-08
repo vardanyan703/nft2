@@ -346,6 +346,7 @@
                 templateResult: formatState,
                 closeOnSelect: false
             })
+ 
             function formatState(state) {
                 if (!state.id) {
                     return state.text;

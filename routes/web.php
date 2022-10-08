@@ -46,6 +46,7 @@ Route::prefix('dashboard')->name('cabinet.')->middleware('auth')->group(function
       Route::post('payment/confirm',[\App\Http\Controllers\Cabinet\BuyTokenController::class,'confirmPayment'])->name('payment.confirm');
       Route::post('payment/balance',[\App\Http\Controllers\Cabinet\BuyTokenController::class,'fromBalance'])->name('payment.balance');
       Route::post('payment/details',[\App\Http\Controllers\Cabinet\BuyTokenController::class,'details'])->name('payment.details');
+      Route::post('payment/top_up',[\App\Http\Controllers\Cabinet\BuyTokenController::class,'top_up'])->name('payment.top_up');
    });
 
    Route::prefix('your-tokens')->name('my-tokens.')->group(function(){

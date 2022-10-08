@@ -40,7 +40,7 @@
                     </div>
                     <div class="modal__body-item">
                         <div class="modal__body-left">Send To Address:</div>
-                        <div class="modal__body-right address">{{ $transaction->address }}
+                        <div class="modal__body-right address modal_copy_button" style="cursor: pointer" data-clipboard-text='{{ $transaction->address }}'>{{ $transaction->address }}
                             {{ $transaction->dest_tag ? ' with the Destination Tag set to ' . $transaction->dest_tag : '' }}
                         </div>
                     </div>
@@ -49,10 +49,10 @@
                         <div class="modal__body-right modal_time"></div>
                     </div>
                 </div>
-                <div class="btn btn-big btn-yellow btn-main text-uppercase mb-2 buy w-full">
+                <div class="btn btn-big btn-yellow btn-main text-uppercase mb-2 buy w-full have_paid">
                     I have paid
                 </div>
-                <p class="modal-more">Need help? <a href="#">Contact Us</a></p>
+                <p class="modal-more">Need help? <a href="{{ route('cabinet.support.index') }}">Contact Us</a></p>
             </div>
         </div>
     </div>
