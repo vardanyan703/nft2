@@ -216,8 +216,7 @@
                                             <div class="col-md-12">
                                                 <div class="main-empty ">
                                                     <h4 class="main-empty__title">
-                                                        YOU DON’T HAVE PAYMENTS YET
-{{--                                                        You don’t have any tokens--}}
+                                                        YOU DON'T HAVE ANY TOKENS
                                                     </h4>
                                                 </div>
                                             </div>

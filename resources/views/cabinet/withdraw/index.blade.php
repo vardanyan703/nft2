@@ -163,7 +163,7 @@
                                                 <div class="col-lg-12">
                                                     <div class="main-empty ">
                                                         <h4 class="main-empty__title">
-                                                            You don't have any payments
+                                                            YOU DON'T HAVE ANY WITHDRAWALS
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -173,7 +173,7 @@
                                         @else
                                         <div class="main-empty ">
                                             <h4 class="main-empty__title">
-                                                You don't have any payments
+                                                YOU DON'T HAVE ANY WITHDRAWALS
                                             </h4>
                                         </div>
                                     @endif

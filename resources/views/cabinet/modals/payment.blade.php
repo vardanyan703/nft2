@@ -19,7 +19,7 @@
                     </div>
                     <div class="modal__body-item">
                         <div class="modal__body-left">Total Amount To Send:</div>
-                        <div class="modal__body-right price_text">
+                        <div class="modal__body-right price_text"  style="cursor: pointer" data-clipboard-text='{{ $transaction->amount2  }}'>
                             {{ $transaction->amount2 . ' ' .$transaction->currency1 . '(total confirms needed: ' . $transaction->confirms_needed. ')' }}
                         </div>
                     </div>
@@ -31,9 +31,9 @@
                     </div>
                     <div class="modal__body-item">
                         <div class="modal__body-left">Balance Remaining:</div>
-                        <div class="modal__body-right qr_text">
-                            {{ $transaction->amount2 . ' ' . $transaction->currency1 }}
-                            <div class="modal__body-right__img">
+                        <div class="modal__body-right qr_text copy_qr" style="cursor: pointer" data-clipboard-text='{{ $transaction->amount2  }}'>
+                           {{ $transaction->amount2 . ' ' . $transaction->currency1 }}
+                            <div class="modal__body-right__img " >
                                 <img src="{{ $transaction->qrcode_url }}" alt="">
                             </div>
                         </div>

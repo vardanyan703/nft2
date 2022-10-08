@@ -80,24 +80,12 @@
                                         <div class="input-group">
                                             <input type="text"
                                                    class="form-control form-input-main table-white form-input-main__big"
-                                                   disabled
                                                    style="background: #fff;"
                                                    value="{{ route('referral',['username' => auth()->user()->name]) }}"
                                                    id="copyreflink">
-                                            <button class="btn btn-main-dark btn-copy rounded-0" type="button"
-                                                    onclick="myFunction()">
+                                            <button class="btn btn-main-dark btn-copy rounded-0 copy_referal" type="button" data-clipboard-text='{{ route('referral',['username' => auth()->user()->name]) }}'>
                                                 Copy
                                             </button>
-                                            @push('scripts')
-                                                <script>
-                                                    function myFunction() {
-                                                        var copyText = document.getElementById('copyreflink');
-                                                        copyText.select();
-                                                        copyText.setSelectionRange(0, 99999)
-                                                        document.execCommand("copy");
-                                                    }
-                                                </script>
-                                            @endpush
                                         </div>
                                     </form>
                                 </div>
@@ -292,10 +280,19 @@
 @endsection
 
 @push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
     <script>
         function reset_form() {
             $('.form-support')[0].reset();
         }
+
+        var clipboard = new ClipboardJS('.copy_referal');
+
+        clipboard.on('success', function(e) {
+            var copyText = document.getElementById('copyreflink');
+            copyText.select();
+            copyText.setSelectionRange(0, 99999)
+        });
+
     </script>
 @endpush
-

@@ -245,6 +245,10 @@
                                                                         <span>
                                                                             {{ $currency->user->count() ? number_format($currency->user[0]->pivot->balance,4) : number_format(0,4) }} {{ $currency->name }}
                                                                         </span>
+
+                                                                        <span class="esi kdnes qo sarqci mej arden $ ov arjeqna">
+                                                                           (${{number_format( \App\Facades\CryptoFacade::xChangeToUSDT( $currency->user->count() ? $currency->user[0]->pivot->balance : 0  , $currency->network ,'USD'),4) }})
+                                                                        </span>
                                                                     </div>
                                                                     <div class="card-statistic__list">
                                                                         <div class="card-statistic__item">
@@ -255,7 +259,7 @@
                                                                                     <rect width="8" height="8"
                                                                                           fill="#FCD535"/>
                                                                                 </svg>
-                                                                                Total deposits
+                                                                                Deposits
                                                                             </div>
                                                                             <div class="card-statistic__right">
                                                                                 {{ $currency->user->count() ? number_format($currency->user[0]->pivot->deposit,4) : number_format(0,4)  }} {{ $currency->network }}
@@ -269,7 +273,7 @@
                                                                                     <rect width="8" height="8"
                                                                                           fill="#FCD535"/>
                                                                                 </svg>
-                                                                                Earned total
+                                                                                Earned
                                                                             </div>
                                                                             <div class="card-statistic__right">
                                                                                 {{ $currency->user->count() ? number_format($currency->user[0]->pivot->earned_total,4) : number_format(0,4)  }} {{ $currency->network }}

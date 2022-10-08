@@ -301,40 +301,45 @@
         });
 
         $(function () {
+
+            function copy(className){
+                var clipboard = new ClipboardJS(className);
+
+                clipboard.on('success', function(e) {
+                    const el = $(className);
+                    const address = el.html();
+
+                    el.text('Copied!')
+
+                    setTimeout(() => {
+                        el.html(address);
+                    },1000)
+
+                    hideTooltip();
+                });
+
+                clipboard.on('error', function(e) {
+                    const el = $(className);
+                    const address = el.html();
+
+                    el.text('Failed!')
+
+                    setTimeout(() => {
+                        el.html(address);
+                    },1000)
+
+                    hideTooltip();
+                });
+            }
+
             function hideTooltip() {
                 setTimeout(function() {
                     $('.modal_copy_button').tooltip('hide');
                 }, 1000);
             }
-
-
-            var clipboard = new ClipboardJS('.modal_copy_button');
-
-            clipboard.on('success', function(e) {
-                const el = $('.modal_copy_button');
-                const address = el.data('clipboard-text');
-
-                el.text('Copied!')
-
-                setTimeout(() => {
-                    el.text(address);
-                },1000)
-
-                hideTooltip();
-            });
-
-            clipboard.on('error', function(e) {
-                const el = $('.modal_copy_button');
-                const address = el.data('clipboard-text');
-
-                el.text('Failed!')
-
-                setTimeout(() => {
-                    el.text(address);
-                },1000)
-
-                hideTooltip();
-            });
+            copy('.modal_copy_button');
+            copy('.price_text');
+            copy('.copy_qr');
 
 
             $('button.buy').on('click', function (e) {
