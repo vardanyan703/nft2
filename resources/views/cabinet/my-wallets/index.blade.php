@@ -116,7 +116,7 @@
                             $('.wallet_form').attr('action',`{{ route('cabinet.my-wallets.store') }}`)
                         }else{
                             $('button[type="submit"]').html((`Update`))
-                            $('.wallet_form').attr('action',`/cabinet/my-wallets/update/${response.my_wallet.id}`)
+                            $('.wallet_form').attr('action',`/dashboard/settings/update/${response.my_wallet.id}`)
                         }
                     },
                 });

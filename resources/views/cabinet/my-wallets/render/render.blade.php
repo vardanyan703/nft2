@@ -23,7 +23,7 @@
 <div class="my-sm-4 my-3 py-sm-1">
     <label class="d-flex align-center">
         <div class="switch-container">
-            <input class="switch-input switch-flat d-none form-check-input" type="checkbox" value="0"
+            <input id="switch-flat" class="switch-input switch-flat d-none form-check-input" type="checkbox" value="0"
                    name="wallet_allow_edit">
             <label for="switch-flat">
                 <span></span>
