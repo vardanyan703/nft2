@@ -51,7 +51,7 @@
                                         <div class="row">
                                             <div class="col-lg-6 d-lg-none">
                                                 <button type="button"
-                                                        class="w-full btn btn-border-grey btn-big text-uppercase btn-main btn-primary mb-2"
+                                                        class="w-full btn btn-border-grey btn-big text-uppercase btn-main reset-search btn-primary mb-2"
                                                         onclick="reset_form();">
                                                     Reset form
                                                 </button>
@@ -64,7 +64,7 @@
                                             </div>
                                             <div class="col-lg-6 d-lg-block d-none">
                                                 <button type="button"
-                                                        class="w-full btn btn-border-grey btn-big text-uppercase btn-main btn-primary"
+                                                        class="w-full btn btn-border-grey btn-big text-uppercase btn-main btn-primary reset-search"
                                                         onclick="reset_form();">
                                                     Reset form
                                                 </button>
@@ -129,3 +129,40 @@
         </div>
     </div>
 @endsection
+
+
+@push('scripts')
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function (event) {
+            $("select[name='referal_search']").on('change', function () {
+                var cur_value = this.value;
+                console.log(cur_value);
+                if (cur_value == 'login' || cur_value == 'name' || cur_value == 'email') {
+                    $("input[name='referal_search_val']").attr('placeholder', 'Example: demo');
+                    $("input[name='referal_search_val']").attr('disabled', false);
+                } else {
+                    $("input[name='referal_search_val']").attr('placeholder', '');
+                    $("input[name='referal_search_val']").attr('disabled', true);
+                }
+            });
+        });
+
+        $('.reset-search').on('click', function (e) {
+            e.preventDefault()
+            let url = new URL(window.location.href);
+            let params = new URLSearchParams(url.search);
+
+            params.delete('referal_search_val');
+            params.delete('referal_search');
+            window.location.href = window.location.origin + window.location.pathname + '?' + params.toString()
+        });
+
+        $("input[name='refback_percent_form']").inputmask({
+            regex: "[0-9]{1,3}[.][0-9]{1,4}",
+            showMaskOnHover: false,
+            showMaskOnFocus: false,
+            placeholder: ""
+        });
+    </script>
+
+@endpush

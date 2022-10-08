@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="cardfon">
                 <div class="row row-deck row-cards">
-                    <form action="{{ route('cabinet.referrals.history.index') }}" method="GET">
+                    <form action="{{ route('cabinet.referrals.history.index') }}" method="GET" class="form-support">
                         <div class="col-lg-12">
                             <div class="row">
                                 <div class="col-xxl-8">
@@ -44,7 +44,7 @@
                                                 <div class="row form-footer">
                                                     <div class="col-lg-6 d-lg-none mb-lg-0 mb-3">
                                                         <a href="#" class="reset-search">
-                                                            <button type="button" class="w-full btn btn-border-grey btn-big text-uppercase btn-main btn-primary">
+                                                            <button type="button" onclick="reset_form();" class="w-full btn btn-border-grey btn-big text-uppercase btn-main btn-primary">
                                                                 Reset search parameters
                                                             </button>
                                                         </a>
@@ -57,7 +57,7 @@
                                                     </div>
                                                     <div class="col-lg-6 d-none d-lg-block">
                                                         <a href="#" class="reset-search">
-                                                            <button type="button" class="w-full btn btn-border-grey btn-big text-uppercase btn-main btn-primary">
+                                                            <button type="button" onclick="reset_form();" class="w-full btn btn-border-grey btn-big text-uppercase btn-main btn-primary">
                                                                 Reset search parameters
                                                             </button>
                                                         </a>
@@ -79,10 +79,10 @@
                                                                 id="selects">
                                                             <option value="asc">Default</option>
                                                             <option @if(request()->get('referal_sort') === 'asc') selected
-                                                                    @endif value="asc">Oldest to Newest
+                                                                    @endif value="asc">Date (new to old)
                                                             </option>
                                                             <option @if(request()->get('referal_sort') === 'desc') selected
-                                                                    @endif value="desc">Newest to Oldest
+                                                                    @endif value="desc">Date (old to new)
                                                             </option>
                                                         </select>
                                                     </div>
@@ -186,4 +186,13 @@
             </div>
         </div>
     </div>
+
 @endsection
+
+@push('scripts')
+    <script>
+        function reset_form(){
+            $('.form-support')[0].reset();
+        }
+    </script>
+@endpush

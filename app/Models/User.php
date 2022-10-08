@@ -202,6 +202,38 @@ class User extends Authenticatable
      * @param $currency
      * @return Builder|\Illuminate\Database\Eloquent\Model|object|null
      */
+    public static function updateOrAttachCryptoByDeposit($buyer_id, $received_amount, $currency)
+    {
+        $user = self::getUserByIdOrName($buyer_id, $currency);
+
+        if ($user->cryptos->count()) {
+            $user->cryptos()
+                ->newPivotStatement()
+                ->where('id', $user->cryptos[0]->pivot->id)
+                ->update([
+                    'balance' => DB::raw("balance+$received_amount"),
+                    'updated_at' => now()
+                ]);
+        } else {
+            $crypto = Crypto::query()->where('network', $currency)->first();
+
+            $user->cryptos()->attach($crypto->id, [
+                'balance' => $received_amount,
+                'earned_total' => 0,
+                'deposit' => 0,
+                'created_at' => now()
+            ]);
+        }
+
+        return $user;
+    }
+
+    /**
+     * @param $buyer_id
+     * @param $received_amount
+     * @param $currency
+     * @return Builder|\Illuminate\Database\Eloquent\Model|object|null
+     */
     public static function updateOrAttachCryptoByAffiliate($buyer_id, $received_amount, $currency)
     {
         $user = self::getUserByIdOrName($buyer_id, $currency);

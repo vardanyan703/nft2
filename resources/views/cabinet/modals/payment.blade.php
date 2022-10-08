@@ -3,7 +3,7 @@
         <div class="modal__container">
             <div class="modal__header">
                 <div class="modal__title modal__title-big title title-line">Payment information</div>
-                <div class="modal__close close">
+                <div class="modal__close close" data-open="#buy-modal">
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M9.42333 1.10131C9.29015 0.966229 9.07446 0.966229 8.94128 1.10131L6.00037 4.08426L3.05969 1.10131C2.92651 0.966229 2.71083 0.966229 2.57765 1.10131L1.10037 2.5997C0.967193 2.73479 0.967193 2.95355 1.10037 3.08864L3.97072 6L1.10037 8.91137C0.967193 9.04645 0.967193 9.26521 1.10037 9.4003L2.57765 10.8987C2.71083 11.0338 2.92651 11.0338 3.05969 10.8987L6.00037 7.91574L8.94128 10.8987C9.07446 11.0338 9.29015 11.0338 9.42333 10.8987L10.9006 9.40007C11.0338 9.26498 11.0338 9.04622 10.9006 8.91113L8.03049 6L10.9006 3.08887C11.0338 2.95378 11.0338 2.73502 10.9006 2.59993L9.42333 1.10131Z"
@@ -49,7 +49,7 @@
                         <div class="modal__body-right modal_time"></div>
                     </div>
                 </div>
-                <div class="btn btn-big btn-yellow btn-main text-uppercase mb-2 buy w-full have_paid">
+                <div class="btn btn-big btn-yellow btn-main text-uppercase mb-2 buy w-full have_paid" data-open="#buy-modal">
                     I have paid
                 </div>
                 <p class="modal-more">Need help? <a href="{{ route('cabinet.support.index') }}">Contact Us</a></p>

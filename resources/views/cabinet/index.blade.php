@@ -314,11 +314,59 @@
 
 
 @push('scripts')
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
     <script>
         $(document).ready(function () {
 
+            window.Echo.private('payment-callback-{{ \Illuminate\Support\Facades\Auth::user()->name }}').listen('PaymentCallbackEvent', (e) => {
+                if (e.transaction_id == window.$transaction_id) {
+                    $('#modal-html').html(e.html);
+
+                    $('#buy-modal').fadeIn();
+                }
+            });
+
+            function hideTooltip() {
+                setTimeout(function() {
+                    $('.modal_copy_button').tooltip('hide');
+                }, 1000);
+            }
+
+            var clipboard = new ClipboardJS('.modal_copy_button');
+
+            clipboard.on('success', function(e) {
+                const el = $('.modal_copy_button');
+                const address = el.data('clipboard-text');
+
+                el.text('Copied!')
+
+                setTimeout(() => {
+                    el.text(address);
+                },1000)
+
+                hideTooltip();
+            });
+
+            clipboard.on('error', function(e) {
+                const el = $('.modal_copy_button');
+                const address = el.data('clipboard-text');
+
+                el.text('Failed!')
+
+                setTimeout(() => {
+                    el.text(address);
+                },1000)
+
+                hideTooltip();
+            });
+
+
             function openModalTopUp(network){
                 axios.post('/dashboard/buy-nfts/payment/top_up',{network}).then(res => {
+                    window.network = network;
+                    window.to = 'USD';
                     $('#modal-html').html(res.data);
 
                     $('#modal-coin').fadeIn();
@@ -328,12 +376,56 @@
                         templateResult: formatState,
                         closeOnSelect: false
                     }).on("change.select2",function (e){
-                        console.log($("#social").val())
                         openModalTopUp($("#social").val()[0])
                     })
                 })
             }
 
+            $('body').on('input','.modal .price',function (){
+                axios.get('/dashboard/buy-nfts/payment/xchange',{
+                    params : {
+                        m_amount : $(this).val(),
+                        wallet_type: window.network,
+                        to: window.to
+                    }
+                }).then(res => {
+                    $('.modal .show_price').text(window.to +' '+ res.data)
+                })
+            })
+
+            $('body').on('click','.xchange_reverse',function (){
+                const reverse = window.network;
+                window.network = window.to;
+
+                const from_price = $('.modal .price').val()
+                const to_price = $('.modal .show_price').text().split(' ')[1];
+
+                $('.modal .price').val(to_price)
+                $('.modal .price_icon').text(window.to)
+
+                window.to = reverse;
+
+                $('.modal .show_price').text(window.to +' '+ from_price)
+
+            })
+
+            $('body').on('click','.create_payment',function (){
+                axios.post('/dashboard/buy-nfts/payment/deposit',{
+                    m_amount : $('.modal .price').val(),
+                    wallet_type: window.network,
+                    to: window.to
+                }).then(res => {
+
+                    $('#modal-coin').fadeOut(function () {
+                        $("body").css("overflow", "auto");
+                    });
+
+                    $('#modal-html').html(res.data);
+
+                    $('#buy-modal').fadeIn();
+
+                })
+            })
 
             $('.top_up').click(function () {
                 const network = $(this).data('coin');
@@ -347,11 +439,12 @@
                 $(open).fadeIn();
             });
 
-            $("body").on("click", ".modal .close, .modal, .modal-close", function (e) {
+            $("body").on("click", ".modal .close, .modal, .modal-close, .have_paid", function (e) {
                 const open = $(this).data('open');
 
                 e.preventDefault();
                 $(open).fadeOut(function () {
+                    window.$transaction_id = null;
                     $("body").css("overflow", "auto");
                 });
             });

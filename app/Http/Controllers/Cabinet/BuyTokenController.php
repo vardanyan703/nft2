@@ -152,8 +152,38 @@ class BuyTokenController extends Controller
         return redirect()->route('cabinet.my-tokens.index');
     }
 
+    public function deposit(Request $request){
+
+        if($request->wallet_type === 'USD'){
+            $coin = CryptoFacade::xChangeToUSDT($request->m_amount,$request->wallet_type,$request->to);
+        }
+
+        $coin = $request->m_amount;
+
+
+        // 99999 это попалнения балансе
+
+        $transaction = \Coinpayments::createTransactionSimple($coin, $request->wallet_type, $request->wallet_type, [
+            'buyer_email' => Auth::user()->email,
+            'buyer_name' => Auth::user()->name,
+            'item_name' => 99999,
+        ]);
+
+        $transaction = Transaction::query()->where('id',$transaction['id'])->first();
+
+        $html = view('cabinet.modals.payment',compact('transaction'))->render();
+
+        return \response()->json($html);
+
+
+    }
+
     public function details(Request $request){
         $transaction = Transaction::query()->where('id',$request->get('id'))->firstOrFail();
         return view('cabinet.modals.payment',compact('transaction'));
+    }
+
+    public function xchange(Request $request){
+        return CryptoFacade::xChangeToUSDT($request->m_amount,$request->wallet_type,$request->to);
     }
 }
