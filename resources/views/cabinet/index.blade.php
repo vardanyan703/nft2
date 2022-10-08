@@ -319,11 +319,17 @@
 
             $('.top_up').click(function (){
                 const network = $(this).data('coin');
-                console.log(network);
+
                 axios.post('/dashboard/buy-nfts/payment/top_up',{network}).then(res => {
                     $('#modal-html').html(res.data);
 
                     $('#modal-coin').fadeIn();
+
+                    $("#social").select2({
+                        placeholder: 'Search',
+                        templateResult: formatState,
+                        closeOnSelect: false
+                    })
 
                 })
             })
@@ -335,24 +341,30 @@
                 $(open).fadeIn();
             });
 
-            $(".show-coins__inner").on("click", function (e) {
+            $("body").on("click", ".modal .close, .modal, .modal-close", function (e) {
+                const open = $(this).data('open');
+
+                e.preventDefault();
+                $(open).fadeOut(function () {
+                    $("body").css("overflow", "auto");
+                });
+            });
+
+            $('body').on("click",".show-coins__inner", function (e) {
                 console.log($(this).has('active'))
                 $(this).toggleClass('active')
                 $('.show-coins__select ').toggle()
                 $('#social').select2('open');
             });
-            $("#social").select2({
-                placeholder: 'Search',
-                templateResult: formatState,
-                closeOnSelect: false
-            })
- 
+
+
             function formatState(state) {
+                console.log(state);
                 if (!state.id) {
                     return state.text;
                 }
                 const img = $(state.element).data('img')
-                const $state = $(`<span class="select2-item"><img src="images/${img}"/>${state.text}</span>`);
+                const $state = $(`<span class="select2-item"><img src="${img}"/>${state.text}</span>`);
                 return $state;
             }
         })
