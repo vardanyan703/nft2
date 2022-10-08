@@ -42,7 +42,10 @@ class BuyTokenController extends Controller
 
     public function top_up(Request $request){
         $coin = CryptoRate::query()->where('network',$request->network)->firstOrFail();
-        return view('cabinet.modals.top-up',compact('coin'));
+
+        $images = Crypto::query()->whereIn('network',$coin->pluck('network'))->get()->pluck('image','network');
+
+        return view('cabinet.modals.top-up',compact('coin','images'));
     }
 
     public function confirmPayment(ConfirmPaymnetRequest $request)
