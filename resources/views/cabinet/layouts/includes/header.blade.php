@@ -38,7 +38,7 @@
         }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
+    <link rel="stylesheet" href="{{asset('css/admin.css?v=1')}}">
     <link rel="stylesheet" href="{{asset('css/modal.css?v=3')}}">
     @stack('style')
 </head>
