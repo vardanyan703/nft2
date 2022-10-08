@@ -1261,13 +1261,13 @@ form {
 
 .card-statistic__list {
     margin: 13px 0 0;
-    max-width: fit-content;
+    max-width: 100%;
+    width: 100%;
 }
 
 .card-statistic__item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 13px;
     font-family: 'Cera Pro', sans-serif;
     font-weight: 400;
@@ -2034,7 +2034,6 @@ body {
         margin-bottom: 11px;
     }
     .card-statistic__status,
-    .card-statistic__price,
     .card-statistic__list {
         padding-left: 15px;
     }
