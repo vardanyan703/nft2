@@ -22,6 +22,7 @@
                 <div class="modal__title title title-line">
                     Top up
                     <span class="show-coins">
+ 
                       <span class="show-coins__inner">
                          BTC
                           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,6 +56,7 @@
                      </span>
                 </span>
             </span>
+ 
                 </div>
                 <div class="modal__form-item">
                     <div class="modal__form-label">Enter amount</div>

@@ -346,7 +346,7 @@
                 templateResult: formatState,
                 closeOnSelect: false
             })
-
+ 
             function formatState(state) {
                 if (!state.id) {
                     return state.text;
@@ -355,7 +355,6 @@
                 const $state = $(`<span class="select2-item"><img src="images/${img}"/>${state.text}</span>`);
                 return $state;
             }
-
         })
     </script>
 @endpush

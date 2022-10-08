@@ -459,8 +459,7 @@ border:none;}
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    gap: 13px;
-    width: calc(100% - 16px); }
+    gap: 13px;  }
 @media screen and (max-width: 600px) {
     .modal__form-inner__left {
         -webkit-transform: unset;
