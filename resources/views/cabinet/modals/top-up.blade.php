@@ -15,41 +15,40 @@
                 <div class="modal__title title title-line">
                     Top up
                     <span class="show-coins">
-                  <span class="show-coins__inner">
-                              {{ $coin->network }}
-                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                   xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.3933 2.75319C11.2224 2.58227 10.9456 2.58227 10.7747 2.75319L7.0005 6.52735L3.22663 2.75319C3.05571 2.58227 2.77892 2.58227 2.60801 2.75319L0.712172 4.64902C0.541255 4.81994 0.541255 5.09673 0.712172 5.26765L6.69134 11.2468C6.77651 11.3326 6.8885 11.3751 7.0005 11.3751C7.1125 11.3751 7.22451 11.3326 7.30996 11.2471L13.2891 5.26794C13.46 5.09702 13.46 4.82023 13.2891 4.64931L11.3933 2.75319Z"
-                                fill="#14151B"/>
-                          </svg>
-                      </span>
-                    <span class="show-coins__select" style="display: none;">
-                     <span class="show">
-                        <select id='social' name="states[]" multiple="multiple">
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                        <option data-img="btc.jpg" value='BTC'>BTC</option>
-                      </select>
-                     </span>
-                </span>
-            </span>
-
+                        <span class="show-coins__inner">
+                                  {{ $coin->network }}
+                                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.3933 2.75319C11.2224 2.58227 10.9456 2.58227 10.7747 2.75319L7.0005 6.52735L3.22663 2.75319C3.05571 2.58227 2.77892 2.58227 2.60801 2.75319L0.712172 4.64902C0.541255 4.81994 0.541255 5.09673 0.712172 5.26765L6.69134 11.2468C6.77651 11.3326 6.8885 11.3751 7.0005 11.3751C7.1125 11.3751 7.22451 11.3326 7.30996 11.2471L13.2891 5.26794C13.46 5.09702 13.46 4.82023 13.2891 4.64931L11.3933 2.75319Z"
+                                    fill="#14151B"/>
+                              </svg>
+                          </span>
+                        <span class="show-coins__select" style="display: none;">
+                         <span class="show">
+                            <select id='social' name="states[]" multiple="multiple">
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                            <option data-img="btc.jpg" value='BTC'>BTC</option>
+                          </select>
+                         </span>
+                    </span>
+                    </span>
                 </div>
                 <div class="modal__form-item">
                     <div class="modal__form-label">Enter amount</div>

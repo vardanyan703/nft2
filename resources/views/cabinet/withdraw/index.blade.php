@@ -3,11 +3,11 @@
 @push('style')
     <style>
         .Waiting {
-            color: orange !important;
+            color: rgba(44, 46, 60, 0.3); !important;
         }
 
-        .Rejected {
-            color: red !important;
+        .Rejec§ted {
+            color: #FF1515 !important;
         }
     </style>
 @endpush

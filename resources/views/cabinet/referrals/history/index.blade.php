@@ -120,7 +120,7 @@
                                                     <th scope="row"><span>Name</span> <br> {{ $history->referrals->name }}</th>
                                                     <th>
                                                         <span>Profit from referral's deposit</span><br>
-                                                        {{ $history->referral_deposit_cash_back }} TRC20
+                                                        {{ number_format($history->referral_deposit_cash_back,5) }} TRC20
                                                     </th>
                                                     <th><span>Level</span> <br> {{ $history->level }}</th>
                                                 </tr>

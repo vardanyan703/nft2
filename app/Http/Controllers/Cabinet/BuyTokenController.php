@@ -75,8 +75,16 @@ class BuyTokenController extends Controller
 
         $transaction = Transaction::query()->where('id',$transaction['id'])->first();
 
-        $html = view('cabinet.modals.payment',compact('transaction'))->render();
-        return \response()->json($html);
+        $transactions = Transaction::query()->where('buyer_name', Auth::user()->name)->latest()->paginate(5);
+
+        $transactions->withPath(route('cabinet.buy-token.index'));
+
+        $cryptos = Crypto::query()->get();
+
+        return \response()->json([
+                'html' => view('cabinet.modals.payment',compact('transaction'))->render(),
+                'history' => view('cabinet.buy-token.render_table',compact('transactions','cryptos'))->render()
+        ]);
     }
 
     /**

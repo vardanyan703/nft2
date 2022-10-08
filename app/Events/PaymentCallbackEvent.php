@@ -2,6 +2,7 @@
 
 namespace App\Events;
 
+use App\Models\Crypto;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -37,10 +38,14 @@ class PaymentCallbackEvent implements ShouldBroadcast
 
     public function broadcastWith(){
         $transaction = $this->transaction;
+        $cryptos = Crypto::query()->get();
+
+        $transactions = Transaction::query()->where('buyer_name', $this->name)->latest()->paginate(5);
 
         return [
             'html' => view('cabinet.modals.payment',compact('transaction'))->render(),
-            'transaction_id' => $this->transaction->id
+            'transaction_id' => $this->transaction->id,
+            'table' => view('cabinet.buy-token.render_table',compact('transactions','cryptos'))->render()
         ];
     }
 }
