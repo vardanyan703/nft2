@@ -244,11 +244,12 @@
                                                                         </div>
                                                                         <span>
                                                                             {{ $currency->user->count() ? number_format($currency->user[0]->pivot->balance,4) : number_format(0,4) }} {{ $currency->name }}
+                                                                            <span class="card-statistic__price-min">
+                                                                               (${{number_format( \App\Facades\CryptoFacade::xChangeToUSDT( $currency->user->count() ? $currency->user[0]->pivot->balance : 0  , $currency->network ,'USD'),4) }})
+                                                                            </span>
                                                                         </span>
 
-                                                                        <span class="esi kdnes qo sarqci mej arden $ ov arjeqna">
-                                                                           (${{number_format( \App\Facades\CryptoFacade::xChangeToUSDT( $currency->user->count() ? $currency->user[0]->pivot->balance : 0  , $currency->network ,'USD'),4) }})
-                                                                        </span>
+
                                                                     </div>
                                                                     <div class="card-statistic__list">
                                                                         <div class="card-statistic__item">

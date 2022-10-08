@@ -1249,6 +1249,11 @@ form {
     align-items: center;
     color: #14151B;
 }
+.card-statistic__price-min{
+    font-size: 14px;
+    line-height: 100%;
+    opacity: 0.4;
+}
 
 .text-yellow {
     color: #FFDC40;
@@ -1282,11 +1287,12 @@ form {
     gap: 10px;
     opacity: 0.7;
     font-weight: 700;
+    max-width: 83px;
+    width: 100%;
 }
 
 .card-statistic__right {
     opacity: 0.7;
-    text-align: right;
 }
 
 .card-tokens {
@@ -1573,6 +1579,11 @@ textarea.form-control.form-textarea-main__big {
         gap: 14px;
         font-size: 18px;
     }
+    .card-statistic__price-min{
+        font-size: 12px;
+        display: block;
+        margin-top: 3px;
+    }
 
     .card-statistic__price .text-yellow {
         color: #14151B !important;
@@ -1580,6 +1591,9 @@ textarea.form-control.form-textarea-main__big {
 
     .card-statistic__item {
         font-size: 14px;
+    }
+    .card-statistic__left {
+        max-width: 75px;
     }
 
     .alert-main-error {
@@ -1891,11 +1905,18 @@ body {
     .card-statistic__price {
         font-size: 16px;
     }
+    .card-statistic__price-min{
+        font-size: 10px;
+    }
 
     .card-statistic__item {
         font-size: 12px;
         margin-bottom: 6px;
     }
+    .card-statistic__left {
+        max-width: 65px;
+    }
+
 
     .card-statistic {
         padding: 19px;
