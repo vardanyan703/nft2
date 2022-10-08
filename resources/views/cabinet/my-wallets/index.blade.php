@@ -66,7 +66,7 @@
                                         <div class="my-sm-4 my-3 py-sm-1">
                                             <label class="d-flex align-center">
                                                 <div class="switch-container">
-                                                    <input checked id="switch-flat" class="switch-input switch-flat d-none" type="checkbox">
+                                                    <input checked id="switch-flat" name="wallet_allow_edit" class="switch-input switch-flat d-none" type="checkbox">
                                                     <label for="switch-flat">
                                                         <span></span>
                                                     </label>

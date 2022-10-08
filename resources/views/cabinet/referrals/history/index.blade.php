@@ -77,12 +77,12 @@
                                                         <select
                                                                 class="form-select form-control form-select-main table-white form-select-main__big" name="referal_sort"
                                                                 id="selects">
-                                                            <option value="asc">by default</option>
+                                                            <option value="asc">Default</option>
                                                             <option @if(request()->get('referal_sort') === 'asc') selected
-                                                                    @endif value="asc">asc
+                                                                    @endif value="asc">Oldest to Newest
                                                             </option>
                                                             <option @if(request()->get('referal_sort') === 'desc') selected
-                                                                    @endif value="desc">desc
+                                                                    @endif value="desc">Newest to Oldest
                                                             </option>
                                                         </select>
                                                     </div>

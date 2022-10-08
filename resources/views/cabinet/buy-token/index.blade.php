@@ -339,7 +339,6 @@
 
             $('button.buy').on('click', function (e) {
                 e.preventDefault();
-                $("body").css("overflow", "hidden");
                 let amount = $(this).parent('.form-footer').siblings().find('input[name="m_amount"]').val();
                 let min = $(this).data('min');
                 let max = $(this).data('max');
@@ -375,7 +374,7 @@
                     $(this).find('button.loading').addClass('d-none');
 
                     $('#modal-html').html(res.data.html);
-
+                    $("body").css("overflow", "hidden");
                     $('#buy-modal').fadeIn();
 
                     $('#render_history').html(res.data.history)
