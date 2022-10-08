@@ -9,6 +9,7 @@ use App\Http\Requests\ConfirmPaymnetRequest;
 use App\Http\Requests\PayFromBalanceRequest;
 use App\Models\ApiKey;
 use App\Models\Crypto;
+use App\Models\CryptoRate;
 use App\Models\Tariff;
 use App\Models\User;
 use App\Models\UserTariff;
@@ -37,6 +38,11 @@ class BuyTokenController extends Controller
         $transactions = Transaction::query()->where('buyer_name', \auth()->user()->name)->latest()->paginate(5);
 
         return view('cabinet.buy-token.index', compact('tariffs', 'cryptos', 'transactions'));
+    }
+
+    public function top_up(Request $request){
+        $coin = CryptoRate::query()->where('network',$request->network)->firstOrFail();
+        return view('cabinet.modals.top-up',compact('coin'));
     }
 
     public function confirmPayment(ConfirmPaymnetRequest $request)
