@@ -329,8 +329,18 @@
                         placeholder: 'Search',
                         templateResult: formatState,
                         closeOnSelect: false
+                    }).on("change.select2",function (e){
+                      console.log($("#social").val())
                     })
-
+                  // const social = $("#social").select2({
+                  //   placeholder:'Search',
+                  //   templateResult: formatState,
+                  //   closeOnSelect: false
+                  // }).on("select2:closing", function(e) {
+                  //   e.preventDefault();
+                  // }).on("select2:closed", function(e) {
+                  //   social.select2("open");
+                  // });
                 })
             })
 
