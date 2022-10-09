@@ -7,7 +7,7 @@
     right: 0;
     height: 100%;
     width: 100%;
-    z-index: 5;
+    z-index: 9999;
     background: rgba(44, 46, 60, 0.3);
     overflow: auto;
     box-sizing: border-box; }

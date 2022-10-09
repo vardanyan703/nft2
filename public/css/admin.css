@@ -2158,7 +2158,8 @@ body {
 }
 
 .statistic-btns {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     gap: 11px;
     margin-top: 30px;
 }
