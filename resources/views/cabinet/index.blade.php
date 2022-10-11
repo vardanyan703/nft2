@@ -400,15 +400,18 @@
 
                     $('#modal-coin').fadeIn();
 
-                    $("#social").select2({
-                        placeholder: 'Search',
-                        templateResult: formatState,
-                        closeOnSelect: false
-                    }).on("change.select2",function (e){
-                        openModalTopUp($("#social").val()[0])
-                    })
-                })
-            }
+            $("#social").select2({
+              placeholder: 'Search',
+              templateResult: formatState,
+              closeOnSelect: false
+            }).on("change.select2", function (e) {
+              openModalTopUp($("#social").val()[0])
+            }).on('select2:close', function (e) {
+              $('.show-coins__select').hide()
+              $('.show-coins__inner').removeClass('active')
+            })
+          })
+        }
 
             $('body').on('input','.modal .price',function (){
                 axios.get('/dashboard/buy-nfts/payment/xchange',{
