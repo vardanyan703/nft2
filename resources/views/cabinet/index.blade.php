@@ -303,8 +303,10 @@
                                                                     <a href="{{ route('cabinet.withdraw.index') }}"
                                                                        class="statistic-btn">Withdraw</a>
                                                                     <button
-                                                                       class="statistic-btn statistic-btn__yellow open__modal top_up"
-                                                                       data-open="#modal-coin" data-coin="{{ $currency->network }}">Top up</button>
+                                                                        class="statistic-btn statistic-btn__yellow open__modal top_up"
+                                                                        data-open="#modal-coin"
+                                                                        data-coin="{{ $currency->network }}">Top up
+                                                                    </button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -331,21 +333,21 @@
     <script src="https://momentjs.com/downloads/moment-timezone-with-data.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
     <script>
-      $(function () {
-        $('#input-search__input').on('keyup', function(){
-          let input = $(this).val();
-          let reg = new RegExp(input.toLowerCase(), 'gi');
-          let list = $('.statistic-item')
-          list.map(item => {
-            let coin = list.eq(item).data('coin').toLowerCase()
-            let test = coin.match(reg)
-            if (test) {
-              list.eq(item).show()
-            } else {
-              list.eq(item).hide()
-            }
-          })
-        })
+        $(function () {
+            $('#input-search__input').on('keyup', function () {
+                let input = $(this).val();
+                let reg = new RegExp(input.toLowerCase(), 'gi');
+                let list = $('.statistic-item')
+                list.map(item => {
+                    let coin = list.eq(item).data('coin').toLowerCase()
+                    let test = coin.match(reg)
+                    if (test) {
+                        list.eq(item).show()
+                    } else {
+                        list.eq(item).hide()
+                    }
+                })
+            })
         })
         $(document).ready(function () {
 
@@ -357,39 +359,44 @@
                 }
             });
 
+            function copy(className){
+                var clipboard = new ClipboardJS(className);
+
+                clipboard.on('success', function(e) {
+                    const el = $(className);
+                    const address = el.html();
+
+                    el.text('Copied!')
+
+                    setTimeout(() => {
+                        el.html(address);
+                    },1000)
+
+                    hideTooltip();
+                });
+
+                clipboard.on('error', function(e) {
+                    const el = $(className);
+                    const address = el.html();
+
+                    el.text('Failed!')
+
+                    setTimeout(() => {
+                        el.html(address);
+                    },1000)
+
+                    hideTooltip();
+                });
+            }
+
             function hideTooltip() {
                 setTimeout(function() {
                     $('.modal_copy_button').tooltip('hide');
                 }, 1000);
             }
-
-            var clipboard = new ClipboardJS('.modal_copy_button');
-
-            clipboard.on('success', function(e) {
-                const el = $('.modal_copy_button');
-                const address = el.data('clipboard-text');
-
-                el.text('Copied!')
-
-                setTimeout(() => {
-                    el.text(address);
-                },1000)
-
-                hideTooltip();
-            });
-
-            clipboard.on('error', function(e) {
-                const el = $('.modal_copy_button');
-                const address = el.data('clipboard-text');
-
-                el.text('Failed!')
-
-                setTimeout(() => {
-                    el.text(address);
-                },1000)
-
-                hideTooltip();
-            });
+            copy('.modal_copy_button');
+            copy('.price_text');
+            copy('.copy_qr');
 
 
             function openModalTopUp(network){
