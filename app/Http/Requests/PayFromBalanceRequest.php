@@ -45,7 +45,13 @@ class PayFromBalanceRequest extends FormRequest
                     })
                     ->first();
 
+                if($crypto_balance->user->count() == 0){
+                    $fail("Insufficient ". $this->request->get('wallet_type') ." balance for buy token");
+                }
+
+
                 $to_crypto = CryptoFacade::xChangeToUSDT($value,'USD',$this->request->get('wallet_type'));
+
 
                 if($crypto_balance->user->count() && $crypto_balance->user[0]->pivot->balance < $to_crypto){
                     $fail("Insufficient ". $this->request->get('wallet_type') ." balance for buy token");

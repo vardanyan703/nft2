@@ -153,9 +153,9 @@
                                                             >
                                                         </div>
                                                         <div class="form-input__checkbox mt-3">
-                                                            <input type="checkbox" name="balance" id="checked">
-                                                            <label for="checked" class="pb-0 mb-0">
-                                                                Balance
+                                                            <input type="checkbox" name="balance" id="checked{{ $tariff->id }}">
+                                                            <label for="checked{{ $tariff->id }}" class="pb-0 mb-0">
+                                                                Avaliable Balance
                                                             </label>
                                                         </div>
                                                     </div>
@@ -164,6 +164,7 @@
                                                                 data-min="{{ $tariff->min_price }}"
                                                                 data-max="{{ $tariff->max_price }}"
                                                                 data-key="{{$key}}"
+                                                                data-id="{{ $tariff->id }}"
                                                                 class="btn btn-big btn-yellow btn-main text-uppercase mb-2 buy"
                                                                 style="width: 100%;">
                                                             Buy a token
@@ -350,6 +351,24 @@
             copy('.copy_qr');
 
 
+            function reinvest(tariff_id,amount,wallet_type,form){
+               const url = '{{ route('cabinet.buy-token.payment.balance') }}'
+
+                axios.post(url, {
+                    tarif_plan_reinvest: tariff_id,
+                    wallet_type: wallet_type,
+                    m_amount: amount
+                }).then(res => {
+
+                }).catch(error => {
+                    console.log(error,form);
+                    form.find('span.error-message').text(error.response.data.message);
+                    form.find('button[type=submit]').prop('disabled', false);
+                    form.find('button.buy').removeClass('d-none');
+                    form.find('button.loading').addClass('d-none');
+                })
+            }
+
             $('button.buy').on('click', function (e) {
                 e.preventDefault();
                 let amount = $(this).parent('.form-footer').siblings().find('input[name="m_amount"]').val();
@@ -361,10 +380,16 @@
                     $(this).parent('.form-footer').find('.error-message').text('Please choose payment system')
                     return;
                 }
-
                 if (amount >= min && amount <= max) {
-                    $(this).siblings('button.fin').click()
-                    $(this).parent('.form-footer').find('.error-message').text('')
+                    const balance = $(this).parents('form').find('input:checkbox');
+
+                    if(balance.is(':checked')){
+                        const tariff_id = $(this).data('id')
+                        reinvest(tariff_id,amount,select, $(this).parents('form'));
+                    }else{
+                        $(this).siblings('button.fin').click()
+                        $(this).parent('.form-footer').find('.error-message').text('')
+                    }
                     return
                 }
 
@@ -372,6 +397,7 @@
 
 
             })
+
             $('.buy-tariff').on('submit', function (e) {
                 e.preventDefault();
 

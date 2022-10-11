@@ -123,7 +123,7 @@ class BuyTokenController extends Controller
     }
 
     public function fromBalance(PayFromBalanceRequest $request){
-
+        dd(12);
         try{
 
             $to_crypto = CryptoFacade::xChangeToUSDT($request->m_amount,'USD',$request->get('wallet_type'));
