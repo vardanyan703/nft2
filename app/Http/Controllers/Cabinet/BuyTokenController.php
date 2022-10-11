@@ -154,12 +154,20 @@ class BuyTokenController extends Controller
 
     public function deposit(Request $request){
 
+        $usd = $request->m_amount;
         if($request->wallet_type === 'USD'){
             $coin = CryptoFacade::xChangeToUSDT($request->m_amount,$request->wallet_type,$request->to);
+        }else{
+            $usd = $coin = CryptoFacade::xChangeToUSDT($request->m_amount,$request->wallet_type,'USD');
+        }
+
+        if($usd < 33){
+            return \response()->json([
+                'error' => 'Minimum top up amount - $33'
+            ],403);
         }
 
         $coin = $request->m_amount;
-
 
         // 99999 это попалнения балансе
 
@@ -184,6 +192,13 @@ class BuyTokenController extends Controller
     }
 
     public function xchange(Request $request){
-        return CryptoFacade::xChangeToUSDT($request->m_amount,$request->wallet_type,$request->to);
+
+        $x = CryptoFacade::xChangeToUSDT($request->m_amount,$request->wallet_type,$request->to);
+        if($request->to == 'USD'){
+            return floor($x);
+        }
+
+        return number_format($x,5);
+
     }
 }

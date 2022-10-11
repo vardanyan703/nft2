@@ -53,14 +53,16 @@
                             </div>
                         </div>
                         <div class="modal__form-inner">
-                            <input type="text" class="price" value="0.00">
+                            <input type="text" class="price" placeholder="0.00">
                         </div>
                         <div class="modal__form-inner__price show_price">USD 0</div>
                     </div>
+                    <p class="error_message" style="color: #a11818;"></p>
                 </div>
                 <div class="modal__btn modal__btn-bottom btn btn-primary mb-0 create_payment">
                     Top up
                 </div>
+
                 <div class="modal__form-coin">1 {{ $coin->network }} =
                     ${{ \App\Facades\CryptoFacade::xChangeToUSDT(1,$coin->network) }}</div>
             </div>

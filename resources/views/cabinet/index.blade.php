@@ -1,7 +1,13 @@
 @extends('cabinet.layouts.app')
 
 @section('title','NFT Grower - Dashboard')
-
+@push('style')
+    <style>
+        .select2-dropdown {
+            z-index: 99999 !important;
+        }
+    </style>
+@endpush
 @section('cabinet-content')
     <div class="content">
         <div class="container-fluid">
@@ -391,25 +397,34 @@
                 }).then(res => {
                     $('.modal .show_price').text(window.to +' '+ res.data)
                 })
-            })
+            }).on('focus','.modal .price',function (){
+                $(this).attr('placeholder','')
 
-            $('body').on('click','.xchange_reverse',function (){
+            }).on('click','.xchange_reverse',function (){
                 const reverse = window.network;
                 window.network = window.to;
 
-                const from_price = $('.modal .price').val()
+                let from_price = $('.modal .price').val()
                 const to_price = $('.modal .show_price').text().split(' ')[1];
 
-                $('.modal .price').val(to_price)
+                if(to_price == 0){
+                    $('.modal .price').attr('placeholder',to_price)
+                }else{
+                    $('.modal .price').val(to_price)
+                }
+
                 $('.modal .price_icon').text(window.to)
 
                 window.to = reverse;
 
+                if(from_price == ''){
+                    from_price = 0;
+                }
+
                 $('.modal .show_price').text(window.to +' '+ from_price)
 
-            })
+            }).on('click','.create_payment',function (){
 
-            $('body').on('click','.create_payment',function (){
                 axios.post('/dashboard/buy-nfts/payment/deposit',{
                     m_amount : $('.modal .price').val(),
                     wallet_type: window.network,
@@ -424,6 +439,8 @@
 
                     $('#buy-modal').fadeIn();
 
+                }).catch(error => {
+                    $('.error_message').text(error.response.data.error)
                 })
             })
 
@@ -445,7 +462,9 @@
                 e.preventDefault();
                 $(open).fadeOut(function () {
                     window.$transaction_id = null;
+                    $('#modal-html').html('');
                     $("body").css("overflow", "auto");
+                    $('.error_message').text('')
                 });
             });
 
