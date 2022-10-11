@@ -331,6 +331,22 @@
     <script src="https://momentjs.com/downloads/moment-timezone-with-data.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
     <script>
+      $(function () {
+        $('#input-search__input').on('keyup', function(){
+          let input = $(this).val();
+          let reg = new RegExp(input.toLowerCase(), 'gi');
+          let list = $('.statistic-item')
+          list.map(item => {
+            let coin = list.eq(item).data('coin').toLowerCase()
+            let test = coin.match(reg)
+            if (test) {
+              list.eq(item).show()
+            } else {
+              list.eq(item).hide()
+            }
+          })
+        })
+        })
         $(document).ready(function () {
 
             window.Echo.private('payment-callback-{{ \Illuminate\Support\Facades\Auth::user()->name }}').listen('PaymentCallbackEvent', (e) => {
