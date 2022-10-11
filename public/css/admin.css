@@ -2318,3 +2318,40 @@ body {
 input{
     outline: none;
 }
+
+.form-input__checkbox {
+    transition: 0.3s;
+    cursor: pointer; }
+.form-input__checkbox:hover {
+    color: #FCD535; }
+.form-input__checkbox input {
+    display: none; }
+.form-input__checkbox input:checked ~ label::after {
+    opacity: 1;
+    visibility: visible; }
+.form-input__checkbox label {
+    cursor: pointer;
+    padding-left: 29px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative; }
+.form-input__checkbox label::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #FFDC40;
+    border-radius: 4px;
+    left: 0; }
+.form-input__checkbox label::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("../images/selected_icon.svg");
+    border-radius: 4px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden; }

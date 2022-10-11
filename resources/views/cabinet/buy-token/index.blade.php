@@ -124,6 +124,12 @@
                                                                 </tr>
                                                                 </tbody>
                                                             </table>
+                                                            <div class="form-input__checkbox mb-3">
+                                                                <input type="checkbox" name="remeber" checked="" id="checked">
+                                                                <label for="checked" class="title title-small-1 pb-0 mb-0">
+                                                                    Remeber me
+                                                                </label>
+                                                            </div>
                                                         </div>
                                                         <div class="col-12 mb-2" translate="no">
                                                             {{--                                                            <label class="form-label" translate="yes"> Select a paymentsystem</label>--}}
@@ -236,6 +242,7 @@
                                                 @endforeach
                                             </table>
                                         </div>
+
                                         <br>
                                         {!! $transactions->withQueryString()->links() !!}
                                     @else
