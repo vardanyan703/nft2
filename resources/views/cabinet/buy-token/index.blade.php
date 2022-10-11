@@ -154,7 +154,7 @@
                                                         </div>
                                                         <div class="form-input__checkbox mt-3">
                                                             <input type="checkbox" name="remeber" checked="" id="checked">
-                                                            <label for="checked" class="title title-small-1 pb-0 mb-0">
+                                                            <label for="checked" class="pb-0 mb-0">
                                                                 Balance
                                                             </label>
                                                         </div>
