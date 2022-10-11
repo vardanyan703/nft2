@@ -2322,8 +2322,6 @@ input{
 .form-input__checkbox {
     transition: 0.3s;
     cursor: pointer; }
-.form-input__checkbox:hover {
-    color: #FCD535; }
 .form-input__checkbox input {
     display: none; }
 .form-input__checkbox input:checked ~ label::after {
