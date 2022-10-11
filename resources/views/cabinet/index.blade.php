@@ -231,8 +231,8 @@
                                             <div class="col-12">
                                                 <div class="statistics">
                                                     @foreach($currencies as $currency)
-                                                        <div
-                                                            class="statistic-item card card-sm card-white card-statistic mx-0">
+                                                        <div data-coin="{{ $currency->name }} {{ $currency->image }}"
+                                                             class="statistic-item card card-sm card-white card-statistic mx-0">
                                                             <div class="row align-items-center">
 
                                                                 <div class="col-md-10 col-sm-12 col">
