@@ -224,8 +224,15 @@
                                 <div class="card card-grey px-sm-3">
                                     <div class="px-2">
                                         <div class="pt-3 my-1 ">
-                                            <h4 class="title title-small text-uppercase title-line mb-2">Financial
-                                                statistics</h4>
+                                            <div class="input-search__head">
+                                                <h4 class="title title-small text-uppercase title-line mb-2">
+                                                    Financial statistics
+                                                </h4>
+                                                <div class="input-search">
+                                                    <input id="input-search__input" type="text" placeholder="Search">
+                                                </div>
+                                            </div>
+
                                         </div>
                                         <div class="row">
                                             <div class="col-12">
