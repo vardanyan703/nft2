@@ -355,6 +355,9 @@
 .modal__success {
     padding-bottom: 21px;
     padding-top: 30px; }
+.modal__success img{
+    border-radius: 50%;
+}
 @media screen and (max-width: 600px) {
     .modal__success {
         padding-top: 4px;
@@ -688,4 +691,7 @@ border:none;}
         height: 20px;
         left: 10px;
     }
+}
+.select2-dropdown{
+    z-index: 99999;
 }
