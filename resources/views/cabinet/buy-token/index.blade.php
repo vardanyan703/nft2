@@ -124,12 +124,7 @@
                                                                 </tr>
                                                                 </tbody>
                                                             </table>
-                                                            <div class="form-input__checkbox mb-3">
-                                                                <input type="checkbox" name="remeber" checked="" id="checked">
-                                                                <label for="checked" class="title title-small-1 pb-0 mb-0">
-                                                                    Balance
-                                                                </label>
-                                                            </div>
+
                                                         </div>
                                                         <div class="col-12 mb-2" translate="no">
                                                             {{--                                                            <label class="form-label" translate="yes"> Select a paymentsystem</label>--}}
@@ -156,6 +151,12 @@
                                                                    placeholder="Enter amount (USD)"
                                                                    inputmode="text"
                                                             >
+                                                        </div>
+                                                        <div class="form-input__checkbox mt-3">
+                                                            <input type="checkbox" name="remeber" checked="" id="checked">
+                                                            <label for="checked" class="title title-small-1 pb-0 mb-0">
+                                                                Balance
+                                                            </label>
                                                         </div>
                                                     </div>
                                                     <div class="form-footer mt-3 pt-lg-2" style="margin-top: 1.1rem;">
