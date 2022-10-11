@@ -2348,11 +2348,12 @@ input{
 .form-input__checkbox label::before {
     content: '';
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background: #FFDC40;
+    width: 18px;
+    height: 18px;
+    background: transparent;
     border-radius: 50%;
-    left: 0; }
+    left: 0;
+    border: 2px solid #FFDC40; }
 .form-input__checkbox label::after {
     content: '';
     position: absolute;

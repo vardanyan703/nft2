@@ -297,7 +297,7 @@
                     </svg>
                 </div>
                 <div class="modal__body">
-                    <div class="modal__success">
+                    <div class="modal__success modal__loading">
                         <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                   d="M32 10.4C20.0707 10.4 10.4 20.0707 10.4 32H5C5 17.0883 17.0883 5 32 5V10.4ZM32 53.6C43.9294 53.6 53.6 43.9294 53.6 32H59C59 46.9117 46.9117 59 32 59V53.6Z"
