@@ -456,6 +456,7 @@
 
                 $('.modal .show_price').text(window.to +' '+ from_price)
 
+
             }).on('click','.create_payment',function (){
 
                 axios.post('/dashboard/buy-nfts/payment/deposit',{

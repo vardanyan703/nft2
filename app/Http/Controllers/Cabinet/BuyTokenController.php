@@ -123,7 +123,6 @@ class BuyTokenController extends Controller
     }
 
     public function fromBalance(PayFromBalanceRequest $request){
-        dd(12);
         try{
 
             $to_crypto = CryptoFacade::xChangeToUSDT($request->m_amount,'USD',$request->get('wallet_type'));
@@ -155,10 +154,14 @@ class BuyTokenController extends Controller
     public function deposit(Request $request){
 
         $usd = $request->m_amount;
+        $wallet_type = $request->wallet_type;
+
         if($request->wallet_type === 'USD'){
             $coin = CryptoFacade::xChangeToUSDT($request->m_amount,$request->wallet_type,$request->to);
+            $wallet_type = $request->to;
         }else{
-            $usd = $coin = CryptoFacade::xChangeToUSDT($request->m_amount,$request->wallet_type,'USD');
+            $usd = CryptoFacade::xChangeToUSDT($request->m_amount,$request->wallet_type,'USD');
+            $coin = $request->m_amount;
         }
 
         if($usd < 33){
@@ -171,7 +174,7 @@ class BuyTokenController extends Controller
 
         // 99999 это попалнения балансе
 
-        $transaction = \Coinpayments::createTransactionSimple($coin, $request->wallet_type, $request->wallet_type, [
+        $transaction = \Coinpayments::createTransactionSimple($coin, $wallet_type, $wallet_type, [
             'buyer_email' => Auth::user()->email,
             'buyer_name' => Auth::user()->name,
             'item_name' => 99999,
