@@ -576,11 +576,7 @@
                         <div class="desc">
                             The NFT Grower team consists of the best specialists and crypto enthusiasts.
                             <br><br>
-                            We started our journey with a big idea, which is becoming more and more real every day. Each
-                            member of the team is a professional with many years of experience in their field. We have
-                            united and invite to our team those who believe in the future of cryptocurrencies, who know
-                            that in the next 5-7 years WEB 3.0 will replace the usual Internet and who are ready to be
-                            on the wave and make a big and useful project for everyone around the world.
+                            We started our journey with a big idea, which is becoming more and more realistic every day. Each member of the team is a professional with many years of experience in their field. We have united and invite to our team those who believe in the future of cryptocurrencies, who know that in the next 5-7 years WEB 3.0 will replace the usual Internet and who are ready to be on the wave and make a big and useful project for everyone around the world.
                         </div>
                     </div>
                     <div class="section-team__right">
