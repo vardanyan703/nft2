@@ -127,7 +127,7 @@
                                                             <div class="form-input__checkbox mb-3">
                                                                 <input type="checkbox" name="remeber" checked="" id="checked">
                                                                 <label for="checked" class="title title-small-1 pb-0 mb-0">
-                                                                    Remeber me
+                                                                    Balance
                                                                 </label>
                                                             </div>
                                                         </div>

@@ -2330,7 +2330,7 @@ input{
     opacity: 1;
     visibility: visible; }
 .form-input__checkbox label {
-    font-size: 16px;
+    font-size: 16px !important;
     cursor: pointer;
     padding-left: 29px;
     display: -ms-flexbox;
@@ -2340,7 +2340,7 @@ input{
     position: relative; }
 @media screen and (max-width: 600px) {
     .form-input__checkbox label{
-        font-size: 12px;
+        font-size: 12px !important;
     }
 }
 .form-input__checkbox label::before {
