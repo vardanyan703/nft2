@@ -211,7 +211,7 @@
                     </li>
 
                     <li class="featured__item">
-                        <a href="#" class="featured__link">
+                        <a href="https://es.cointelegraph.com/press-releases/nft-grower-is-rapidly-gaining-popularity-in-the-crypto-community" target="_blank" class="featured__link">
                             <img src="images/featured-2.png" alt="">
                         </a>
                     </li>

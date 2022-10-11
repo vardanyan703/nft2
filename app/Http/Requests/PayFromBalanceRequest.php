@@ -46,7 +46,7 @@ class PayFromBalanceRequest extends FormRequest
                     ->first();
 
                 if($crypto_balance->user->count() == 0){
-                    $fail("Insufficient ". $this->request->get('wallet_type') ." balance for buy token");
+                    $fail('Not enough funds on your account balance');
                 }
 
 
@@ -54,7 +54,8 @@ class PayFromBalanceRequest extends FormRequest
 
 
                 if($crypto_balance->user->count() && $crypto_balance->user[0]->pivot->balance < $to_crypto){
-                    $fail("Insufficient ". $this->request->get('wallet_type') ." balance for buy token");
+                    //$fail("Insufficient ". $this->request->get('wallet_type') ." balance for buy token");
+                    $fail('Not enough funds on your account balance');
                 }
 
             } ,function ($attribute, $value, $fail) {
