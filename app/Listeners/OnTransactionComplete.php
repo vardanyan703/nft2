@@ -66,7 +66,7 @@ class OnTransactionComplete
             ]);
         }
 
-        event(new PaymentCallbackEvent($event->transaction['buyer_name'],$event->transaction['txn_id']));
+        event(new PaymentCallbackEvent($event->transaction['buyer_name'],$event->transaction['txn_id'],1));
         dispatch(new AffiliatePercentJob($event->transaction['buyer_name'],$usdt));
     }
 }

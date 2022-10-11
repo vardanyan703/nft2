@@ -287,7 +287,64 @@
         </div>
     </div>
     <section id="modal-html"></section>
-
+    <div class="modal" id="waiting_modal">
+        <div class="modal-inner">
+            <div class="modal__container">
+                <div class="modal__close close">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.42333 1.10131C9.29015 0.966229 9.07446 0.966229 8.94128 1.10131L6.00037 4.08426L3.05969 1.10131C2.92651 0.966229 2.71083 0.966229 2.57765 1.10131L1.10037 2.5997C0.967193 2.73479 0.967193 2.95355 1.10037 3.08864L3.97072 6L1.10037 8.91137C0.967193 9.04645 0.967193 9.26521 1.10037 9.4003L2.57765 10.8987C2.71083 11.0338 2.92651 11.0338 3.05969 10.8987L6.00037 7.91574L8.94128 10.8987C9.07446 11.0338 9.29015 11.0338 9.42333 10.8987L10.9006 9.40007C11.0338 9.26498 11.0338 9.04622 10.9006 8.91113L8.03049 6L10.9006 3.08887C11.0338 2.95378 11.0338 2.73502 10.9006 2.59993L9.42333 1.10131Z"
+                              fill="#231F20"/>
+                    </svg>
+                </div>
+                <div class="modal__body">
+                    <div class="modal__success">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M32 10.4C20.0707 10.4 10.4 20.0707 10.4 32H5C5 17.0883 17.0883 5 32 5V10.4ZM32 53.6C43.9294 53.6 53.6 43.9294 53.6 32H59C59 46.9117 46.9117 59 32 59V53.6Z"
+                                  fill="#FFDC40"/>
+                        </svg>
+                    </div>
+                    <div class="modal__title title title-line">
+                        Great, usually a transaction gets confirmation within 10 seconds to 1 hour, it all depends on the
+                        blockchain.
+                    </div>
+                    <div class="modal-desc__more">
+                        <span>
+                            After confirming the payment, NFT will be displayed in the <a href="{{ route('cabinet.my-tokens.index') }}" target="_blank">Your Tokens</a> section and there you can monitor the profit from your token.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="token_add">
+        <div class="modal-inner">
+            <div class="modal__container">
+                <div class="modal__close close">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.42333 1.10131C9.29015 0.966229 9.07446 0.966229 8.94128 1.10131L6.00037 4.08426L3.05969 1.10131C2.92651 0.966229 2.71083 0.966229 2.57765 1.10131L1.10037 2.5997C0.967193 2.73479 0.967193 2.95355 1.10037 3.08864L3.97072 6L1.10037 8.91137C0.967193 9.04645 0.967193 9.26521 1.10037 9.4003L2.57765 10.8987C2.71083 11.0338 2.92651 11.0338 3.05969 10.8987L6.00037 7.91574L8.94128 10.8987C9.07446 11.0338 9.29015 11.0338 9.42333 10.8987L10.9006 9.40007C11.0338 9.26498 11.0338 9.04622 10.9006 8.91113L8.03049 6L10.9006 3.08887C11.0338 2.95378 11.0338 2.73502 10.9006 2.59993L9.42333 1.10131Z"
+                              fill="#231F20"/>
+                    </svg>
+                </div>
+                <div class="modal__body">
+                    <div class="modal__success">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M32.0002 5.33325C17.2963 5.33325 5.3335 17.296 5.3335 31.9999C5.3335 46.7038 17.2963 58.6666 32.0002 58.6666C46.7041 58.6666 58.6668 46.7038 58.6668 31.9999C58.6668 17.296 46.7041 5.33325 32.0002 5.33325ZM32.0002 9.33325C44.5423 9.33325 54.6668 19.4578 54.6668 31.9999C54.6668 44.5421 44.5423 54.6666 32.0002 54.6666C19.458 54.6666 9.3335 44.5421 9.3335 31.9999C9.3335 19.4578 19.458 9.33325 32.0002 9.33325ZM41.9611 23.9817C41.4417 23.9968 40.9486 24.2135 40.5861 24.5859L28.6668 36.5051L23.4142 31.2525C23.2299 31.0606 23.0092 30.9073 22.7649 30.8018C22.5207 30.6962 22.2578 30.6404 21.9917 30.6377C21.7257 30.635 21.4617 30.6854 21.2154 30.786C20.969 30.8866 20.7452 31.0353 20.5571 31.2235C20.3689 31.4116 20.2202 31.6354 20.1196 31.8818C20.019 32.1281 19.9686 32.3921 19.9713 32.6582C19.974 32.9242 20.0298 33.1871 20.1354 33.4314C20.2409 33.6756 20.3942 33.8964 20.5861 34.0806L27.2528 40.7473C27.6279 41.1222 28.1365 41.3329 28.6668 41.3329C29.1972 41.3329 29.7058 41.1222 30.0809 40.7473L43.4142 27.414C43.7028 27.133 43.8997 26.7714 43.9794 26.3766C44.059 25.9818 44.0176 25.5721 43.8606 25.2012C43.7036 24.8304 43.4382 24.5155 43.0993 24.2979C42.7604 24.0803 42.3637 23.9701 41.9611 23.9817Z"
+                                  fill="#0EB159"/>
+                        </svg>
+                    </div>
+                    <div class="modal__title title title-line">The Matrix token has been successfully purchased</div>
+                    <p class="modal-desc">
+                        it is already making you a profit. This can be seen in the
+                        <a href="{{ route('cabinet.my-tokens.index') }}">Your Tokens</a> section.
+                    </p>
+                    <div class="modal__btn modal__btn-bottom btn btn-primary ok_button">
+                        OK
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 
@@ -306,6 +363,13 @@
             }
 
             $('#render_history').html(e.table)
+
+            if(e.add == 1){
+                $('#modal-html').fadeOut();
+                $('#waiting_modal').fadeOut();
+
+                $('#token_add').fadeIn();
+            }
 
         });
 
@@ -359,7 +423,7 @@
                     wallet_type: wallet_type,
                     m_amount: amount
                 }).then(res => {
-
+                    $('#token_add').fadeIn();
                 }).catch(error => {
                     console.log(error,form);
                     form.find('span.error-message').text(error.response.data.message);
@@ -431,12 +495,19 @@
                 e.stopPropagation();
             });
 
-            $("body").on("click", ".modal .close, .modal, .modal-close, .have_paid", function (e) {
+            $("body").on("click", ".modal .close, .modal, .modal-close, .have_paid, .ok_button", function (e) {
                 e.preventDefault();
+
+                const button = $(this)
                 $(".modal").fadeOut(function () {
                     clearInterval(window.x);
                     window.$transaction_id = null;
                     $("body").css("overflow", "auto");
+
+                    if(button.hasClass('have_paid')){
+                        $("body").css("overflow", "hidden");
+                        $('#waiting_modal').fadeIn();
+                    }
                 });
             });
 

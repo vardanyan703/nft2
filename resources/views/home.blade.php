@@ -200,12 +200,12 @@
                 <h2 class="title title-line">As featured in</h2>
                 <ul class="featured__list">
                     <li class="featured__item">
-                        <a href="#" class="featured__link">
+                        <a href="https://cryptonews.com/news/an-nft-collection-that-creates-metaverse-unites-global-community.htm" target="_blank" class="featured__link">
                             <img src="images/featured-1.png" alt="">
                         </a>
                     </li>
                     <li class="featured__item">
-                        <a href="#" class="featured__link">
+                        <a href="https://coindoo.com/nft-grower-team-launches-project-to-accelerate-web2-to-web3-transition/" target="_blank" class="featured__link">
                             <img src="images/featured-4.png" alt="">
                         </a>
                     </li>
@@ -216,7 +216,7 @@
                         </a>
                     </li>
                     <li class="featured__item">
-                        <a href="#" class="featured__link">
+                        <a href="https://coinmarketcal.com/en/news/while-everyone-is-in-a-panic-the-nft-grower-community-is-actively-developing-and-hiring-the-best-specialists-to-its-team" target="_blank" class="featured__link">
                             <img src="images/featured-3.png" alt="">
                         </a>
                     </li>

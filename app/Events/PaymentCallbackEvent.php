@@ -22,7 +22,7 @@ class PaymentCallbackEvent implements ShouldBroadcast
      *
      * @return void
      */
-    public function __construct(private string $name,private $transaction_txn_id){
+    public function __construct(private string $name,private $transaction_txn_id,private $add = null){
         $this->transaction = Transaction::query()->where('txn_id',$transaction_txn_id)->first();
     }
 
@@ -45,6 +45,7 @@ class PaymentCallbackEvent implements ShouldBroadcast
         return [
             'html' => view('cabinet.modals.payment',compact('transaction'))->render(),
             'transaction_id' => $this->transaction->id,
+            'add' => $this->add,
             'table' => view('cabinet.buy-token.render_table',compact('transactions','cryptos'))->render()
         ];
     }
