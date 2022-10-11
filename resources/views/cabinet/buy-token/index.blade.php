@@ -310,7 +310,7 @@
                     </div>
                     <div class="modal-desc__more">
                         <span>
-                            After confirming the payment, NFT will be displayed in the <a href="{{ route('cabinet.my-tokens.index') }}" target="_blank">Your Tokens</a> section and there you can monitor the profit from your token.
+                            After confirming the payment, NFT will be displayed in the <a href="{{ route('cabinet.my-tokens.index') }}">Your Tokens</a> section and there you can monitor the profit from your token.
                         </span>
                     </div>
                 </div>
