@@ -165,6 +165,7 @@
                                                                 data-max="{{ $tariff->max_price }}"
                                                                 data-key="{{$key}}"
                                                                 data-id="{{ $tariff->id }}"
+                                                                data-tariff-name="{{ $tariff->home_page_name }}"
                                                                 class="btn btn-big btn-yellow btn-main text-uppercase mb-2 buy"
                                                                 style="width: 100%;">
                                                             Buy a token
@@ -368,7 +369,7 @@
                 $('#modal-html').fadeOut();
                 $('#waiting_modal').fadeOut();
 
-                $('#token_add').find('.title-line').text('The '+e.network+' token has been successfully purchased')
+                $('#token_add').find('.title-line').text('The '+e.home_page_name+' token has been successfully purchased')
 
                 $('#token_add').fadeIn();
             }
@@ -417,7 +418,7 @@
             copy('.copy_qr');
 
 
-            function reinvest(tariff_id,amount,wallet_type,form){
+            function reinvest(tariff_id,amount,wallet_type,tariff_name,form){
                const url = '{{ route('cabinet.buy-token.payment.balance') }}'
 
                 axios.post(url, {
@@ -425,7 +426,7 @@
                     wallet_type: wallet_type,
                     m_amount: amount
                 }).then(res => {
-                    $('#token_add').find('.title-line').text('The '+wallet_type+' token has been successfully purchased')
+                    $('#token_add').find('.title-line').text('The '+tariff_name+' token has been successfully purchased')
                     $('#token_add').fadeIn();
                 }).catch(error => {
                     console.log(error,form);
@@ -443,6 +444,7 @@
                 let amount = $(this).parent('.form-footer').siblings().find('input[name="m_amount"]').val();
                 let min = $(this).data('min');
                 let max = $(this).data('max');
+                let tariff_name = $(this).data('tariff-name');
                 let select = $(this).parents('form').find('select#selects').val();
 
                 if (!select) {
@@ -454,7 +456,7 @@
 
                     if(balance.is(':checked')){
                         const tariff_id = $(this).data('id')
-                        reinvest(tariff_id,amount,select, $(this).parents('form'));
+                        reinvest(tariff_id,amount,select, tariff_name,$(this).parents('form'));
                     }else{
                         $(this).siblings('button.fin').click()
                         $(this).parent('.form-footer').find('.error-message').text('')
@@ -514,15 +516,18 @@
                         $('#waiting_modal').fadeIn();
                     }
 
-                    window.submit_form.trigger('reset');
+                    if(window.submit_form != undefined){
+                        window.submit_form.trigger('reset');
 
-                    const example = new Choices(window.submit_form.find('#selects')[0]);
-                    example.removeActiveItems();
-                    let element = window.submit_form.find('.choices__list.choices__list--single')
-                    let html = `<div class="choices__item choices__placeholder choices__item--selectable" data-item="" data-id="1" data-value="" data-custom-properties="null" aria-selected="true">
+                        const example = new Choices(window.submit_form.find('#selects')[0]);
+                        example.removeActiveItems();
+                        let element = window.submit_form.find('.choices__list.choices__list--single')
+                        let html = `<div class="choices__item choices__placeholder choices__item--selectable" data-item="" data-id="1" data-value="" data-custom-properties="null" aria-selected="true">
                              Select a payment system
                             </div>`
-                    element.html(html)
+                        element.html(html)
+                    }
+
                 });
             });
 

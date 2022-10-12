@@ -3,6 +3,7 @@
 namespace App\Events;
 
 use App\Models\Crypto;
+use App\Models\Tariff;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -42,10 +43,12 @@ class PaymentCallbackEvent implements ShouldBroadcast
 
         $transactions = Transaction::query()->where('buyer_name', $this->name)->latest()->paginate(5);
 
+        $tariff = Tariff::query()->where('id',$this->transaction['item_name'])->first();
+
         return [
             'html' => view('cabinet.modals.payment',compact('transaction'))->render(),
             'transaction_id' => $this->transaction->id,
-            'network' => $this->transaction->currency1,
+            'home_page_name' => $tariff->home_page_name,
             'add' => $this->add,
             'table' => view('cabinet.buy-token.render_table',compact('transactions','cryptos'))->render()
         ];
