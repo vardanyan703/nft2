@@ -112,7 +112,7 @@
                                 <a href="#" class="home-banner__logo">
                                     <img src="images/ft.svg" alt="">
                                 </a>
-                                <a href="https://www.binance.com" target="_blank" class="home-banner__logo">
+                                <a href="https://www.binance.com/en/nft/profile/nftgrower-dd70c39de7ba09f478a03d8ac3855d5a" target="_blank" class="home-banner__logo">
                                     <img src="images/binance-big.svg" alt="">
                                 </a>
                             </div>

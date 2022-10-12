@@ -134,7 +134,7 @@
                                                                 <select name="wallet_type"
                                                                         class="form-select form-select-main form-control"
                                                                         id="selects">
-                                                                    <option value=""> Select a paymentsystem</option>
+                                                                    <option value=""> Select a payment system</option>
                                                                     @foreach($cryptos as $crypto)
                                                                         <option value="{{ $crypto->network }}">
                                                                             {{ $crypto->name }}
@@ -155,7 +155,7 @@
                                                         <div class="form-input__checkbox mt-3">
                                                             <input type="checkbox" name="balance" id="checked{{ $tariff->id }}">
                                                             <label for="checked{{ $tariff->id }}" class="pb-0 mb-0">
-                                                                Avaliable Balance
+                                                                Use account balance
                                                             </label>
                                                         </div>
                                                     </div>
@@ -368,6 +368,8 @@
                 $('#modal-html').fadeOut();
                 $('#waiting_modal').fadeOut();
 
+                $('#token_add').find('.title-line').text('The '+e.network+' token has been successfully purchased')
+
                 $('#token_add').fadeIn();
             }
 
@@ -423,6 +425,7 @@
                     wallet_type: wallet_type,
                     m_amount: amount
                 }).then(res => {
+                    $('#token_add').find('.title-line').text('The '+wallet_type+' token has been successfully purchased')
                     $('#token_add').fadeIn();
                 }).catch(error => {
                     console.log(error,form);
@@ -434,6 +437,8 @@
             }
 
             $('button.buy').on('click', function (e) {
+                window.submit_form = $(this).parents('form');
+                $('.error-message').text('');
                 e.preventDefault();
                 let amount = $(this).parent('.form-footer').siblings().find('input[name="m_amount"]').val();
                 let min = $(this).data('min');
@@ -508,6 +513,16 @@
                         $("body").css("overflow", "hidden");
                         $('#waiting_modal').fadeIn();
                     }
+
+                    window.submit_form.trigger('reset');
+
+                    const example = new Choices(window.submit_form.find('#selects')[0]);
+                    example.removeActiveItems();
+                    let element = window.submit_form.find('.choices__list.choices__list--single')
+                    let html = `<div class="choices__item choices__placeholder choices__item--selectable" data-item="" data-id="1" data-value="" data-custom-properties="null" aria-selected="true">
+                             Select a payment system
+                            </div>`
+                    element.html(html)
                 });
             });
 

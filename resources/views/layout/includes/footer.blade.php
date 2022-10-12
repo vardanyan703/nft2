@@ -29,7 +29,7 @@
                     </ul>
                 </nav>
                 <div class="footer-btns">
-                    <a class="btn btn-grey" href="https://www.binance.com" target="_blank">
+                    <a class="btn btn-grey" href="https://www.binance.com/en/nft/profile/nftgrower-dd70c39de7ba09f478a03d8ac3855d5a" target="_blank">
                         <img src="/images/binance.svg" alt="">
                     </a>
                     <a class="btn btn-grey" href="https://www.trustpilot.com/review/nftgrower.io" target="_blank">

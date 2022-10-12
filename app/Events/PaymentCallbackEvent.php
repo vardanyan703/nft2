@@ -45,6 +45,7 @@ class PaymentCallbackEvent implements ShouldBroadcast
         return [
             'html' => view('cabinet.modals.payment',compact('transaction'))->render(),
             'transaction_id' => $this->transaction->id,
+            'network' => $this->transaction->currency1,
             'add' => $this->add,
             'table' => view('cabinet.buy-token.render_table',compact('transactions','cryptos'))->render()
         ];
