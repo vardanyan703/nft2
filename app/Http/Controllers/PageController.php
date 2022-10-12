@@ -15,6 +15,8 @@ class PageController extends Controller
     {
         $tariffs = Tariff::query()
             ->with('attachment')
+            ->where('id','!=',99999)
+            ->where('published','!=',0)
             ->get();
 
         $faq = Faq::query()
