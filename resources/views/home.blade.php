@@ -112,7 +112,7 @@
                                 <a href="#" class="home-banner__logo">
                                     <img src="images/ft.svg" alt="">
                                 </a>
-                                <a href="https://www.binance.com/en/nft/profile/nftgrower-dd70c39de7ba09f478a03d8ac3855d5a" target="_blank" class="home-banner__logo">
+                                <a href="https://www.binance.com/en/nft/collection/nft-grower-apes-632883609714249728" target="_blank" class="home-banner__logo">
                                     <img src="images/binance-big.svg" alt="">
                                 </a>
                             </div>
@@ -150,9 +150,7 @@
                     </div>
                     <div class="section-grower__right">
                         <h2 class="title">What is <span>NFT GROWER?</span></h2>
-                        <div class="desc">NFT Grower is an NFT collection of 11,111 unique monkey characters powered by
-                            the Binance
-                            blockchain.
+                        <div class="desc">NFT Grower is an NFT collection of 11,111 unique monkey heroes powered by the Binance blockchain, P2E Metaverse, Investment Pool.
                         </div>
                         <div class="section-grower__list">
                             <div class="section-grower__item">

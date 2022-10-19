@@ -41,7 +41,7 @@ class OnTransactionComplete
         cp_log($event->transaction->toArray(), 'TRANSACTIONЬCOMPLETED', \Kevupton\LaravelCoinpayments\Models\Log::LEVEL_ALL);
 
         // 99999 это попалнения балансе
-        if($event->transaction['item_name'] === 99999){
+        if($event->transaction['item_name'] == 99999){
             $received_amount = $event->transaction['received_amount'];
 
             $user = User::updateOrAttachCryptoByDeposit($event->transaction['buyer_name'],$received_amount,$event->transaction['currency1']);

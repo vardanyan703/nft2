@@ -170,8 +170,6 @@ class BuyTokenController extends Controller
             ],403);
         }
 
-        $coin = $request->m_amount;
-
         // 99999 это попалнения балансе
 
         $transaction = \Coinpayments::createTransactionSimple($coin, $wallet_type, $wallet_type, [
