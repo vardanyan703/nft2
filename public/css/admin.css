@@ -1614,12 +1614,7 @@ textarea.form-control.form-textarea-main__big {
         margin: 0;
     }
 
-    .profile-img__inner {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        margin: 21px 0;
-    }
+
 
     .statistics {
         gap: 10px;
@@ -1687,10 +1682,12 @@ textarea.form-control.form-textarea-main__big {
     .person-info {
         max-width: 100% !important;
     }
-
-    /*.card-statistic__item{*/
-    /*    flex-direction: row;*/
-    /*}*/
+    .profile-img__inner {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin: 21px 0;
+    }
 }
 
 @media screen and (max-width: 1100px) {
