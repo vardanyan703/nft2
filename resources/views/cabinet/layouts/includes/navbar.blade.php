@@ -19,7 +19,7 @@
                 </li>
                 <li class="nav-item @if(Route::currentRouteName() === 'cabinet.buy-token.index') active @endif">
                     <a class="nav-link" href="{{ route('cabinet.buy-token.index') }}">
-                        <span class="nav-link-title" style="margin-left: 5px;">Buy NFTs</span>
+                        <span class="nav-link-title" style="margin-left: 5px;">Buy NFT</span>
                     </a>
                 </li>
                 <li class="nav-item @if(Route::currentRouteName() === 'cabinet.my-tokens.index') active @endif">

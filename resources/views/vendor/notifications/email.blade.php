@@ -192,11 +192,11 @@
                                     <tr>
                                         <td>
                                             <p class="social-list">
-                                                <a href="https://t.me/nftgrower"
+                                                <a href="https://t.me/+tM8gcPWb5CQ3NDEy"
                                                    style="margin-right: 3px; box-sizing: border-box; display:inline-flex;align-items:center;justify-content:center; width: 36px;height: 36px;border-radius: 50%;border: 2px solid #FFDC40;">
                                                     <img src="{{ asset('images/icon2.png') }}" idth="20" height="20" alt="">
                                                 </a>
-                                                <a href="https://t.me/nftgrowerchat"
+                                                <a href="https://t.me/+l3nUB8JdCBFkMDVh"
                                                    style="margin: 0 3px; box-sizing: border-box; display:inline-flex;align-items:center;justify-content:center; width: 36px;height: 36px;border-radius: 50%;border: 2px solid #FFDC40;">
                                                     <img src="{{ asset('images/icon3.png') }}" idth="20" height="20" alt="">
                                                 </a>

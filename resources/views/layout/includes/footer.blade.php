@@ -42,7 +42,7 @@
             </div>
             <div class="footer-bottom">
                 <div class="footer-soc">
-                    <a class="btn btn-dashed" href="https://t.me/nftgrower" target="_blank">
+                    <a class="btn btn-dashed" href="https://t.me/+tM8gcPWb5CQ3NDEy" target="_blank">
                           <span class="btn-dashed__inner">
                             <span>
                           <svg width="32" height="32" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +66,7 @@
                           </span>
                           </span>
                     </a>
-                    <a class="btn btn-dashed" href="https://t.me/nftgrowerchat" target="_blank">
+                    <a class="btn btn-dashed" href="https://t.me/+l3nUB8JdCBFkMDVh" target="_blank">
                           <span class="btn-dashed__inner">
                         <span>
                          <svg width="32" height="32" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">

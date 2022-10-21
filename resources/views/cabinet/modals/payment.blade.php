@@ -52,7 +52,7 @@
                 <div class="btn btn-big btn-yellow btn-main text-uppercase mb-2 buy w-full have_paid" data-open="#buy-modal">
                     I have paid
                 </div>
-                <p class="modal-more">Need help? <a href="{{ route('cabinet.support.index') }}">Contact Us</a></p>
+                <p class="modal-more modal_contact">Need help? <a href="{{ route('cabinet.support.index') }}">Contact Us</a></p>
             </div>
         </div>
     </div>

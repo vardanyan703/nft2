@@ -2,6 +2,8 @@
 
 namespace App\Orchid\Layouts\User;
 
+use App\Orchid\Filters\EmailFilter;
+use App\Orchid\Filters\NameFilter;
 use App\Orchid\Filters\RoleFilter;
 use Orchid\Filters\Filter;
 use Orchid\Screen\Layouts\Selection;
@@ -15,6 +17,8 @@ class UserFiltersLayout extends Selection
     {
         return [
             RoleFilter::class,
+            NameFilter::class,
+            EmailFilter::class
         ];
     }
 }

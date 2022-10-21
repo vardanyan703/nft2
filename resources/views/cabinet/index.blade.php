@@ -325,6 +325,35 @@
     </div>
 
     <div id="modal-html"></div>
+    <div class="modal" id="waiting_modal">
+        <div class="modal-inner">
+            <div class="modal__container">
+                <div class="modal__close close" data-open="#waiting_modal">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.42333 1.10131C9.29015 0.966229 9.07446 0.966229 8.94128 1.10131L6.00037 4.08426L3.05969 1.10131C2.92651 0.966229 2.71083 0.966229 2.57765 1.10131L1.10037 2.5997C0.967193 2.73479 0.967193 2.95355 1.10037 3.08864L3.97072 6L1.10037 8.91137C0.967193 9.04645 0.967193 9.26521 1.10037 9.4003L2.57765 10.8987C2.71083 11.0338 2.92651 11.0338 3.05969 10.8987L6.00037 7.91574L8.94128 10.8987C9.07446 11.0338 9.29015 11.0338 9.42333 10.8987L10.9006 9.40007C11.0338 9.26498 11.0338 9.04622 10.9006 8.91113L8.03049 6L10.9006 3.08887C11.0338 2.95378 11.0338 2.73502 10.9006 2.59993L9.42333 1.10131Z"
+                              fill="#231F20"/>
+                    </svg>
+                </div>
+                <div class="modal__body">
+                    <div class="modal__success modal__loading">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M32 10.4C20.0707 10.4 10.4 20.0707 10.4 32H5C5 17.0883 17.0883 5 32 5V10.4ZM32 53.6C43.9294 53.6 53.6 43.9294 53.6 32H59C59 46.9117 46.9117 59 32 59V53.6Z"
+                                  fill="#FFDC40"/>
+                        </svg>
+                    </div>
+                    <div class="modal__title title title-line">
+                        GREAT, USUALLY A TRANSACTION GETS CONFIRMATION WITHIN 10 SECONDS TO 1 HOUR, IT ALL DEPENDS ON THE BLOCKCHAIN.
+                    </div>
+                    <div class="modal-desc__more">
+                        <span>
+                            After confirming the payment, the replenishment amount will be displayed on your Dashboard in the "Available Balance", and after that you can buy NFT in the <a class="buy_nft_modal_href" href="{{ route('cabinet.buy-token.index') }}">BUY NFT</a> section.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 
@@ -334,6 +363,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
     <script>
         $(function () {
+            $('body').on('click','.modal_contact a, .buy_nft_modal_href',function () {
+               window.location.href = $(this).attr('href')
+            });
+
             $('#input-search__input').on('keyup', function () {
                 let input = $(this).val();
                 let reg = new RegExp(input.toLowerCase(), 'gi');
@@ -492,13 +525,19 @@
 
             $("body").on("click", ".modal .close, .modal, .modal-close, .have_paid", function (e) {
                 const open = $(this).data('open');
+                const button = $(this)
 
                 e.preventDefault();
                 $(open).fadeOut(function () {
                     window.$transaction_id = null;
                     $('#modal-html').html('');
                     $("body").css("overflow", "auto");
+                    if(button.hasClass('have_paid')){
+                        $("body").css("overflow", "hidden");
+                        $('#waiting_modal').fadeIn();
+                    }
                     $('.error_message').text('')
+
                 });
             });
 

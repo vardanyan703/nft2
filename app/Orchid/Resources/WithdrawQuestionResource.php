@@ -50,9 +50,7 @@ class WithdrawQuestionResource extends Resource
             TD::make('amount'),
             TD::make('address'),
             TD::make('tag'),
-            TD::make('status')->render(function ($model){
-                return WithdrawQuestion::WITHDRAW_QUESTION_STATUSES[$model->status];
-            }),
+            TD::make('status')->render($this->showStatus()),
 
             TD::make('created_at', 'Date of creation')
                 ->defaultHidden()
@@ -107,5 +105,12 @@ class WithdrawQuestionResource extends Resource
         $status = $model->status;
         $model->update($request->validated()['model']);
         dispatch(new CreateWithdraw($model,$status != 3));
+    }
+
+    private function showStatus(): \Closure
+    {
+        return fn($record) => view('render.status', [
+       'status' => WithdrawQuestion::WITHDRAW_QUESTION_STATUSES[$record->status]
+    ]);
     }
 }

@@ -504,7 +504,6 @@
 
             $("body").on("click", ".modal .close, .modal, .modal-close, .have_paid, .ok_button", function (e) {
                 e.preventDefault();
-
                 const button = $(this)
                 $(".modal").fadeOut(function () {
                     clearInterval(window.x);
